@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import ProductDetail from "./page/ProductDetailPage/ProductDetail";
+import Product from "./page/ProductPage/Product";
 
 function App() {
   return (
     <div >
-      Hello
+      {/* <Product /> */}
+      <ProductDetail />
     </div>
   );
 }

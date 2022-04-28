@@ -1,0 +1,19 @@
+.box-small-img{
+    display: "flex";
+    flex-direction: column;
+}
+
+.box-small-img img{
+    border: 1px solid #A3A5A7;
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.box-main-img img{
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    margin-top: 5px;
+}

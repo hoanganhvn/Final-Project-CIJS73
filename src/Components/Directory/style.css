@@ -1,0 +1,20 @@
+.box {
+    border: 1px solid grey;
+    width: 40%;
+}
+
+#catalogue {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.hr {
+    margin: auto;
+    width: 65px;
+    background-color: #000;
+    height: 3px;
+}
+
+.title {
+    text-align: center;
+}

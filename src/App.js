@@ -1,10 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import { Blog } from "./Blog/Blog";
+import {Routes, Route} from 'react-router-dom'
+
 
 function App() {
   return (
-    <div >
-
+    <div>
+      <Routes>
+        <Route path="/blog" element={<Blog />} />
+      </Routes>
     </div>
   );
 }

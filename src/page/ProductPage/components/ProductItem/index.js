@@ -23,7 +23,7 @@ export const ProductItem = (props) => {
     return (
         <Item>
             <img
-                src={isHovered ? item.image[0] : item.image[1]}
+                src={isHovered ? item.image[1] : item.image[0]}
                 alt={item.tag}
                 width="300"
                 height="300"

@@ -14,7 +14,6 @@ const Product = () => {
         by: '',
         direction: ''
     });
-    // const [hoverRef, isHovered] = useHover();
 
     const fetchData = () => {
         axios
@@ -69,6 +68,7 @@ const Product = () => {
                                     updateSort({ by: "name", direction: "desc" })
                                     break;
                                 default:
+                                    updateSort({ by: "", direction: "" })
                                     break;
                             }
                         }} defaultValue="">
@@ -83,55 +83,6 @@ const Product = () => {
                         return (
                             <Grid item xs={3}>
                                 <ProductItem item={item} />
-                                {/* <Item>
-                                    <img
-                                        src={isHovered ? item.image[0] : item.image[1]}
-                                        alt={item.tag}
-                                        width="300"
-                                        height="300"
-                                        ref={hoverRef}
-                                    />
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {item.name}
-                                    </Typography>
-                                    {item.discount > 0 ? (
-                                        <div style={{ display: "flex", gap: 20 }}>
-                                            <Typography
-                                                gutterBottom
-                                                variant="subtitle1"
-                                                component="div"
-                                                style={{ textDecoration: "line-through" }}
-                                            >
-                                                {(item.price.toFixed(2) * 1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ
-                                            </Typography>
-                                            <Typography
-                                                gutterBottom
-                                                variant="subtitle1"
-                                                component="div"
-                                            >
-                                                {((item.price * (100 - item.discount) / 100).toFixed(2) * 1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ
-                                            </Typography>
-                                            <div className="box-discount">
-                                                <Typography
-                                                    gutterBottom
-                                                    variant="subtitle1"
-                                                    component="div"
-                                                >
-                                                    -{item.discount}%
-                                                </Typography>
-                                            </div>
-                                        </div>
-                                    ) : (
-                                        <Typography
-                                            gutterBottom
-                                            variant="subtitle1"
-                                            component="div"
-                                        >
-                                            {(item.price.toFixed(2) * 1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ
-                                        </Typography>
-                                    )}
-                                    {item.inStock > 0 ? <Button variant="contained">THÊM VÀO GIỎ</Button> : <Button variant="contained" disabled>HẾT HÀNG</Button>}
-                                </Item> */}
                             </Grid>
                         );
                     })}

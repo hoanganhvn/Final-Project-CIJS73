@@ -8,16 +8,30 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./style.css"
+import * as _ from 'lodash';
+import { ProductItem } from "../ProductPage/components/ProductItem";
 
 const ProductDetail = () => {
     const [detail, setDetail] = useState();
     const [selectedImg, setSelectedImg] = useState();
+    const [product, setProduct] = useState([]);
 
     const fetchProductById = async (id) => {
         await axios
             .get(`https://625d83154c36c75357761d85.mockapi.io/Product/${id}`)
             .then((respone) => {
                 setDetail(respone.data);
+            });
+    }
+
+    const fetchData = () => {
+        axios
+            .get("https://625d83154c36c75357761d85.mockapi.io/Product")
+            .then((respone) => {
+                let data = [...respone.data];
+                data = _.sampleSize(data, 5);
+                console.log(data);
+                setProduct(data);
             });
     }
 
@@ -35,6 +49,7 @@ const ProductDetail = () => {
 
     useEffect(() => {
         fetchProductById(5)
+        fetchData()
     }, []);
 
     useEffect(() => {
@@ -112,9 +127,23 @@ const ProductDetail = () => {
                         </Grid>
                     </Grid>
                 )}
-                <Typography gutterBottom variant="h5" component="div">
-                    Sản phẩm liên quan
-                </Typography>
+                {product && (
+                    <Grid container spacing={2}>
+                        <Grid item xs={12}>
+                            <Typography gutterBottom variant="h5" component="div">
+                                Sản phẩm liên quan
+                            </Typography>
+                        </Grid>
+                        {product.map((item) => {
+                            return (
+                                <Grid item xs={12}>
+                                    <ProductItem item={item} />
+                                </Grid>
+                            );
+                        })}
+                    </Grid>
+                )}
+
             </Box>
         </Container>
     );

@@ -47,37 +47,37 @@ const Product = () => {
         <Container maxWidth="xl">
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={3}>
-                    <Grid item xs={9}>
-                        <Typography gutterBottom variant="h3" component="div">
-                            Tất cả sản phẩm
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <select onChange={(e) => {
-                            switch (e.target.value) {
-                                case "increase_price":
-                                    updateSort({ by: "priceAfterDiscount", direction: "asc" })
-                                    break;
-                                case "decrease_price":
-                                    updateSort({ by: "priceAfterDiscount", direction: "desc" })
-                                    break;
-                                case "increase_name":
-                                    updateSort({ by: "name", direction: "asc" })
-                                    break;
-                                case "decrease_name":
-                                    updateSort({ by: "name", direction: "desc" })
-                                    break;
-                                default:
-                                    updateSort({ by: "", direction: "" })
-                                    break;
-                            }
-                        }} defaultValue="">
-                            <option value="">None</option>
-                            <option value="increase_price">Giá: tăng dần</option>
-                            <option value="decrease_price">Giá: giảm dần</option>
-                            <option value="increase_name">Tên: A-Z</option>
-                            <option value="decrease_name">Tên: Z-A</option>
-                        </select>
+                    <Grid item xs={12}>
+                        <div className="box-header">
+                            <h1>Tất cả sản phẩm</h1>
+                            <div className="header-sort">
+                                <select onChange={(e) => {
+                                    switch (e.target.value) {
+                                        case "increase_price":
+                                            updateSort({ by: "priceAfterDiscount", direction: "asc" })
+                                            break;
+                                        case "decrease_price":
+                                            updateSort({ by: "priceAfterDiscount", direction: "desc" })
+                                            break;
+                                        case "increase_name":
+                                            updateSort({ by: "name", direction: "asc" })
+                                            break;
+                                        case "decrease_name":
+                                            updateSort({ by: "name", direction: "desc" })
+                                            break;
+                                        default:
+                                            updateSort({ by: "", direction: "" })
+                                            break;
+                                    }
+                                }} defaultValue="">
+                                    <option value="">None</option>
+                                    <option value="increase_price">Giá: tăng dần</option>
+                                    <option value="decrease_price">Giá: giảm dần</option>
+                                    <option value="increase_name">Tên: A-Z</option>
+                                    <option value="decrease_name">Tên: Z-A</option>
+                                </select>
+                            </div>
+                        </div>
                     </Grid>
                     {product.map((item) => {
                         return (

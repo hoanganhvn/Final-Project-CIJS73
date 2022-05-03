@@ -6,25 +6,50 @@ import { useState } from "react";
 
 function Header() {
     const [openSearch, setOpenSearch] = useState(false);
+    const [openLoginAndRegister, setOpenLoginAndRegister] = useState(false);
+    const [openCart, setOpenCart] = useState(false);
+    const [openMiniMenu, setOpenMiniMenu] = useState(false);
+    const [openLogin, setOpenLogin] = useState(true);
+    const [openRegister, setOpenRegister] = useState(false);
+    const [openForgotPassword, setOpenForgotPassword] = useState(false);
+
     const handleOpenSearch = () => setOpenSearch(true);
     const handleCloseSearch = () => setOpenSearch(false);
 
-    const [openLoginAndRegister, setOpenLoginAndRegister] = useState(false);
     const handleOpenLoginAndRegister = () => setOpenLoginAndRegister(true);
-    const handleCloseLoginAndRegister = () => setOpenLoginAndRegister(false);
+    const handleCloseLoginAndRegister = () => {
+        setOpenLoginAndRegister(false);
+        setOpenLogin(true);
+        setOpenRegister(false);
+        setOpenForgotPassword(false);
+    };
 
-    const [openCart, setOpenCart] = useState(false);
     const handleOpenCart = () => setOpenCart(true);
     const handleCloseCart = () => setOpenCart(false);
 
-    const [openMiniMenu, setOpenMiniMenu] = useState(false);
     const clickOpenMiniMenu = () => setOpenMiniMenu(!openMiniMenu);
+
+    const clickToGoToRegister = () => {
+        setOpenLogin(false);
+        setOpenRegister(true);
+        setOpenForgotPassword(false);
+    }
+    const clickToGoToLogin = () => {
+        setOpenLogin(true);
+        setOpenRegister(false);
+        setOpenForgotPassword(false);
+    }
+    const clickToGoToForgotPassword = () => {
+        setOpenLogin(false);
+        setOpenRegister(false);
+        setOpenForgotPassword(true);
+    }
 
     return (
         <>
             < header className="header" >
                 < Search openSearch={openSearch} handleCloseSearch={handleCloseSearch} />
-                < LoginAndRegister openLoginAndRegister={openLoginAndRegister} handleCloseLoginAndRegister={handleCloseLoginAndRegister} />
+                < LoginAndRegister openLoginAndRegister={openLoginAndRegister} openLogin={openLogin} openRegister={openRegister} openForgotPassword={openForgotPassword} handleCloseLoginAndRegister={handleCloseLoginAndRegister} clickToGoToRegister={clickToGoToRegister} clickToGoToForgotPassword={clickToGoToForgotPassword} clickToGoToLogin={clickToGoToLogin}/>
                 < Cart openCart={openCart} handleCloseCart={handleCloseCart} />
                 <div div className="topbar" id="topbar" >
                     <div className="container-fluid">

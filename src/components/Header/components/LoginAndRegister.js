@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Modal from '@mui/material/Modal';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useState } from "react";
 import Login from './components/Login';
 import Register from './components/Register';
 import ForgotPassword from './components/ForgotPassword';
@@ -56,24 +55,6 @@ function LoginAndRegister(props) {
             lastName: data.get('lastName'),
         });
     };
-    const [openLogin, setOpenLogin] = useState(true);
-    const [openRegister, setOpenRegister] = useState(false);
-    const [openForgotPassword, setOpenForgotPassword] = useState(false);
-    const clickToGoToRegister = () => {
-        setOpenLogin(false);
-        setOpenRegister(true);
-        setOpenForgotPassword(false);
-    }
-    const clickToGoToLogin = () => {
-        setOpenLogin(true);
-        setOpenRegister(false);
-        setOpenForgotPassword(false);
-    }
-    const clickToGoToForgotPassword = () => {
-        setOpenLogin(false);
-        setOpenRegister(false);
-        setOpenForgotPassword(true);
-    }
 
     return (
         <ThemeProvider theme={theme}>
@@ -88,9 +69,9 @@ function LoginAndRegister(props) {
                     <Box sx={style}>
                         <Avatar sx={{ m: 1, bgcolor: '#66a55f' }}>
                         </Avatar>
-                        {openLogin && <Login onSubmitLogin={handleSubmitLogin} clickToGoToRegister={clickToGoToRegister} clickToGoToForgotPassword={clickToGoToForgotPassword} />}
-                        {openRegister && <Register onSubmitRegister={handleSubmitRegister} clickToGoToLogin={clickToGoToLogin} />}
-                        {openForgotPassword && <ForgotPassword clickToGoToLoginFromForgotPassword={clickToGoToLogin} />}
+                        {props.openLogin && <Login onSubmitLogin={handleSubmitLogin} clickToGoToRegister={props.clickToGoToRegister} clickToGoToForgotPassword={props.clickToGoToForgotPassword} />}
+                        {props.openRegister && <Register onSubmitRegister={handleSubmitRegister} clickToGoToLogin={props.clickToGoToLogin} />}
+                        {props.openForgotPassword && <ForgotPassword clickToGoToLoginFromForgotPassword={props.clickToGoToLogin} />}
                     </Box>
                 </Container>
             </Modal>

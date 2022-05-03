@@ -14,7 +14,7 @@ const ProductDetail = () => {
     const [selectedImg, setSelectedImg] = useState();
     const [product, setProduct] = useState([]);
     const [count, setCount] = useState(1);
-    const [error, SetError] = useState();
+    const [error, SetError] = useState(false);
 
     const fetchProductById = async (id) => {
         await axios
@@ -32,6 +32,12 @@ const ProductDetail = () => {
                 data = _.sampleSize(data, 4);
                 setProduct(data);
             });
+    }
+
+    const updateProductInStock = (id, inStockProduct) => {
+        axios.put(`https://625d83154c36c75357761d85.mockapi.io/Product/${id}`, {
+            inStock: inStockProduct
+        })
     }
 
     const handleChangeImg = (newImg) => {
@@ -105,11 +111,13 @@ const ProductDetail = () => {
                                 <hr />
                                 <div className="box-input-value">
                                     <input type="button" value="-" className="btnSub" onClick={() => { count > 0 ? setCount(count - 1) : setCount(0) }} />
-                                    <input type="text" value={count} className="txtStock" />
-                                    <input type="button" value="+" className="btnAdd" onClick={() => { count < detail.inStock ? setCount(count + 1) : setCount(count) && SetError("Số lượng tồn kho không đủ") }} />
-                                    {error && <p value={error}></p>}
+                                    <input type="text" value={count} className="txtInput" />
+                                    <input type="button" value="+" className="btnAdd" onClick={() => { count < detail.inStock ? setCount(count + 1) : setCount(count) && SetError(true) }} />
+                                    <div className="box-instock">
+                                        Tồn kho: {detail.inStock}
+                                    </div>
                                 </div>
-                                {detail.inStock > 0 ? <Button variant="contained">THÊM VÀO GIỎ</Button> : <Button variant="contained" disabled>HẾT HÀNG</Button>}
+                                {detail.inStock > 0 ? <Button variant="contained" onClick={() => { count < detail.inStock && !error ? updateProductInStock(detail.id, detail.inStock - count) && alert("Thêm thành công") && fetchProductById(detail.id) : updateProductInStock(detail.id, detail.inStock) }}>THÊM VÀO GIỎ</Button> : <Button variant="contained" disabled>HẾT HÀNG</Button>}
                                 <hr />
                                 <span><b>Mô tả</b></span>
                                 {detail.details.map((content) => {

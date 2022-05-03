@@ -34,6 +34,7 @@
 }
 
 .box-input-value{
+    display: flex;
     margin-bottom: 10px;
 }
 
@@ -43,7 +44,11 @@
     border: 1px solid #A3A5A7;
 }
 
-.txtStock{
+.box-instock{
+    margin-left: 50px;
+}
+
+.txtInput{
     width: 80px;
     text-align: center;
     border-radius: 5px;

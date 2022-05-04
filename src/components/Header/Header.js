@@ -105,7 +105,7 @@ function Header() {
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home4">
-                                <a className="nav-link" href="Lựu_đỏ_Peru.html" target="_blank">Product Views</a>
+                                <a className="nav-link" href="Lựu_đỏ_Peru.html" target="_blank">Product Details</a>
                                 <div className="line4" />
                             </div>
                         </li>

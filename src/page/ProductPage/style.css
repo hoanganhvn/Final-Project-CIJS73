@@ -1,0 +1,17 @@
+.box-header{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.header-sort{
+    margin-top: 15px;
+    padding: 2px 20px;
+}
+
+.box-discount{
+    border: 1px solid black;
+    padding: 0 10px;
+    color: red;
+}

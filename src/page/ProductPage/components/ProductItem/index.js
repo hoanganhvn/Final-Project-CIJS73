@@ -36,7 +36,7 @@ export const ProductItem = (props) => {
                 </Typography>
             </Link>
             {item.discount > 0 ? (
-                <div style={{ display: "flex", gap: 20 }}>
+                <div className="style-noname">
                     <Typography
                         gutterBottom
                         variant="h5"
@@ -50,7 +50,7 @@ export const ProductItem = (props) => {
                         gutterBottom
                         variant="h5"
                         component="div"
-                        className="box-price"
+                        className="box-price-discount"
                     >
                         {((item.price * (100 - item.discount) / 100).toFixed(2) * 1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ
                     </Typography>
@@ -73,7 +73,7 @@ export const ProductItem = (props) => {
                     {(item.price.toFixed(2) * 1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ
                 </Typography>
             )}
-            {item.inStock > 0 ? <Button variant="contained">THÊM VÀO GIỎ</Button> : <Button variant="contained" disabled>HẾT HÀNG</Button>}
+            {item.inStock > 0 ? <Button   className="button-product" variant="contained">THÊM VÀO GIỎ</Button> : <Button variant="contained" disabled>HẾT HÀNG</Button>}
         </Item>
     );
 }

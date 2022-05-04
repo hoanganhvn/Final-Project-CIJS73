@@ -1120,11 +1120,13 @@ span.psw {
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
-  height: 60vh;
-  margin-top: 100px;
+  height: 40vh;
+  margin-top: 250px;
 }
 
 .modal-header-email {
+
+  padding-top: 50px;
   background-color: white;
   opacity: 0.8;
   width: 60%;
@@ -1134,7 +1136,9 @@ span.psw {
   border-bottom-right-radius: 5px;
   position: relative;
 }
-
+.modal-header-email h2{
+  text-align: center;
+}
 .close3 {
   font-size: 2rem;
   background-color: gray;
@@ -1288,13 +1292,15 @@ h4 {
   .navbar {
     display: none;
   }
-
+.footertotal{
+  padding-top: 40%;
+}
   .foot-icon-email {
     width: 100vw;
   }
 
   .foot-up {
-    height: 40vh;
+    height: 25vh;
   }
 
   .foot-icon-email {
@@ -1305,6 +1311,7 @@ h4 {
   .foot-input-email,
   .foot-register {
     text-align: center;
+    height: 4vh;
   }
 
   .col-md-6 {
@@ -1312,7 +1319,7 @@ h4 {
   }
 
   .foot-middle {
-    height: 80vh;
+    height: 40vh;
     /* padding: 6vh 0; */
     /* width: 90%;
       padding-left: 5%; */
@@ -1365,7 +1372,7 @@ h4 {
   }
 
   .about {
-    margin-bottom: 90%;
+    margin-bottom: 75%;
   }
 
   .about-img,
@@ -1381,6 +1388,7 @@ h4 {
 
   .about-img-word3 {
     left: 31%;
+    height: vh;
   }
 
   .modal-header-email {
@@ -1433,6 +1441,42 @@ h4 {
       cursor: pointer;
       position: absolute;
       transition: 0.5s; */
+  }
+
+  .logo {
+    height: 5vh;
+  }
+
+  .img-slide {
+    height: 30vh;
+  }
+
+  .slick-dots {
+    display: none;
+  }
+
+  .slick-thumb {
+    display: none;
+  }
+
+  .demo {
+    display: none;
+  }
+
+  .slick-arrow {
+    top: 65%;
+  }
+
+  .slick-dots {
+    height: 0;
+  }
+
+  .slick-slider {
+    height: 30vh;
+  }
+
+  .product-detail {
+    height: 65vh;
   }
 }
 
@@ -1524,7 +1568,12 @@ h4 {
 
   .about-img-word2 {
     left: 8%;
+    font-size: 3rem;
     /* transform: translateX(-50%); */
+  }
+
+  .about-img-word3 {
+    height: 5vh;
   }
 
   .text-right {
@@ -1535,5 +1584,9 @@ h4 {
   .logo .header-logo {
     font-size: 0.5rem;
     font-weight: 800;
+  }
+
+  .footertotal {
+    padding-top: 1%;
   }
 }

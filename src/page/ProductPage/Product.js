@@ -43,52 +43,73 @@ const Product = () => {
 
 
     return (
-        <Container maxWidth="xl">
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={3}>
-                    <Grid item xs={12}>
-                        <div className="box-header">
-                            <div></div>
-                            <h1>Tất cả sản phẩm</h1>
-                            <div className="header-sort">
-                                <select onChange={(e) => {
-                                    switch (e.target.value) {
-                                        case "increase_price":
-                                            updateSort({ by: "priceAfterDiscount", direction: "asc" })
-                                            break;
-                                        case "decrease_price":
-                                            updateSort({ by: "priceAfterDiscount", direction: "desc" })
-                                            break;
-                                        case "increase_name":
-                                            updateSort({ by: "name", direction: "asc" })
-                                            break;
-                                        case "decrease_name":
-                                            updateSort({ by: "name", direction: "desc" })
-                                            break;
-                                        default:
-                                            updateSort({ by: "", direction: "" })
-                                            break;
-                                    }
-                                }} defaultValue="">
-                                    <option value="">None</option>
-                                    <option value="increase_price">Giá: tăng dần</option>
-                                    <option value="decrease_price">Giá: giảm dần</option>
-                                    <option value="increase_name">Tên: A-Z</option>
-                                    <option value="decrease_name">Tên: Z-A</option>
-                                </select>
-                            </div>
-                        </div>
-                    </Grid>
-                    {product.map((item) => {
-                        return (
-                            <Grid item xs={3}>
-                                <ProductItem item={item} />
+        <>
+            <div class="container-fluid total-product">
+                <div className="container-banner">
+                    <img src="img/collection_banner.jpg" alt="" />
+                </div>
+                <Container maxWidth="xl">
+
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Grid container spacing={3}>
+                            <Grid item xs={12}>
+                                <div className="box-header">
+                                    <div></div>
+                                    <div className="product">
+                                        <a href="#">
+                                            Tất cả sản phẩm
+                                        </a>
+
+                                    </div>
+
+                                    <div className="header-sort">
+                                        <select onChange={(e) => {
+                                            switch (e.target.value) {
+                                                case "increase_price":
+                                                    updateSort({ by: "priceAfterDiscount", direction: "asc" })
+                                                    break;
+                                                case "decrease_price":
+                                                    updateSort({ by: "priceAfterDiscount", direction: "desc" })
+                                                    break;
+                                                case "increase_name":
+                                                    updateSort({ by: "name", direction: "asc" })
+                                                    break;
+                                                case "decrease_name":
+                                                    updateSort({ by: "name", direction: "desc" })
+                                                    break;
+                                                default:
+                                                    updateSort({ by: "", direction: "" })
+                                                    break;
+                                            }
+                                        }} defaultValue="">
+                                            <option value="">None</option>
+                                            <option value="increase_price">Giá: tăng dần</option>
+                                            <option value="decrease_price">Giá: giảm dần</option>
+                                            <option value="increase_name">Tên: A-Z</option>
+                                            <option value="decrease_name">Tên: Z-A</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="product-detail">
+                                    <ul className="product-top">
+                                        {product.map((item) => {
+                                            return (
+                                                <Grid item xs={6} md={3}>
+                                                    <ProductItem item={item} />
+                                                </Grid>
+                                            );
+                                        })}
+                                    </ul>
+                                </div>
                             </Grid>
-                        );
-                    })}
-                </Grid>
-            </Box>
-        </Container >
+
+                        </Grid>
+                    </Box>
+                </Container >
+            </div>
+
+        </>
+
     );
 };
 

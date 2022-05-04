@@ -65,6 +65,19 @@ const ProductDetail = () => {
 
     return (
         <Container maxWidth="xl">
+            <div className="product-breadcrumb">
+                <ol className="product-text-breadcrumb">
+                    <li style={{display: "inline-block"}}>
+                        <a href="index.html" target="_blank">Trang chủ </a>
+                    </li>
+                    <li style={{display: "inline-block"}}>
+                        /
+                    </li>
+                    <li style={{display: "inline-block"}}>
+                        <span>Product Details</span>
+                    </li>
+                </ol>
+            </div>
             <Box sx={{ flexGrow: 1 }}>
                 {detail && (
                     <Grid container spacing={2} className="box-total">
@@ -187,7 +200,7 @@ const ProductDetail = () => {
                     </Grid>
                 )}
                 {product && (
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2}  >
                         <Grid item xs={12}>
                             <Typography
                                 gutterBottom
@@ -195,13 +208,17 @@ const ProductDetail = () => {
                                 component="div"
                                 align="center"
                             >
-                                Các sản phẩm khác
+                                <div className="product-best-mobile ">
+                                    <a href="#">
+                                        Sản Phẩm Liên Quan
+                                    </a>
+                                </div>
                             </Typography>
                         </Grid>
                         {product.map((item) => {
                             console.log(item);
                             return (
-                                <Grid item xs={3}>
+                                <Grid item xs={6} md={3}>
                                     <ProductItem item={item} />
                                 </Grid>
                             );

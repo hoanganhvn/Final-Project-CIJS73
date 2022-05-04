@@ -3,6 +3,8 @@ import LoginAndRegister from "./components/LoginAndRegister";
 import Cart from "./components/Cart";
 import Menu from "./components/Menu";
 import { useState } from "react";
+import './Header.css';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     const [openSearch, setOpenSearch] = useState(false);
@@ -43,6 +45,10 @@ function Header() {
         setOpenLogin(false);
         setOpenRegister(false);
         setOpenForgotPassword(true);
+    }
+    
+    const activeClass = (params) => {
+        return params.isActive ? "active-item" : "navbar-brand";
     }
 
     return (
@@ -87,7 +93,7 @@ function Header() {
                     <ul className="nav justify-content-center container-fluid">
                         <li className="nav-item">
                             <div className="nav-name home1">
-                                <a className="nav-link" href="index.html" target="_blank">Trang chủ</a>
+                                <NavLink  className={`nav-link ${activeClass}`}  to="/">Trang chủ</NavLink>
                                 <div className="line1" />
                             </div>
                         </li>
@@ -99,13 +105,13 @@ function Header() {
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home3">
-                                <a className="nav-link" href="product.html" target="_blank">Sản phẩm</a>
+                                <NavLink  className={`nav-link ${activeClass}`} to="/product">Sản phẩm</NavLink>
                                 <div className="line3" />
                             </div>
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home4">
-                                <a className="nav-link" href="Lựu_đỏ_Peru.html" target="_blank">Product Details</a>
+                            <NavLink  className={`nav-link ${activeClass}`} to="/product-detail/:productId">Product Details</NavLink>
                                 <div className="line4" />
                             </div>
                         </li>

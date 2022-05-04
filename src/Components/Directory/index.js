@@ -7,23 +7,29 @@ import { Links } from "../Links";
 import { Contact } from "../Directory/Contact";
 import { Service } from "../Directory/Service/index";
 import { Restore } from "./../Directory/Restore/index";
+import { Image } from "./../Directory/Img/index";
 
 const Directory = () => {
   return (
     <div className="container">
-      <div className="box">
-        <div id="catalogue"> DANH MỤC TRANG </div>{" "}
-        <hr
-          style={{
-            width: "80%",
-            color: "black",
-            margin: "auto",
-            marginBottom: "7%",
-            height: 2,
-          }}
-        />
-        <div className="content">
-          <Links />
+      <div>
+        <div className="box">
+          <div id="catalogue"> DANH MỤC TRANG </div>{" "}
+          <hr
+            style={{
+              width: "80%",
+              color: "black",
+              margin: "auto",
+              marginBottom: "7%",
+              height: 2,
+            }}
+          />
+          <div className="content">
+            <Links />
+          </div>
+        </div>
+        <div>
+          <Image />
         </div>
       </div>
       <div className="content1">

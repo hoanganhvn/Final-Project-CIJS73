@@ -14,9 +14,10 @@ export const Search = (props) => {
   return (
     <div>
       <h1 className="title"> Tìm Kiếm </h1>
-      <div className="hr"> </div>{" "}
+      <div className="hr"> </div>
       <div id="search">
         <input
+          width={"100%"}
           id="searchBar"
           type="text"
           placeholder="Search..."

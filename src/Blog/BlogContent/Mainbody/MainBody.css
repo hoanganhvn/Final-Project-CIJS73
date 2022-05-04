@@ -1,0 +1,40 @@
+img {
+    width: 100%;;
+}
+
+.main-title h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.main-item {
+    padding: 13px 0;
+    height: 22%;
+}
+
+.image-zoom img {
+    display: block;
+    transition: all .3s ease;
+}
+
+
+.image-zoom a {
+    display: block;
+    overflow: hidden;
+}
+
+.image-zoom img:hover {
+    transform: scale(1.2);
+}
+
+.margin-bottom {
+    margin: 5px;
+}
+
+.main-item a {
+    color: #252a2b;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}

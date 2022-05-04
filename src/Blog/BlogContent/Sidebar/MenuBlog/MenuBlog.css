@@ -1,0 +1,25 @@
+.sidebar-menu-blog {
+    margin: 0 0 30px;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #e3e5ec;
+    height: 250px;
+}
+
+.sidebar-title h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+}
+
+.sidebar-menu-list li {
+    list-style: none;
+    color: #252a2b;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 1px;
+}

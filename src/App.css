@@ -1120,8 +1120,8 @@ span.psw {
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
-  height: 40vh;
-  margin-top: 250px;
+  height: 60vh;
+  margin-top: 100px;
 }
 
 .modal-header-email {
@@ -1477,6 +1477,12 @@ h4 {
 
   .product-detail {
     height: 65vh;
+    
+  }
+  .modal-get-email {
+  
+    height: 40vh;
+    margin-top: 250px;
   }
 }
 
@@ -1588,5 +1594,10 @@ h4 {
 
   .footertotal {
     padding-top: 1%;
+  }
+  .modal-get-email {
+  
+    height: 55vh;
+
   }
 }

@@ -117,7 +117,7 @@ function Header() {
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home5">
-                                <a className="nav-link" href="blog.html" target="_blank">Blog</a>
+                            <NavLink  className={`nav-link ${activeClass}`} to="/blog">Blog</NavLink>
                                 <div className="line5" />
                             </div>
                         </li>

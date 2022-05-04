@@ -1,0 +1,40 @@
+.sidebar {
+    margin: 0 0 30px;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #e3e5ec;
+    height: 600px;
+}
+
+.sidebar-title h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+}
+
+.sidebar-article {
+    border-bottom: 1px #efefef dotted;
+    padding: 15px 0;
+    height: 22%;
+}
+
+.sidebar-image{
+    float: left;
+    padding-right: 10px;
+    width: 30%;
+}
+
+img {
+    width: 100%;
+}
+
+.sidebar-post{
+    float: left;
+}
+
+.sidebar-post h3{
+    font-size: 14px;
+}

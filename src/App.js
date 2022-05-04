@@ -9,6 +9,7 @@ import SignIn from "./page/LoginFormPage/SignIn";
 import SignUp from "./page/LoginFormPage/SignUp";
 import Layout from './components/Layout/Layout';
 import NoPage from './components/NoPage/NoPage';
+import { Blog } from "./Blog/Blog";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/product' element={<Product />} />
           <Route path="/product-detail/:productId" element={<ProductDetail />} />
+          <Route path="/blog" element={<Blog />} />
         </Route>
         <Route path="*" element={<NoPage />} />
       </Routes>
@@ -30,7 +32,7 @@ function App() {
       {/* <ProductDetail /> */}
       {/* <SignIn /> */}
       {/* <SignUp /> */}
-      
+
       <Footer />
     </>
   );

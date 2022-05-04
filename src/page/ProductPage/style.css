@@ -10,8 +10,27 @@
     padding: 2px 20px;
 }
 
+.box-price{
+    /* border: 1px solid black; */
+    padding: 4px 0;
+}
+
 .box-discount{
-    border: 1px solid black;
-    padding: 0 10px;
-    color: red;
+    border: 1px solid #DD4745;
+    /* background-color: #DD4745; */
+    background: linear-gradient(to top, #cc0000 0%, #ff9999 100%);
+    padding: 4px 10px;
+    color: white;
+    border-radius: 100%;
+    font-weight: bold;
+}
+
+.link-item{
+    text-decoration: none;
+    color: black;
+}
+
+.link-item:hover{
+    text-decoration: none;
+    color: cornflowerblue;
 }

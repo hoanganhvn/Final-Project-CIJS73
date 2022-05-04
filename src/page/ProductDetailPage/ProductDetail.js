@@ -15,7 +15,7 @@ const ProductDetail = () => {
     const [detail, setDetail] = useState();
     const [selectedImg, setSelectedImg] = useState();
     const [product, setProduct] = useState([]);
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
     const [status, setStatus] = useState(false);
     const params = useParams();
 
@@ -24,6 +24,9 @@ const ProductDetail = () => {
             .get(`https://625d83154c36c75357761d85.mockapi.io/Product/${id}`)
             .then((respone) => {
                 setDetail(respone.data);
+                if (respone.data.inStock > 0) {
+                    setCount(1)
+                } else setCount(0)
             });
     };
 
@@ -42,6 +45,9 @@ const ProductDetail = () => {
         axios.put(`https://625d83154c36c75357761d85.mockapi.io/Product/${id}`, {
             inStock: inStockProduct,
         });
+        if (inStockProduct > 0) {
+            setCount(1)
+        } else setCount(0)
     };
 
     const handleChangeImg = (newImg) => {
@@ -51,7 +57,7 @@ const ProductDetail = () => {
     useEffect(() => {
         fetchProductById(params.productId);
         fetchData();
-    }, []);
+    }, [params.productId]);
 
     useEffect(() => {
         detail && setSelectedImg(detail.image[0]);
@@ -89,13 +95,14 @@ const ProductDetail = () => {
                                             variant="h5"
                                             component="div"
                                             style={{ textDecoration: "line-through" }}
+                                            className="box-price"
                                         >
                                             {(detail.price.toFixed(2) * 1000)
                                                 .toString()
                                                 .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
                                             đ
                                         </Typography>
-                                        <Typography gutterBottom variant="h5" component="div">
+                                        <Typography gutterBottom variant="h5" component="div" className="box-price">
                                             {(
                                                 (
                                                     (detail.price * (100 - detail.discount)) /
@@ -106,14 +113,12 @@ const ProductDetail = () => {
                                                 .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
                                             đ
                                         </Typography>
-                                        <div className="box-discount">
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                -{detail.discount}%
-                                            </Typography>
-                                        </div>
+                                        <Typography gutterBottom variant="h6" component="div" className="box-discount">
+                                            -{detail.discount}%
+                                        </Typography>
                                     </div>
                                 ) : (
-                                    <Typography gutterBottom variant="h5" component="div">
+                                    <Typography gutterBottom variant="h5" component="div" className="box-price">
                                         {(detail.price.toFixed(2) * 1000)
                                             .toString()
                                             .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
@@ -130,15 +135,13 @@ const ProductDetail = () => {
                                             count > 0 ? setCount(count - 1) : setCount(0);
                                         }}
                                     />
-                                    <input type="text" value={count} className="txtInput" />
+                                    <input type="text" value={count} className="txtInput" max={detail.inStock} />
                                     <input
                                         type="button"
                                         value="+"
                                         className="btnAdd"
                                         onClick={() => {
-                                            count < detail.inStock
-                                                ? setCount(count + 1)
-                                                : setCount(count);
+                                            count < detail.inStock ? setCount(count + 1) : setCount(count);
                                         }}
                                     />
                                     <div className="box-instock">Tồn kho: {detail.inStock}</div>
@@ -148,13 +151,12 @@ const ProductDetail = () => {
                                         <Button
                                             variant="contained"
                                             onClick={() => {
-                                                detail.inStock >= count
-                                                    ? updateProductInStock(
-                                                        detail.id,
-                                                        detail.inStock - count
-                                                    ) && setStatus(true)
-                                                    : updateProductInStock(detail.id, detail.inStock);
+                                                if (detail.inStock >= count) {
+                                                    updateProductInStock(detail.id, detail.inStock - count)
+                                                    setStatus(true)
+                                                }
                                             }}
+                                            style={{ height: 40 }}
                                         >
                                             THÊM VÀO GIỎ
                                         </Button>
@@ -164,14 +166,14 @@ const ProductDetail = () => {
                                         </Button>
                                     )}
                                     {status && (
-                                        <Alert variant="outlined" severity="success">
+                                        <Alert onClose={() => { setStatus(false) }} variant="outlined" severity="success" className="box-alert">
                                             Thêm thành công !
                                         </Alert>
                                     )}
                                 </div>
                                 <hr />
                                 <span>
-                                    <b>Mô tả</b>
+                                    <b>Mô tả sản phẩm</b>
                                 </span>
                                 {detail.details.map((content) => {
                                     return (
@@ -197,6 +199,7 @@ const ProductDetail = () => {
                             </Typography>
                         </Grid>
                         {product.map((item) => {
+                            console.log(item);
                             return (
                                 <Grid item xs={3}>
                                     <ProductItem item={item} />
@@ -206,7 +209,7 @@ const ProductDetail = () => {
                     </Grid>
                 )}
             </Box>
-        </Container>
+        </Container >
     );
 };
 

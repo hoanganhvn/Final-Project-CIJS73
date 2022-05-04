@@ -30,7 +30,7 @@ export const ProductItem = (props) => {
                 height="300"
                 ref={hoverRef}
             />
-            <Link to={`/product-detail/${item.id}`}>
+            <Link to={`/product-detail/${item.id}`} className="link-item">
                 <Typography gutterBottom variant="h5" component="div">
                     {item.name}
                 </Typography>
@@ -39,34 +39,36 @@ export const ProductItem = (props) => {
                 <div style={{ display: "flex", gap: 20 }}>
                     <Typography
                         gutterBottom
-                        variant="subtitle1"
+                        variant="h5"
                         component="div"
                         style={{ textDecoration: "line-through" }}
+                        className="box-price"
                     >
                         {(item.price.toFixed(2) * 1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ
                     </Typography>
                     <Typography
                         gutterBottom
-                        variant="subtitle1"
+                        variant="h5"
                         component="div"
+                        className="box-price"
                     >
                         {((item.price * (100 - item.discount) / 100).toFixed(2) * 1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ
                     </Typography>
-                    <div className="box-discount">
-                        <Typography
-                            gutterBottom
-                            variant="subtitle1"
-                            component="div"
-                        >
-                            -{item.discount}%
-                        </Typography>
-                    </div>
+                    <Typography
+                        gutterBottom
+                        variant="h6"
+                        component="div"
+                        className="box-discount"
+                    >
+                        -{item.discount}%
+                    </Typography>
                 </div>
             ) : (
                 <Typography
                     gutterBottom
-                    variant="subtitle1"
+                    variant="h5"
                     component="div"
+                    className="box-price"
                 >
                     {(item.price.toFixed(2) * 1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ
                 </Typography>

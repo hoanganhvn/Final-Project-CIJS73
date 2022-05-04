@@ -40,8 +40,8 @@
 
 .btnSub, .btnAdd{
     padding: 0 10px;
-    border-radius: 5px;
-    border: 1px solid #A3A5A7;
+    border: 1px solid #F5F5F5;
+    background-color: #F5F5F5;
 }
 
 .box-instock{
@@ -55,7 +55,12 @@
 .txtInput{
     width: 80px;
     text-align: center;
-    border-radius: 5px;
-    border: 1px solid #A3A5A7;
+    border: 1px solid #F5F5F5;
     padding: 0 10px;
+}
+
+.box-alert{
+    margin-left: 20px;
+    padding: 1px 10px;
+    height: 40px;
 }

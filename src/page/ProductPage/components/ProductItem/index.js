@@ -3,6 +3,7 @@ import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useHover } from "../../../../hooks";
+import { Link } from 'react-router-dom';
 
 export const ProductItem = (props) => {
 
@@ -29,9 +30,11 @@ export const ProductItem = (props) => {
                 height="300"
                 ref={hoverRef}
             />
-            <Typography gutterBottom variant="h5" component="div">
-                {item.name}
-            </Typography>
+            <Link to={`/product-detail/${item.id}`}>
+                <Typography gutterBottom variant="h5" component="div">
+                    {item.name}
+                </Typography>
+            </Link>
             {item.discount > 0 ? (
                 <div style={{ display: "flex", gap: 20 }}>
                     <Typography

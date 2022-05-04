@@ -3,7 +3,6 @@ import axios from "axios";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import "./style.css"
 import * as _ from 'lodash';
 import { ProductItem } from "./components/ProductItem";
@@ -49,6 +48,7 @@ const Product = () => {
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
                         <div className="box-header">
+                            <div></div>
                             <h1>Tất cả sản phẩm</h1>
                             <div className="header-sort">
                                 <select onChange={(e) => {

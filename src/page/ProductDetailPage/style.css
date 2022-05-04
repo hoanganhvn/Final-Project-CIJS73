@@ -48,6 +48,10 @@
     margin-left: 50px;
 }
 
+.box-button{
+    display: flex;
+}
+
 .txtInput{
     width: 80px;
     text-align: center;

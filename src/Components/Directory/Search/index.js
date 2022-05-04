@@ -1,20 +1,34 @@
 import "../style.css";
+import "./index.css";
 import { useState } from "react";
 // import Directory from "./../Directory/index";
+// import { JSONDATA } from "MOCK_DATA.json";
 
-export const Search = () => {
-  const [search, setSearch] = useState("");
+export const Search = (props) => {
+  const [search, setSearch] = useState(props.keywork);
+  const handleSearch = () => {
+    props.changeHandleSearch(search);
+  };
   // console.log("he");
+
   return (
     <div>
-      <h1 className="title"> Tìm Kiếm </h1> <div className="hr"> </div>{" "}
-      <input
-        type="text"
-        className="search"
-        placeholder="Search..."
-        onChange={(e) => setSearch(e.target.value)}
-      />{" "}
-      <button> Search </button>{" "}
+      <h1 className="title"> Tìm Kiếm </h1>
+      <div className="hr"> </div>{" "}
+      <div id="search">
+        <input
+          id="searchBar"
+          type="text"
+          placeholder="Search..."
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+        />
+
+        <button type="submit" id="searchBtn" onClick={handleSearch}>
+          Search
+        </button>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,8 @@
 .box {
+    margin: 30px;
     border: 1px solid grey;
-    width: 40%;
+    width: 20%;
+    height: 40%;
 }
 
 #catalogue {
@@ -17,4 +19,13 @@
 
 .title {
     text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.content {
+    left: 30px;
+    padding: 40px;
 }

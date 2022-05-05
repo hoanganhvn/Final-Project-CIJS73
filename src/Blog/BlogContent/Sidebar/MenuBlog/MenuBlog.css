@@ -23,3 +23,10 @@
     line-height: 28px;
     letter-spacing: 1px;
 }
+
+.sidebar-menu-list a {
+    color: #252a2b;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}

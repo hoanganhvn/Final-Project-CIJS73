@@ -1,6 +1,6 @@
 import "./BlogContent.css"
-import { MainBody } from "./Mainbody/MainBody";
 import { Sidebar } from "./Sidebar/Sidebar";
+import { Outlet } from "react-router-dom";
 
 const BlogContent = () => {
 
@@ -8,7 +8,11 @@ const BlogContent = () => {
         <div className="blog-content">
             <div className="row">
                 <Sidebar />
-                <MainBody />
+                {/* <Routes>
+                    <Route path="/" element={<MainBody />} />
+                    <Route path="/article1" element={<Article1 />} />
+                </Routes> */}
+                <Outlet />
             </div>
         </div>
     )

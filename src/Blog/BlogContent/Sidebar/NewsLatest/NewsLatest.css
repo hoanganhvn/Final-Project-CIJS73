@@ -38,3 +38,10 @@ img {
 .sidebar-post h3{
     font-size: 14px;
 }
+
+.sidebar-article a {
+    color: #252a2b;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}

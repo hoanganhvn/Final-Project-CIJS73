@@ -1,4 +1,5 @@
 import "./MenuBlog.css"
+import { Link } from "react-router-dom";
 
 const MenuBlog = () => {
     return (
@@ -12,7 +13,7 @@ const MenuBlog = () => {
                     <li>Header</li>
                     <li>Sản phẩm</li>
                     <li>Product Views</li>
-                    <li>Blog</li>
+                    <li><Link to="/blog">Blog</Link></li>
                     <li>Landing Page</li>
                 </ul>
             </div>

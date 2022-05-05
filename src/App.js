@@ -9,11 +9,8 @@ import Product from "./page/ProductPage/Product";
 import Layout from './components/Layout/Layout';
 import NoPage from './components/NoPage/NoPage';
 import { Blog } from "./Blog/Blog";
-// import { db,data } from "./firebase";
 
 function App() {
-// console.log(db);
-// console.log(data);
 
   return (
     < >
@@ -21,8 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='/gian-hang' element={<Product />} />
-          <Route path="/san-pham/:productId" element={<ProductDetail />} />
+          <Route path="/san-pham/:productId" element={<Product />} />
           <Route path="/tin-tuc" element={<Blog />} />
           <Route path="/khuyen-mai" element={<LandingPage />} />
         </Route>

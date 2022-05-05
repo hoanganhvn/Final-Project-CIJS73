@@ -37,15 +37,11 @@ function Menu() {
                 </ListItem>
                 <Divider light />
                 <ListItem button>
-                    <ListItemText primary="Product Views" primaryTypographyProps={{ sx: styleItem }} />
-                </ListItem>
-                <Divider />
-                <ListItem button>
-                    <ListItemText primary="Blog" primaryTypographyProps={{ sx: styleItem }} />
+                    <ListItemText primary="Tin tức" primaryTypographyProps={{ sx: styleItem }} />
                 </ListItem>
                 <Divider light />
                 <ListItem button>
-                    <ListItemText primary="Landing Page" primaryTypographyProps={{ sx: styleItem }} />
+                    <ListItemText primary="Khuyến mại" primaryTypographyProps={{ sx: styleItem }} />
                 </ListItem>
                 <Divider />
             </List>

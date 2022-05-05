@@ -46,7 +46,7 @@ function Header() {
         setOpenRegister(false);
         setOpenForgotPassword(true);
     }
-    
+
     const activeClass = (params) => {
         return params.isActive ? "active-item" : "navbar-brand";
     }
@@ -55,7 +55,7 @@ function Header() {
         <>
             < header className="header" >
                 < Search openSearch={openSearch} handleCloseSearch={handleCloseSearch} />
-                < LoginAndRegister openLoginAndRegister={openLoginAndRegister} openLogin={openLogin} openRegister={openRegister} openForgotPassword={openForgotPassword} handleCloseLoginAndRegister={handleCloseLoginAndRegister} clickToGoToRegister={clickToGoToRegister} clickToGoToForgotPassword={clickToGoToForgotPassword} clickToGoToLogin={clickToGoToLogin}/>
+                < LoginAndRegister openLoginAndRegister={openLoginAndRegister} openLogin={openLogin} openRegister={openRegister} openForgotPassword={openForgotPassword} handleCloseLoginAndRegister={handleCloseLoginAndRegister} clickToGoToRegister={clickToGoToRegister} clickToGoToForgotPassword={clickToGoToForgotPassword} clickToGoToLogin={clickToGoToLogin} />
                 < Cart openCart={openCart} handleCloseCart={handleCloseCart} />
                 <div div className="topbar" id="topbar" >
                     <div className="container-fluid">
@@ -93,7 +93,7 @@ function Header() {
                     <ul className="nav justify-content-center container-fluid">
                         <li className="nav-item">
                             <div className="nav-name home1">
-                                <NavLink  className={`nav-link ${activeClass}`}  to="/">Trang chủ</NavLink>
+                                <NavLink className={`nav-link ${activeClass}`} to="/">Trang chủ</NavLink>
                                 <div className="line1" />
                             </div>
                         </li>
@@ -105,25 +105,19 @@ function Header() {
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home3">
-                                <NavLink  className={`nav-link ${activeClass}`} to="/gian-hang">Gian hàng</NavLink>
+                                <NavLink className={`nav-link ${activeClass}`} to="/san-pham/1">Sản phẩm</NavLink>
                                 <div className="line3" />
                             </div>
                         </li>
                         <li className="nav-item">
-                            <div className="nav-name home4">
-                            <NavLink  className={`nav-link ${activeClass}`} to="/san-pham/1">Sản phẩm</NavLink>
-                                <div className="line4" />
-                            </div>
-                        </li>
-                        <li className="nav-item">
                             <div className="nav-name home5">
-                            <NavLink  className={`nav-link ${activeClass}`} to="/tin-tuc">Tin tức</NavLink>
+                                <NavLink className={`nav-link ${activeClass}`} to="/tin-tuc">Tin tức</NavLink>
                                 <div className="line5" />
                             </div>
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home6">
-                            <NavLink  className={`nav-link ${activeClass}`} to="/khuyen-mai">Khuyến mại</NavLink>
+                                <NavLink className={`nav-link ${activeClass}`} to="/khuyen-mai">Khuyến mại</NavLink>
                                 <div className="line6" />
                             </div>
                         </li>

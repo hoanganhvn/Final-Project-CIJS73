@@ -6,7 +6,7 @@ function SliderShow() {
     const settings = {
         customPaging: function (i) {
             return (
-                <img class="demo" src={`${baseUrl}/home_category_${i + 1}_banner.jpg`} style={{ width: '100%' }} />
+                <img className="demo" src={`${baseUrl}/home_category_${i + 1}_banner.jpg`} style={{ width: '100%' }} />
             );
 
         },
@@ -18,15 +18,34 @@ function SliderShow() {
         slidesToScroll: 1
     };
     const dataImage = [1, 2, 3, 4, 5, 6];
+
     return (
         <>
             <div className="container">
                 <Slider {...settings}>
-                    {dataImage.map(
+                    {/* {dataImage.map(
                         (dataImage) => (
                             <SliderImage number={dataImage} />
                         )
-                    )}
+                    )} */}
+                    <div>
+                        <img className="img-slide" src={baseUrl + "/home_category_1_banner.jpg"} style={{ width: '100%' }} />
+                    </div>
+                    <div>
+                        <img className="img-slide" src={baseUrl + "/home_category_2_banner.jpg"} style={{ width: '100%' }} />
+                    </div>
+                    <div>
+                        <img className="img-slide" src={baseUrl + "/home_category_3_banner.jpg"} style={{ width: '100%' }} />
+                    </div>
+                    <div>
+                        <img className="img-slide" src={baseUrl + "/home_category_4_banner.jpg"} style={{ width: '100%' }} />
+                    </div>
+                    <div>
+                        <img className="img-slide" src={baseUrl + "/home_category_5_banner.jpg"} style={{ width: '100%' }} />
+                    </div>
+                    <div>
+                        <img className="img-slide" src={baseUrl + "/home_category_6_banner.jpg"} style={{ width: '100%' }} />
+                    </div>
                 </Slider>
             </div>
         </>

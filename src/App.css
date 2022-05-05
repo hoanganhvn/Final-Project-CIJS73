@@ -1,43 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Start setup defaults */
 * {
   font-family: 'Quicksand', sans-serif;
@@ -506,12 +466,18 @@ h6 a:hover {
 .product-img-scale {
   overflow: hidden;
 }
+.container-banner-img {
+  /* background-image: url("img/collection_banner.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .product-img-scale-1,
 .product-img-scale-2,
 .product-img-scale-3 {
   transition: 1.6s;
 }
+
 
 .product-img-scale-1:hover,
 .product-img-scale-2:hover,
@@ -539,7 +505,7 @@ h6 a:hover {
 .word2 {
   top: 50%;
   cursor: default;
-  margin-left: 4%;
+  /* margin-left: 1%; */
 }
 
 .word3 {
@@ -590,6 +556,9 @@ h6 a:hover {
   filter: brightness(0.5);
   height: 90vh;
   width: 100%;
+  background-image: url("img/home_about_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about-img-scale-1:hover {

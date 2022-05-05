@@ -1,35 +1,17 @@
 import BannerOne from "./BannerOne";
+import * as _ from 'lodash';
+import {useFetch} from "../../../hooks";
 
 function Banner() {
-    const dataBanner = [
-        {
-            class: "breakfast",
-            numberImg: "1",
-            word1: "Khuyến mãi tới 50%",
-            word2: "Món ngon buổi sáng",
-            word3: "MUA NGAY",
-        },
-        {
-            class: "france",
-            numberImg: "2",
-            word1: "BOUILLABAISSE",
-            word2: "SALAD KIỂU PHÁP",
-            word3: "XEM THÊM",
-        },
-        {
-            class: "healthy",
-            numberImg: "3",
-            word1: "Sản phẩm mới",
-            word2: "BUỔI SÁNG HEALTHY",
-            word3: "XEM THÊM",
-        },
-    ];
+    const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
+    const dataBanner = _.slice(data, 1, 4);
+
     return (
         <>
             <div className="product-img">
                 {dataBanner.map(
                     (dataBanner) => (
-                        <BannerOne class={dataBanner.class} number={dataBanner.numberImg} word1={dataBanner.word1} word2={dataBanner.word2} word3={dataBanner.word3} />
+                        <BannerOne class={dataBanner.class} number={dataBanner.numberImg} word1={dataBanner.word1} word2={dataBanner.word2} word3={dataBanner.word3} imgurl={dataBanner.imgurl}/>
                     )
                 )}
             </div>

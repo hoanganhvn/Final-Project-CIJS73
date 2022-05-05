@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import "./style.css"
 import * as _ from 'lodash';
 import { ProductItem } from "./components/ProductItem";
+import {useFetch} from "../../hooks";
 
 const Product = () => {
     const [product, setProduct] = useState([]);
@@ -14,6 +15,9 @@ const Product = () => {
         direction: ''
     });
 
+    const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
+    const data1 = _.slice(data, 0, 1);
+    
     const fetchData = () => {
         axios
             .get("https://625d83154c36c75357761d85.mockapi.io/Product")
@@ -40,13 +44,11 @@ const Product = () => {
         fetchData()
     }, [sort]);
 
-
-
     return (
         <>
             <div class="container-fluid total-product">
                 <div className="container-banner">
-                    <img src="./img/collection_banner.jpg" alt="" />
+                    <img src={data1.map(data1=>data1.imgurl)} alt="banner" />
                 </div>
                 <Container maxWidth="xl">
 

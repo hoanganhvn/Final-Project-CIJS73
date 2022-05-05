@@ -5,7 +5,7 @@ function BannerOne(props) {
         <>
             <div className={props.class}>
                 <div className="product-img-scale">
-                    <img className={"product-img-scale-" + props.number} src={"img/block_home_category" + props.number + ".jpg"} alt="" />
+                    <img className={"product-img-scale-" + props.number} src={ props.imgurl} alt="" />
                 </div>
                 <h4 className="word1">{props.word1}</h4>
                 <h2 className="word2">{props.word2}</h2>

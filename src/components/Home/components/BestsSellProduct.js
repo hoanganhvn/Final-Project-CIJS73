@@ -1,4 +1,4 @@
-import useFetch from "./useFetch";
+import {useFetch} from "../../../hooks";
 import Product from "./Product";
 import * as _ from 'lodash';
 

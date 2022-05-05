@@ -12,8 +12,10 @@ function Product(props) {
                     {props.name}
                 </a>
                 <h5 className="price">
-                    <span className="price-red">  {props.price * (100 - props.discount) / 100 * 1000}đ</span>
-                    <span className="price-cross">  {props.price * 1000}đ</span>
+                    <span className="price-red">  {(props.price * (100 - props.discount) / 100 * 1000).toString()
+                                            .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ</span>
+                    <span className="price-cross">  {(props.price * 1000).toString()
+                                            .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ</span>
                 </h5>
             </li>
         </>

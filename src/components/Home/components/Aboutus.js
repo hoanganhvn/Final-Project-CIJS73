@@ -6,7 +6,7 @@ function Aboutus() {
             <div className="about">
                 <div className="about-img">
                     <div className="about-img-scale">
-                        <img className="about-img-scale-1" src="img/home_about_image.jpg" alt="" />
+                        <img className="about-img-scale-1"/>
                     </div>
                     <h1 className="about-img-word2">Về chúng tôi</h1>
                     <a href="2Introduction.index.html" target="_blank">

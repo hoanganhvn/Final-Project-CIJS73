@@ -1,14 +1,19 @@
 import Slider from "react-slick";
-import { baseUrl } from "../config";
 import SliderImage from "./SliderImage";
+import { useFetch } from "../../../hooks";
+import * as _ from 'lodash';
 
 function SliderShow() {
+    const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
+    const dataImage = _.slice(data, 4, 10);
+
     const settings = {
         customPaging: function (i) {
             return (
-                <img className="demo" src={`${baseUrl}/home_category_${i + 1}_banner.jpg`} style={{ width: '100%' }} />
+                <a>
+                    <img className="demo" src={dataImage[i].imgurl} style={{ width: '100%' }} />
+                </a>
             );
-
         },
         dots: true,
         dotsClass: "slick-dots slick-thumb",
@@ -17,35 +22,16 @@ function SliderShow() {
         slidesToShow: 1,
         slidesToScroll: 1
     };
-    const dataImage = [1, 2, 3, 4, 5, 6];
 
     return (
         <>
             <div className="container">
                 <Slider {...settings}>
-                    {/* {dataImage.map(
+                    {dataImage.map(
                         (dataImage) => (
-                            <SliderImage number={dataImage} />
+                            <SliderImage number={dataImage.imgurl} />
                         )
-                    )} */}
-                    <div>
-                        <img className="img-slide" src={baseUrl + "/home_category_1_banner.jpg"} style={{ width: '100%' }} />
-                    </div>
-                    <div>
-                        <img className="img-slide" src={baseUrl + "/home_category_2_banner.jpg"} style={{ width: '100%' }} />
-                    </div>
-                    <div>
-                        <img className="img-slide" src={baseUrl + "/home_category_3_banner.jpg"} style={{ width: '100%' }} />
-                    </div>
-                    <div>
-                        <img className="img-slide" src={baseUrl + "/home_category_4_banner.jpg"} style={{ width: '100%' }} />
-                    </div>
-                    <div>
-                        <img className="img-slide" src={baseUrl + "/home_category_5_banner.jpg"} style={{ width: '100%' }} />
-                    </div>
-                    <div>
-                        <img className="img-slide" src={baseUrl + "/home_category_6_banner.jpg"} style={{ width: '100%' }} />
-                    </div>
+                    )}
                 </Slider>
             </div>
         </>

@@ -4,7 +4,6 @@ import Home from "./components/Home/Home";
 import LandingPage from "./components/LandingPage/LandingPage";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import ProductDetail from "./page/ProductDetailPage/ProductDetail";
 import Product from "./page/ProductPage/Product";
 import Layout from './components/Layout/Layout';
 import NoPage from './components/NoPage/NoPage';

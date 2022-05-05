@@ -11,7 +11,7 @@ export const Introduce = () => {
       </h1>
       <div className="hr"></div>
       <br />
-      <div>
+      <div style={{ textAlign: "left" }}>
         <p>
           Trang giới thiệu giúp khách hàng hiểu rõ hơn về cửa hàng của bạn. Hãy
           cung cấp thông tin cụ thể về việc kinh doanh, về cửa hàng, thông tin
@@ -29,17 +29,17 @@ export const Introduce = () => {
           <Paragraphs id="Thông tin liên hệ" />
           <Paragraphs id="Liên kết đến các trang mạng xã hội (Twitter, Facebook)" />
         </div>
+        <p>
+          Bạn có thể chỉnh sửa hoặc xoá bài viết này tại{" "}
+          <strong>
+            <Link to="">đây</Link>
+          </strong>
+          hoặc thêm những bài viết mới trong phần quản lý
+          <strong>
+            <Link to="">Trang nội dung.</Link>
+          </strong>
+        </p>
       </div>
-      <p>
-        Bạn có thể chỉnh sửa hoặc xoá bài viết này tại{" "}
-        <strong>
-          <Link to="">đây</Link>
-        </strong>
-        hoặc thêm những bài viết mới trong phần quản lý
-        <strong>
-          <Link to="">Trang nội dung.</Link>
-        </strong>
-      </p>
     </div>
   );
 };

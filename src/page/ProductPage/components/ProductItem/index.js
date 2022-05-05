@@ -30,7 +30,7 @@ export const ProductItem = (props) => {
                 height="300"
                 ref={hoverRef}
             />
-            <Link to={`/product-detail/${item.id}`} className="link-item">
+            <Link to={`/san-pham/${item.id}`} className="link-item">
                 <Typography gutterBottom variant="h5" component="div">
                     {item.name}
                 </Typography>

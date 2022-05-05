@@ -74,7 +74,7 @@ const ProductDetail = () => {
                         /
                     </li>
                     <li style={{display: "inline-block"}}>
-                        <span>Product Details</span>
+                        <span>Sản phẩm</span>
                     </li>
                 </ol>
             </div>
@@ -216,7 +216,7 @@ const ProductDetail = () => {
                             </Typography>
                         </Grid>
                         {product.map((item) => {
-                            console.log(item);
+                            // console.log(item);
                             return (
                                 <Grid item xs={6} md={3}>
                                     <ProductItem item={item} />

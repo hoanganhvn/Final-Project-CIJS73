@@ -105,25 +105,25 @@ function Header() {
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home3">
-                                <NavLink  className={`nav-link ${activeClass}`} to="/product">Sản phẩm</NavLink>
+                                <NavLink  className={`nav-link ${activeClass}`} to="/gian-hang">Gian hàng</NavLink>
                                 <div className="line3" />
                             </div>
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home4">
-                            <NavLink  className={`nav-link ${activeClass}`} to="/product-detail/:productId">Product Details</NavLink>
+                            <NavLink  className={`nav-link ${activeClass}`} to="/san-pham/1">Sản phẩm</NavLink>
                                 <div className="line4" />
                             </div>
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home5">
-                            <NavLink  className={`nav-link ${activeClass}`} to="/blog">Blog</NavLink>
+                            <NavLink  className={`nav-link ${activeClass}`} to="/tin-tuc">Tin tức</NavLink>
                                 <div className="line5" />
                             </div>
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home6">
-                                <a className="nav-link" href="LandingPage.index.html" target="_blank">Landing Page</a>
+                            <NavLink  className={`nav-link ${activeClass}`} to="/khuyen-mai">Khuyến mại</NavLink>
                                 <div className="line6" />
                             </div>
                         </li>

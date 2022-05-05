@@ -6,7 +6,7 @@ import BestsSellProduct from "./components/BestsSellProduct";
 import Aboutus from "./components/Aboutus";
 import { useEffect, useState } from 'react';
 
-function App() {
+function Home() {
     const [openPopup, setOpenPopup] = useState(false);
     useEffect(() => {
       const timer = setTimeout(() => {
@@ -30,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

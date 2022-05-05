@@ -46,7 +46,7 @@ const Product = () => {
         <>
             <div class="container-fluid total-product">
                 <div className="container-banner">
-                    <img src="img/collection_banner.jpg" alt="" />
+                    <img src="./img/collection_banner.jpg" alt="" />
                 </div>
                 <Container maxWidth="xl">
 

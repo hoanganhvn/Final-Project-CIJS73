@@ -1,34 +1,68 @@
-import "../style.css";
-import "./index.css";
+import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
-// import Directory from "./../Directory/index";
-// import { JSONDATA } from "MOCK_DATA.json";
+import "./index.css";
+import CloseIcon from "@mui/icons-material/Close";
 
-export const Search = (props) => {
-  const [search, setSearch] = useState(props.keywork);
-  const handleSearch = () => {
-    props.changeHandleSearch(search);
+export const Search = ({ placeholder, data }) => {
+  const [filteredData, setFilteredData] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
+
+  const handleFilter = (e) => {
+    const searchWord = e.target.value;
+    setWordEntered(searchWord);
+    const newFilter = data.filter((value) => {
+      return value.name.toLowerCase().includes(searchWord.toLowerCase());
+    });
+
+    if (searchWord === "") {
+      setFilteredData([]);
+    } else {
+      setFilteredData(newFilter);
+    }
   };
-  // console.log("he");
+
+  const clearInput = () => {
+    setFilteredData([]);
+    setWordEntered("");
+  };
 
   return (
     <div>
-      <h1 className="title"> Tìm Kiếm </h1>
-      <div className="hr"> </div>
-      <div id="search">
-        <input
-          width={"100%"}
-          id="searchBar"
-          type="text"
-          placeholder="Search..."
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
-        />
-
-        <button type="submit" id="searchBtn" onClick={handleSearch}>
-          Search
-        </button>
+      <h1 className="title">
+        <strong>Tìm kiếm</strong>
+      </h1>
+      <div className="hr"></div>
+      <br />
+      <div className="search">
+        <div className="searchInputs">
+          <input
+            type="text"
+            placeholder={placeholder}
+            value={wordEntered}
+            onChange={handleFilter}
+          />
+          <div className="searchIcon">
+            {filteredData.length === 0 ? (
+              <SearchIcon />
+            ) : (
+              <CloseIcon id="clearBtn" onClick={clearInput} />
+            )}
+          </div>
+        </div>
+        {filteredData.length !== 0 && (
+          <div className="dataResult">
+            {filteredData.slice().map((value, key) => {
+              console.log(value.image);
+              return (
+                <div>
+                  <a className="dataItem" href={value.image} target="_blank">
+                    <p> {value.name}</p>
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import { Contact } from "../Directory/Contact";
 import { Service } from "../Directory/Service/index";
 import { Restore } from "./../Directory/Restore/index";
 import { Image } from "./../Directory/Img/index";
+import ProductData from "./Product.json";
 
 const Directory = () => {
   return (
@@ -35,7 +36,10 @@ const Directory = () => {
       <div className="content1">
         <Routes>
           <Route path="/introduce" element={<Introduce />} />
-          <Route path="/search" element={<Search />} />{" "}
+          <Route
+            path="/search"
+            element={<Search placeholder=" Search..." data={ProductData} />}
+          />{" "}
           <Route path="/restore" element={<Restore />} />{" "}
           <Route path="/privacy" element={<Privacy />} />{" "}
           <Route path="/service" element={<Service />} />{" "}

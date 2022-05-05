@@ -55,7 +55,7 @@ export const Search = ({ placeholder, data }) => {
               console.log(value.image);
               return (
                 <div>
-                  <a className="dataItem" href={value.image} target="_blank">
+                  <a className="dataItem" href={value.image[0]} target="_blank">
                     <p> {value.name}</p>
                   </a>
                 </div>

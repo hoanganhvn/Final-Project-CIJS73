@@ -135,3 +135,10 @@ h6 a:hover {
 }
 
 /* End setup defaults */
+.blog-content{
+    padding-top: 20px;
+    height: 100%;
+    /* padding-left: 75px;
+    padding-right: 75px; */
+    width: 100%;
+}

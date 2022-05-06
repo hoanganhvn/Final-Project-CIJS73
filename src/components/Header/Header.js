@@ -4,7 +4,7 @@ import Cart from "./components/Cart";
 import Menu from "./components/Menu";
 import { useState } from "react";
 import './Header.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 
 function Header() {
     const [openSearch, setOpenSearch] = useState(false);
@@ -70,9 +70,9 @@ function Header() {
                     </div>
                     <div className="col-md-8 header-logo">
                         <div className="wrap-logo text-center">
-                            <a href="index.html" target="_blank">
+                            <Link to="/" >
                                 Fresh Organic
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-md-2 icon text-right">
@@ -99,7 +99,7 @@ function Header() {
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home2">
-                                <a className="nav-link" href="2Introduction.index.html" target="_blank">Giới thiệu</a>
+                            <NavLink className={`nav-link ${activeClass}`} to="/gioi-thieu">Giới thiệu</NavLink>
                                 <div className="line2" />
                             </div>
                         </li>

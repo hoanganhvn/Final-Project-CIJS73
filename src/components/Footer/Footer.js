@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 function Footer() {
 
@@ -45,24 +46,24 @@ function Footer() {
                                     <span>
                                         Fresh Organic trang mua sắm trực tuyến của thương hiệu thời trang Lama, thời trang nam, nữ, phụ kiện, giúp bạn tiếp cận xu hướng thời trang mới nhất.
                                     </span>
-                                    <a href="#">
+                                    <Link to="/">
                                         <img src="https://theme.hstatic.net/1000309753/1000718324/14/logo_bct.png?v=209" alt="" />
-                                    </a>
+                                    </Link>
                                     <div className="foot-icon">
                                         <i className="fa fa-facebook">
-                                            <a href="https://fresh-organic-food.myharavan.com/" />
+                                           <Link to="/" />
                                         </i>
                                         <i className="fa fa-twitter">
-                                            <a href="https://fresh-organic-food.myharavan.com/" />
+                                           <Link to="/" />
                                         </i>
                                         <i className="fa fa-instagram">
-                                            <a href="https://fresh-organic-food.myharavan.com/" />
+                                           <Link to="/" />
                                         </i>
                                         <i className="fa fa-google">
-                                            <a href="https://fresh-organic-food.myharavan.com/" />
+                                           <Link to="/" />
                                         </i>
                                         <i className="fa fa-youtube-play">
-                                            <a href="https://fresh-organic-food.myharavan.com/" />
+                                           <Link to="/" />
                                         </i>
                                     </div>
                                 </div>
@@ -85,9 +86,9 @@ function Footer() {
                                     <div className="fax">
                                         <i className="fa fa-print" />
                                         <span>
-                                            <a href="tel:+1900636099">
+                                           <Link to="/tel:+1900636099">
                                                 1900.636.099
-                                            </a>
+                                            </Link>
                                         </span>
                                     </div>
                                     <div className="email">
@@ -102,19 +103,19 @@ function Footer() {
                                         Liên kết
                                     </h3>
                                     <span>
-                                        <a href="product.html" target="_blank">
+                                       <Link to="/san-pham/1" >
                                             Sản phẩm khuyến mãi
-                                        </a>
+                                        </Link>
                                     </span>
                                     <span>
-                                        <a href="product.html" target="_blank">
+                                       <Link to="/san-pham/1">
                                             Sản phẩm nổi bật
-                                        </a>
+                                        </Link>
                                     </span>
                                     <span>
-                                        <a href="product.html" target="_blank">
+                                       <Link to="/san-pham/1">
                                             Tất cả sản phẩm
-                                        </a>
+                                        </Link>
                                     </span>
                                 </div>
                                 <div className="col-md-6 col-lg-3 support">
@@ -122,34 +123,34 @@ function Footer() {
                                         Hỗ trợ
                                     </h3>
                                     <span>
-                                        <a href="1Searching.index.html" target="_blank">
+                                       <Link to="/gioi-thieu/searching">
                                             Tìm kiếm
-                                        </a>
+                                        </Link>
                                     </span>
                                     <span>
-                                        <a href="2Introduction.index.html" target="_blank">
+                                       <Link to="/gioi-thieu">
                                             Giới thiệu
-                                        </a>
+                                        </Link>
                                     </span>
                                     <span>
-                                        <a href="3Restore.index.html" target="_blank">
+                                       <Link to="/gioi-thieu/restore">
                                             Chính sách đổi trả
-                                        </a>
+                                        </Link>
                                     </span>
                                     <span>
-                                        <a href="4Privacy.index.html" target="_blank">
+                                       <Link to="/gioi-thieu/privacy">
                                             Chính sách bảo mật
-                                        </a>
+                                        </Link>
                                     </span>
                                     <span>
-                                        <a href="5Service.index.html" target="_blank">
+                                       <Link to="/gioi-thieu/service">
                                             Điều khoản dịch vụ
-                                        </a>
+                                        </Link>
                                     </span>
                                     <span>
-                                        <a href="6Contact.index.html" target="_blank">
+                                       <Link to="/gioi-thieu/contact">
                                             Liên hệ
-                                        </a>
+                                        </Link>
                                     </span>
                                 </div>
                             </div>

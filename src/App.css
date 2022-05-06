@@ -391,6 +391,15 @@ h6 a:hover {
   text-align: center;
 }
 
+.discount-opacity {
+  left: 0;
+  color: red;
+  border: 1px solid rgb(206, 206, 206);
+  width: 20%;
+  text-align: center;
+  opacity: 0;
+}
+
 .discount-5 {
   border: 1px solid rgb(255, 255, 255);
   color: white;
@@ -440,10 +449,18 @@ h6 a:hover {
 .price-red {
   color: red;
 }
+.price-red-no-discount {
+  color: rgb(151, 151, 151);
+}
 
 .price-cross {
   font-size: 0.8rem;
   text-decoration: line-through rgb(151, 151, 151);
+}
+.price-cross-opacity {
+  font-size: 0.8rem;
+  text-decoration: line-through rgb(151, 151, 151);
+  opacity: 0;
 }
 
 .price-red-5 {
@@ -556,7 +573,7 @@ h6 a:hover {
   filter: brightness(0.5);
   height: 90vh;
   width: 100%;
-  background-image: url("img/home_about_image.jpg");
+  /* background-image: url("img/home_about_image.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1085,7 +1102,7 @@ span.psw {
 }
 
 .modal-get-email {
-  background-image: url("img/popup_contact_bkg.jpg");
+  /* background-image: url("img/popup_contact_bkg.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
@@ -1165,13 +1182,13 @@ h4 {
 }
 
 .slick-dots {
-  top: 440px;
+  top: 71vh;
   overflow: hidden;
 }
 
 .slick-dots li {
   width: 13.5vw;
-  height: 100%;
+  height: 20vh;
   overflow: hidden;
   /* padding: 200px 0 0 0; */
   margin: 0;
@@ -1195,7 +1212,9 @@ h4 {
 
 .slick-slider {
   height: 85vh;
-  margin-bottom: 30px;
+  /* width: 90vw;
+  margin:   0 0 8vh -5vw; */
+  /* margin-bottom: 30px; */
 }
 
 

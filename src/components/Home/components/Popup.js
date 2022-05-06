@@ -1,5 +1,7 @@
 import Modal from '@mui/material/Modal';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useFetch } from "../../../hooks";
+import * as _ from 'lodash';
 
 const theme = createTheme({
     palette: {
@@ -13,7 +15,9 @@ const theme = createTheme({
 });
 
 function Popup(props) {
-
+    const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
+    const dataImgurl = _.slice(data, 11, 12);
+console.log(dataImgurl);
     return (
         <>
             <ThemeProvider theme={theme}>
@@ -23,7 +27,7 @@ function Popup(props) {
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
-                    <div className="modal-content modal-get-email">
+                    <div className="modal-content modal-get-email" style={{ backgroundImage: `url(${dataImgurl.map(dataImgurl=>dataImgurl.imgurl)}` }}>
                         <div className="modal-header-email">
                             <h2>Đăng ký nhận thông tin</h2>
                             <h4>

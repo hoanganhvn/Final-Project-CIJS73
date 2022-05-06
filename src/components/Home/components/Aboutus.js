@@ -1,19 +1,25 @@
+import {useFetch} from "../../../hooks";
+import * as _ from 'lodash';
+import { Link } from 'react-router-dom';
 
 function Aboutus() {
+    const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
+    const dataImgurl = _.slice(data, 10, 11);
 
     return (
         <>
             <div className="about">
                 <div className="about-img">
                     <div className="about-img-scale">
-                        <img className="about-img-scale-1"/>
+                        <img className="about-img-scale-1"  src={dataImgurl.map(dataImgurl=>dataImgurl.imgurl)}/>
                     </div>
+
                     <h1 className="about-img-word2">Về chúng tôi</h1>
-                    <a href="2Introduction.index.html" target="_blank">
+                    <Link to="/gioi-thieu">
                         <h3 className="about-img-word3">
                             XEM NGAY
                         </h3>
-                    </a>
+                    </Link>
                 </div>
                 <div className="about-word">
                     <p>
@@ -47,7 +53,7 @@ function Aboutus() {
                         Liên kết đến các trang mạng xã hội (Twitter, Facebook)
                     </p>
                     <p>
-                        Bạn có thể chỉnh sửa hoặc xoá bài viết này <span className="black-word"><a href="https://fresh-organic-food.myharavan.com/adminv2/sale_channels/web/pages/1000592972">tại đây</a></span>  hoặc thêm những bài viết mới trong phần quản lý <span className="black-word"><a href="https://fresh-organic-food.myharavan.com/adminv2/sale_channels/web/pages/1000592972">Trang nội dung.</a></span>
+                        Bạn có thể chỉnh sửa hoặc xoá bài viết này <span className="black-word"><Link to="/">tại đây</Link></span>  hoặc thêm những bài viết mới trong phần quản lý <span className="black-word"><Link to="/">Trang nội dung.</Link></span>
                     </p>
                 </div>
             </div>

@@ -10,6 +10,7 @@ import * as _ from "lodash";
 import { ProductItem } from "../ProductPage/components/ProductItem";
 import { useParams } from "react-router-dom";
 import Alert from "@mui/material/Alert";
+import { Link } from "react-router-dom";
 
 const ProductDetail = () => {
     const [detail, setDetail] = useState();
@@ -67,13 +68,13 @@ const ProductDetail = () => {
         <Container maxWidth="xl">
             <div className="product-breadcrumb">
                 <ol className="product-text-breadcrumb">
-                    <li style={{display: "inline-block"}}>
-                        <a href="index.html" target="_blank">Trang chủ </a>
+                    <li style={{ display: "inline-block" }}>
+                        <Link to="/" >Trang Chủ </Link>
                     </li>
-                    <li style={{display: "inline-block"}}>
+                    <li style={{ display: "inline-block" }}>
                         /
                     </li>
-                    <li style={{display: "inline-block"}}>
+                    <li style={{ display: "inline-block" }}>
                         <span>Sản phẩm</span>
                     </li>
                 </ol>
@@ -209,9 +210,9 @@ const ProductDetail = () => {
                                 align="center"
                             >
                                 <div className="product-best-mobile ">
-                                    <a href="#">
+                                    <Link to='/'>
                                         Sản Phẩm Liên Quan
-                                    </a>
+                                    </Link>
                                 </div>
                             </Typography>
                         </Grid>

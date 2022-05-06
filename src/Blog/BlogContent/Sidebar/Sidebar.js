@@ -1,6 +1,5 @@
-import { MenuBlog } from "./MenuBlog/MenuBlog";
-import { NewsLatest } from "./NewsLatest/NewsLatest";
-import "./Sidebar.css"
+import MenuBlog from "./MenuBlog/MenuBlog";
+import NewsLatest from "./NewsLatest/NewsLatest";
 import { useState, useEffect } from "react";
 
 const Sidebar = () => {
@@ -14,16 +13,20 @@ const Sidebar = () => {
 
     console.log(blogData);
 
-    useEffect(() =>{
+    useEffect(() => {
         fetchBlog()
     }, [])
 
     return (
-        <div className="col-md-3 col-sm-12 col-xs-12">
-            <NewsLatest />
-            <MenuBlog />
+        <div class="blog-content">
+
+                <div class="col-md-12 col-sm-12 col-xs-12 ">
+                    <NewsLatest />
+                    <MenuBlog />
+                </div>
+      
         </div>
     )
 }
 
-export { Sidebar };
+export default Sidebar;

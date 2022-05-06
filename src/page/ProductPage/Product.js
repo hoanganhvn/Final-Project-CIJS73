@@ -7,6 +7,7 @@ import "./style.css"
 import * as _ from 'lodash';
 import { ProductItem } from "./components/ProductItem";
 import {useFetch} from "../../hooks";
+import { Link } from "react-router-dom";
 
 const Product = () => {
     const [product, setProduct] = useState([]);
@@ -16,8 +17,8 @@ const Product = () => {
     });
 
     const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
-    const data1 = _.slice(data, 0, 1);
-    
+    const dataImgurl = _.slice(data, 0, 1);
+
     const fetchData = () => {
         axios
             .get("https://625d83154c36c75357761d85.mockapi.io/Product")
@@ -48,7 +49,7 @@ const Product = () => {
         <>
             <div class="container-fluid total-product">
                 <div className="container-banner">
-                    <img src={data1.map(data1=>data1.imgurl)} alt="banner" />
+                    <img src={dataImgurl.map(dataImgurl=>dataImgurl.imgurl)} alt="" />
                 </div>
                 <Container maxWidth="xl">
 
@@ -58,9 +59,9 @@ const Product = () => {
                                 <div className="box-header">
                                     <div></div>
                                     <div className="product">
-                                        <a href="#">
+                                        <Link to="/">
                                             Tất cả sản phẩm
-                                        </a>
+                                        </Link>
 
                                     </div>
 

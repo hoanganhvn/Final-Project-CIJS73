@@ -13,13 +13,13 @@
 .box-price {
     /* border: 1px solid black; */
     padding: 4px 0;
-    color: red;
+    color: rgb(151, 151, 151);
 }
 
 .box-price-discount {
     /* border: 1px solid black; */
     padding: 4px 0;
-    color: #252a2b;
+    color: red;
 }
 
 .css-sghohy-MuiButtonBase-root-MuiButton-root {

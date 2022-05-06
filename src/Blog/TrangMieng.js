@@ -1,9 +1,9 @@
 import "./Blog.css"
 import BreadCrumb from "./BreadCrumb/BreadCrumb";
 import Sidebar from "./BlogContent/Sidebar/Sidebar";
-import MainBlog from "./BlogContent/MainContent/MainBlog";
+import Article3 from "./BlogContent/MainContent/Article3";
 
-const Blog = () => {
+const TrangMieng = () => {
     return (
         <>
             <div className="container-fluid">
@@ -15,16 +15,19 @@ const Blog = () => {
                                 <Sidebar />
                             </div>
                             <div class="col-md-9 col-lg-9">
-                                <MainBlog />
+                                <Article3 />
+                                
                             </div>
-
+                      
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </>
 
     )
 }
 
-export default Blog;
+export default TrangMieng;

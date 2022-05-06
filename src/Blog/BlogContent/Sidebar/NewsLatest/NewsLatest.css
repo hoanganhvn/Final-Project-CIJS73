@@ -4,6 +4,7 @@
     padding: 20px;
     border: 1px solid #e3e5ec;
     height: 600px;
+    width: 100%;
 }
 
 .sidebar-title h2 {
@@ -37,4 +38,11 @@ img {
 
 .sidebar-post h3{
     font-size: 14px;
+}
+
+.sidebar-article a {
+    color: #252a2b;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
 }

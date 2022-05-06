@@ -1,0 +1,144 @@
+/* Start setup defaults */
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.fa {
+    font-family: 'FontAwesome';
+}
+
+html,
+body {
+    border: 0;
+    background-color: #fff;
+}
+
+html {
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    line-height: 1.4;
+    font-size: 14px;
+    color: #252a2b;
+    overflow-x: hidden;
+    background: #fff;
+    position: initial !important;
+}
+
+/* 1.2 - HTML5 Elements */
+article,
+aside,
+details,
+figcaption,
+figure,
+dialog,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* 1.4 - Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #252a2b;
+    margin: 0 0 13px 0;
+    font-weight: 500;
+    line-height: 1.2
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+h5 {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+h6 {
+    font-size: 10px;
+    line-height: 18px;
+}
+
+p {
+    margin: 0 0 10px 0;
+    line-height: 21px
+}
+
+/* 1.5 - Links and Buttons */
+a {
+    color: #252a2b;
+    text-decoration: none;
+    outline: none;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    color: #66a55f;
+    text-decoration: none;
+    outline: none;
+}
+
+a:active {
+    outline: none;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #252a2b;
+    line-height: 1.1;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+    color: #66a55f;
+}
+
+/* End setup defaults */
+.blog-content{
+    padding-top: 20px;
+    height: 100%;
+    /* padding-left: 75px;
+    padding-right: 75px; */
+    width: 100%;
+}

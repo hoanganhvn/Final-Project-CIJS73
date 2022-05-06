@@ -1,0 +1,55 @@
+#childWeb1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+#Sline {
+    background-color: black;
+    width: 5%;
+    height: 4px;
+}
+#search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searchBar {
+    height: 55px;
+    width: 50%;
+    padding-left: 20px;
+    margin-top: 20px;
+    background-color: #ededed;
+    border: 1px solid #ededed;
+}
+#searchBtn {
+    height: 55px; 
+    width: 55px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}
+#searchBtn:hover {
+    color: #66a55f;
+}
+#p1 {
+    margin-top: 25px;
+}
+#p2 {
+    margin-bottom: 250px;
+}
+
+@media only screen and (max-width: 900px) {
+    #Sline {
+        width: 20%;
+    }
+    #searchBar {
+        width: 70%;
+    }
+    p {
+        text-align: center;
+        padding: 0rem 1rem;
+    }
+}

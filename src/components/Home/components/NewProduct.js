@@ -18,7 +18,7 @@ function NewProduct() {
                 <ul className="product-top">
                     {dataImgurl.map(
                         (dataImgurl) => (
-                            <Product discount={dataImgurl.discount} image={dataImgurl.image[0]} name={dataImgurl.name} price={dataImgurl.price} />
+                            <Product discount={dataImgurl.discount} image={dataImgurl.image[0]} name={dataImgurl.name} price={dataImgurl.price} id={dataImgurl.id}/>
                         )
                     )}
                 </ul>

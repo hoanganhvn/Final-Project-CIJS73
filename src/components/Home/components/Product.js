@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 function Product(props) {
 
@@ -8,9 +9,9 @@ function Product(props) {
                 <div className="img-detail">
                     <img className="img-detail-1" src={props.image} alt="" />
                 </div>
-                <a className="name" href="Bánh_quy.html">
+                <Link className="name" to={`/san-pham/${props.id}`}>
                     {props.name}
-                </a>
+                </Link>
                 <h5 className="price">
                     {props.discount !== 0 ?
                         <>

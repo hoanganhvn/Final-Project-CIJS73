@@ -5,6 +5,8 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Product from "./page/ProductPage/Product";
+import ProductDetail from "./page/ProductDetailPage/ProductDetail";
+import ProductLayout from "./page/ProductPage/ProductLayout";
 import Layout from './components/Layout/Layout';
 import NoPage from './components/NoPage/NoPage';
 import Blog from "./Blog/Blog";
@@ -29,7 +31,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/san-pham/:productId" element={<Product />} />
+          <Route path="/san-pham" element={<ProductLayout />} >
+            <Route index element={<Product />} />
+            <Route path="/san-pham/:productId" element={<ProductDetail />} />
+          </Route>
           <Route path="/gioi-thieu" element={<IntroductionLayout />} >
             <Route index element={<Introduction />} />
             <Route path="restore" element={<Restore />} />

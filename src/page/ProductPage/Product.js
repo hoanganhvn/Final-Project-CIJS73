@@ -59,7 +59,7 @@ const Product = () => {
                                 <div className="box-header">
                                     <div></div>
                                     <div className="product">
-                                        <Link to="/">
+                                        <Link to="/san-pham">
                                             Tất cả sản phẩm
                                         </Link>
 

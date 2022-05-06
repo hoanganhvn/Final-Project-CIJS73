@@ -105,7 +105,7 @@ function Header() {
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home3">
-                                <NavLink className={`nav-link ${activeClass}`} to="/san-pham/1">Sản phẩm</NavLink>
+                                <NavLink className={`nav-link ${activeClass}`} to="/san-pham">Sản phẩm</NavLink>
                                 <div className="line3" />
                             </div>
                         </li>

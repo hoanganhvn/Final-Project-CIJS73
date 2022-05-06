@@ -710,7 +710,9 @@ h6 a:hover {
   height: 55px;
   width: 150px;
   display: block;
-  margin: 15px 0;
+  /* margin: 15px 0; */
+  background-size: cover;
+  overflow: hidden;
 }
 
 .foot-icon i {
@@ -1317,7 +1319,7 @@ h4 {
   .infomation,
   .link,
   .support {
-    padding: 0 5% 0% 5%;
+    margin: 0 5% 0% 5%;
   }
 
   .foot-down {

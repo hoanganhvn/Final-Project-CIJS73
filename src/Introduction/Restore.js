@@ -1,8 +1,12 @@
 import "./Restore.css";
 import { Link } from "react-router-dom";
 import ImaginIntrodution from "./ImaginIntrodution";
+import  { useEffect } from 'react';
 
 function Restore() {
+    useEffect(() => {
+        document.title = "Fresh Organic - Chính sách đổi trả"
+      }, [])
 
     return (
         < >

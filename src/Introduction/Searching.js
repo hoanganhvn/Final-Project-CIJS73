@@ -1,6 +1,10 @@
 import "./Searching.css";
+import  { useEffect } from 'react';
 
 function Searching() {
+    useEffect(() => {
+        document.title = "Fresh Organic - Tìm kiếm"
+      }, [])
 
     return (
         < >

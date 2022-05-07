@@ -4,23 +4,18 @@ import NewProduct from "./components/NewProduct";
 import Banner from "./components/Banner";
 import BestsSellProduct from "./components/BestsSellProduct";
 import Aboutus from "./components/Aboutus";
-import { useEffect, useState } from 'react';
+import  { useEffect } from 'react';
 
 function Home() {
-    const [openPopup, setOpenPopup] = useState(false);
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setOpenPopup(true);
-      }, 2000);
-      return () => clearTimeout(timer);
-    }, []);
-    const handleClosePopup = () => setOpenPopup(false);
+  useEffect(() => {
+    document.title = "Fresh Organic - Home"
+  }, [])
 
   return (
     < >
       <div className="container-fluid">
       <SliderShow />
-      <Popup openPopup={openPopup} handleClosePopup={handleClosePopup} />
+      <Popup />
       <NewProduct />
       <Banner />
       <BestsSellProduct />

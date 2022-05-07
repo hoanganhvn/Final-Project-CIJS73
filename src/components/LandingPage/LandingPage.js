@@ -6,6 +6,7 @@
 // import Aboutus from "./components/Aboutus";
 // import { useEffect, useState } from 'react';
 import "./LandingPage.css";
+import  { useEffect } from 'react';
 
 function LandingPage() {
     // const [openPopup, setOpenPopup] = useState(false);
@@ -16,6 +17,9 @@ function LandingPage() {
     //   return () => clearTimeout(timer);
     // }, []);
     // const handleClosePopup = () => setOpenPopup(false);
+    useEffect(() => {
+        document.title = "Fresh Organic - Khuyến mại"
+      }, [])
 
     return (
         < >

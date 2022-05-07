@@ -45,6 +45,10 @@ const Product = () => {
         fetchData()
     }, [sort]);
 
+    useEffect(() => {
+        document.title = "Fresh Organic - Sản phẩm"
+      }, [])
+
     return (
         <>
             <div class="container-fluid total-product">

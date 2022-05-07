@@ -1,8 +1,12 @@
 import "./Privacy.css";
 import { Link } from "react-router-dom";
 import ImaginIntrodution from "./ImaginIntrodution";
+import  { useEffect } from 'react';
 
 function Privacy() {
+    useEffect(() => {
+        document.title = "Fresh Organic - Chính sách bảo mật"
+      }, [])
 
     return (
         < >

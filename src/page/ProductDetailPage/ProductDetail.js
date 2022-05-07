@@ -9,7 +9,7 @@ import "./style.css";
 import * as _ from "lodash";
 import { ProductItem } from "../ProductPage/components/ProductItem";
 import { useParams } from "react-router-dom";
-import Alert from "@mui/material/Alert";
+// import Alert from "@mui/material/Alert";
 import { Link } from "react-router-dom";
 
 const ProductDetail = () => {
@@ -64,17 +64,21 @@ const ProductDetail = () => {
         detail && setSelectedImg(detail.image[0]);
     }, [detail]);
 
+    useEffect(() => {
+        document.title = "Fresh Organic - Sản phẩm chi tiết"
+      }, [])
+
     return (
         <Container maxWidth="xl">
             <div className="product-breadcrumb">
                 <ol className="product-text-breadcrumb">
-                    <li style={{display: "inline-block"}}>
-                    <Link to="/" >Trang Chủ </Link>
+                    <li style={{ display: "inline-block" }}>
+                        <Link to="/" >Trang Chủ </Link>
                     </li>
-                    <li style={{display: "inline-block"}}>
+                    <li style={{ display: "inline-block" }}>
                         /
                     </li>
-                    <li style={{display: "inline-block"}}>
+                    <li style={{ display: "inline-block" }}>
                         <span>Sản phẩm</span>
                     </li>
                 </ol>
@@ -169,21 +173,24 @@ const ProductDetail = () => {
                                                     updateProductInStock(detail.id, detail.inStock - count)
                                                     setStatus(true)
                                                 }
+                                                setTimeout(() => {
+                                                    setStatus(false);
+                                                }, 2000);
                                             }}
                                             style={{ height: 40 }}
                                         >
-                                            THÊM VÀO GIỎ
+                                            {status ? "ĐÃ THÊM VÀO GIỎ HÀNG" : " THÊM VÀO GIỎ HÀNG"}
                                         </Button>
                                     ) : (
                                         <Button variant="contained" disabled>
                                             HẾT HÀNG
                                         </Button>
                                     )}
-                                    {status && (
+                                    {/* {status && (
                                         <Alert onClose={() => { setStatus(false) }} variant="outlined" severity="success" className="box-alert">
-                                            Thêm thành công !
+                                            Thêm thành công!
                                         </Alert>
-                                    )}
+                                    )} */}
                                 </div>
                                 <hr />
                                 <span>
@@ -210,7 +217,7 @@ const ProductDetail = () => {
                                 align="center"
                             >
                                 <div className="product-best-mobile ">
-                        <Link to='/'>
+                                    <Link to='/'>
                                         Sản Phẩm Liên Quan
                                     </Link>
                                 </div>

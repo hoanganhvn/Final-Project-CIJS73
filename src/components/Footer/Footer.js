@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Footer() {
+    const [email, setEmail] = useState(false);
+    const [inputEmail, setInputEmail] = useState("");
+    const handleSubmitEmail = () => {
+        setInputEmail("");
+        setEmail(true);
+        setTimeout(() => {
+            setEmail(false);
+        }, 5000);
+    }
 
     return (
         <>
@@ -20,9 +30,9 @@ function Footer() {
                                 <div className="col-md-12 col-lg-5 foot-email">
                                     <div className="container">
                                         <div className="row">
-                                            <input className="col-md-6 col-lg-9 input-email" type="text" placeholder="   Nhập email của bạn" />
-                                            <div className="col-md-2 col-lg-3 foot-input-email">
-                                                ĐĂNG KÝ
+                                            <input className="col-md-5 col-lg-8 input-email" type="text"  value={inputEmail} onChange={(e) => setInputEmail(e.target.value)} placeholder="   Nhập email của bạn" />
+                                            <div className="col-md-3 col-lg-4 foot-input-email text-center" onClick={handleSubmitEmail}>
+                                                {email ? "THÀNH CÔNG!" : "ĐĂNG KÝ"}
                                             </div>
                                         </div>
                                     </div>
@@ -51,19 +61,19 @@ function Footer() {
                                     </Link>
                                     <div className="foot-icon">
                                         <i className="fa fa-facebook">
-                                           <Link to="/" />
+                                            <Link to="/" />
                                         </i>
                                         <i className="fa fa-twitter">
-                                           <Link to="/" />
+                                            <Link to="/" />
                                         </i>
                                         <i className="fa fa-instagram">
-                                           <Link to="/" />
+                                            <Link to="/" />
                                         </i>
                                         <i className="fa fa-google">
-                                           <Link to="/" />
+                                            <Link to="/" />
                                         </i>
                                         <i className="fa fa-youtube-play">
-                                           <Link to="/" />
+                                            <Link to="/" />
                                         </i>
                                     </div>
                                 </div>
@@ -86,7 +96,7 @@ function Footer() {
                                     <div className="fax">
                                         <i className="fa fa-print" />
                                         <span>
-                                           <Link to="/tel:+1900636099">
+                                            <Link to="/tel:+1900636099">
                                                 1900.636.099
                                             </Link>
                                         </span>
@@ -103,17 +113,17 @@ function Footer() {
                                         Liên kết
                                     </h3>
                                     <span>
-                                       <Link to="/san-pham/1" >
+                                        <Link to="/san-pham/1" >
                                             Sản phẩm khuyến mãi
                                         </Link>
                                     </span>
                                     <span>
-                                       <Link to="/san-pham/1">
+                                        <Link to="/san-pham/1">
                                             Sản phẩm nổi bật
                                         </Link>
                                     </span>
                                     <span>
-                                       <Link to="/san-pham/1">
+                                        <Link to="/san-pham/1">
                                             Tất cả sản phẩm
                                         </Link>
                                     </span>
@@ -123,32 +133,32 @@ function Footer() {
                                         Hỗ trợ
                                     </h3>
                                     <span>
-                                       <Link to="/gioi-thieu/searching">
+                                        <Link to="/gioi-thieu/searching">
                                             Tìm kiếm
                                         </Link>
                                     </span>
                                     <span>
-                                       <Link to="/gioi-thieu">
+                                        <Link to="/gioi-thieu">
                                             Giới thiệu
                                         </Link>
                                     </span>
                                     <span>
-                                       <Link to="/gioi-thieu/restore">
+                                        <Link to="/gioi-thieu/restore">
                                             Chính sách đổi trả
                                         </Link>
                                     </span>
                                     <span>
-                                       <Link to="/gioi-thieu/privacy">
+                                        <Link to="/gioi-thieu/privacy">
                                             Chính sách bảo mật
                                         </Link>
                                     </span>
                                     <span>
-                                       <Link to="/gioi-thieu/service">
+                                        <Link to="/gioi-thieu/service">
                                             Điều khoản dịch vụ
                                         </Link>
                                     </span>
                                     <span>
-                                       <Link to="/gioi-thieu/contact">
+                                        <Link to="/gioi-thieu/contact">
                                             Liên hệ
                                         </Link>
                                     </span>

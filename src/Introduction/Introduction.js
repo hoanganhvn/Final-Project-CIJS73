@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import ImaginIntrodution from "./ImaginIntrodution";
 import "./Introduction.css";
+import  { useEffect } from 'react';
 
 function Introduction() {
+    useEffect(() => {
+        document.title = "Fresh Organic - Giới thiệu"
+      }, [])
 
     return (
         < >

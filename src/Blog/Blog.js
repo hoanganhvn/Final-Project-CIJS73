@@ -2,8 +2,13 @@ import "./Blog.css"
 import BreadCrumb from "./BreadCrumb/BreadCrumb";
 import Sidebar from "./BlogContent/Sidebar/Sidebar";
 import MainBlog from "./BlogContent/MainContent/MainBlog";
+import  { useEffect } from 'react';
 
 const Blog = () => {
+    useEffect(() => {
+        document.title = "Fresh Organic - Tin tức"
+      }, [])
+
     return (
         <>
             <div className="container-fluid">

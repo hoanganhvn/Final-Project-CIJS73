@@ -1,7 +1,11 @@
 import "./Contact.css";
 import { Link } from 'react-router-dom';
+import  { useEffect } from 'react';
 
 function Contact() {
+  useEffect(() => {
+    document.title = "Fresh Organic - Liên hệ"
+  }, [])
 
   return (
     < >

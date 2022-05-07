@@ -45,7 +45,7 @@
 
 .btnSub,
 .btnAdd {
-    padding: 0 10px;
+    /* padding: 0 10px; */
     border: 1px solid #F5F5F5;
     background-color: #F5F5F5;
     width: 30%;
@@ -69,7 +69,7 @@
     width: 80px;
     text-align: center;
     border: 1px solid #F5F5F5;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     width: 30% !important;
     font-size: 2rem;
     font-weight: bold;
@@ -80,7 +80,13 @@
     padding: 1px 10px;
     height: 40px;
 }
-
+.css-dcrfqy-MuiPaper-root-MuiAlert-root{
+    /* font-size: 0.4rem !important; */
+    width: 80%;
+}
+.css-1erij54{
+    font-size: 0.4rem !important;
+}
 .css-mhc70k-MuiGrid-root {
     margin-top: 30px !important;
 }
@@ -120,7 +126,7 @@
     .btnSub,
     .btnAdd,
     .txtInput {
-        height: 5vh;
+        height: 10%!important;
         width: 20%;
     }
 
@@ -130,6 +136,10 @@
         font-weight: bold;
         margin-left: 10px;
         margin-top: 20px;
+    }
+    .css-dcrfqy-MuiPaper-root-MuiAlert-root{
+        font-size: 0 !important;
+        width: 40%;
     }
 }
 
@@ -176,4 +186,20 @@
         font-size: 1.5rem;
         padding-top: 30px;
       }
+    /* .css-dcrfqy-MuiPaper-root-MuiAlert-root{
+        width: 35%;
+        padding-left: -35%;
+    } */
+    .css-dcrfqy-MuiPaper-root-MuiAlert-root{
+        width: 35%;
+        height: 10vh;
+        display: block!important;
+    }
+    .css-ki1hdl-MuiAlert-action {
+    padding: 0!important;
+    }
+    .css-sghohy-MuiButtonBase-root-MuiButton-root{
+        width: 100%;
+        height: 10vh!important;
+    }
 }

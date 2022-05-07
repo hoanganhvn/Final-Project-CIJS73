@@ -56,8 +56,8 @@ function Header() {
     return (
         <>
             < header className="header" >
-                < Search openSearch={openSearch} handleCloseSearch={handleCloseSearch} />
                 < LoginAndRegister openLoginAndRegister={openLoginAndRegister} openLogin={openLogin} openRegister={openRegister} openForgotPassword={openForgotPassword} handleCloseLoginAndRegister={handleCloseLoginAndRegister} clickToGoToRegister={clickToGoToRegister} clickToGoToForgotPassword={clickToGoToForgotPassword} clickToGoToLogin={clickToGoToLogin} />
+                < Search openSearch={openSearch} handleCloseSearch={handleCloseSearch} />
                 < Cart openCart={openCart} handleCloseCart={handleCloseCart} />
                 <div div className="topbar" id="topbar" >
                     <div className="container-fluid">
@@ -78,8 +78,8 @@ function Header() {
                         </div>
                     </div>
                     <div className="col-md-2 icon text-right">
-                        <i className="fa fa-search fa-search1" id="myBtn" onClick={handleOpenSearch} />
                         {value.username ? <span>Xin chào, {value.username}<i className="fas fa-sign-out-alt" onClick={() => value.setUsername(undefined)} /></span> : <i className="fa fa-user-circle" id="myBtn1" onClick={handleOpenLoginAndRegister} />}
+                        <i className="fa fa-search fa-search1" id="myBtn" onClick={handleOpenSearch} />
                         <i className="fa fa-shopping-bag" id="myBtn2" onClick={handleOpenCart} />
                     </div>
                 </div>

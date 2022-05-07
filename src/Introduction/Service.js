@@ -1,8 +1,12 @@
 import "./Service.css";
 import { Link } from "react-router-dom";
 import ImaginIntrodution from "./ImaginIntrodution";
+import  { useEffect } from 'react';
 
 function Service() {
+    useEffect(() => {
+        document.title = "Fresh Organic - Điều khoản dịch vụ"
+      }, [])
 
     return (
         < >

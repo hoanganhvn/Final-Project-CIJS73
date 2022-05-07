@@ -68,13 +68,13 @@ const ProductDetail = () => {
         <Container maxWidth="xl">
             <div className="product-breadcrumb">
                 <ol className="product-text-breadcrumb">
-                    <li style={{ display: "inline-block" }}>
-                        <Link to="/" >Trang Chủ </Link>
+                    <li style={{display: "inline-block"}}>
+                    <Link to="/" >Trang Chủ </Link>
                     </li>
-                    <li style={{ display: "inline-block" }}>
+                    <li style={{display: "inline-block"}}>
                         /
                     </li>
-                    <li style={{ display: "inline-block" }}>
+                    <li style={{display: "inline-block"}}>
                         <span>Sản phẩm</span>
                     </li>
                 </ol>
@@ -210,7 +210,7 @@ const ProductDetail = () => {
                                 align="center"
                             >
                                 <div className="product-best-mobile ">
-                                    <Link to='/'>
+                        <Link to='/'>
                                         Sản Phẩm Liên Quan
                                     </Link>
                                 </div>

@@ -25,31 +25,35 @@ import ProductData from "../src/Components/Directory/Product.json";
 import Directory from "./Components/Directory";
 
 function App() {
+  const [username, setUsername] = useState("");
+
   return (
-    <div>
+      <Context.Provider value={{ username: username, setUsername: setUsername }}>
+
+    < >
       <Header />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/gioi-thieu/*" element={<Directory />} />
-          <Route path="/san-pham" element={<ProductLayout />}>
+          <Route path="/san-pham" element={<ProductLayout />} >
             <Route index element={<Product />} />
             <Route path="/san-pham/:productId" element={<ProductDetail />} />
           </Route>
 
-          <Route path="/tin-tuc" element={<BlogLayout />}>
+          <Route path="/tin-tuc" element={<BlogLayout />} >
             <Route index element={<Blog />} />
-            <Route path="gio" element={<Gio />} />
-            <Route path="rau-ma" element={<RauMa />} />
-            <Route path="trang-mieng" element={<TrangMieng />} />
-            <Route path="banh-ngot" element={<BanhNgot />} />
+            <Route path="gio" element={< Gio />} />
+            <Route path="rau-ma" element={< RauMa />} />
+            <Route path="trang-mieng" element={< TrangMieng />} />
+            <Route path="banh-ngot" element={< BanhNgot />} />
           </Route>
           <Route path="/khuyen-mai" element={<LandingPage />} />
         </Route>
         <Route path="*" element={<NoPage />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

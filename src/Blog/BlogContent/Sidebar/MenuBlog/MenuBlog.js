@@ -9,12 +9,11 @@ const MenuBlog = () => {
             </div>
             <div>
                 <ul className="sidebar-menu-list">
-                    <li>Trang chủ</li>
-                    <li>Header</li>
-                    <li>Sản phẩm</li>
-                    <li>Product Views</li>
-                    <li><Link to="/blog">Blog</Link></li>
-                    <li>Landing Page</li>
+                    <li><Link to="/">Trang chủ</Link></li>
+                    <li><Link to="/gioi-thieu">Giới thiệu</Link></li>
+                    <li><Link to="/san-pham">Sản phẩm</Link></li>
+                    <li><Link to="/tin-tuc">Tin tức</Link></li>
+                    <li><Link to="/khuyen-mại">Khuyến mại</Link></li>
                 </ul>
             </div>
         </div>

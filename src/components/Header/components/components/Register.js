@@ -6,56 +6,55 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import FormHelperText from '@mui/material/FormHelperText';
 
 function Register(props) {
+    const { error, processing } = props
 
     return (
         <>
             <Typography component="h1" variant="h5">
                 ĐĂNG KÝ
             </Typography>
-            <Box component="form" noValidate onSubmit={props.onSubmitRegister} sx={{ mt: 3 }}>
+            <Box component="form" noValidate autoComplete="off" onSubmit={props.onSubmitRegister} sx={{ mt: 3 }}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={6}>
                         <TextField
-                            autoComplete="given-name"
+                            id="firstName"
                             name="firstName"
                             required
                             fullWidth
-                            id="firstName"
                             label="Họ"
                             autoFocus
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <TextField
-                            required
-                            fullWidth
                             id="lastName"
-                            label="Tên"
                             name="lastName"
-                            autoComplete="family-name"
+                            required
+                            fullWidth
+                            label="Tên"
+
                         />
                     </Grid>
                     <Grid item xs={12}>
                         <TextField
+                            id="username"
+                            name="username"
                             required
                             fullWidth
-                            id="email"
-                            label="Địa chỉ Email"
-                            name="email"
-                            autoComplete="email"
+                            label="Tên tài khoản"
                         />
                     </Grid>
                     <Grid item xs={12}>
                         <TextField
-                            required
-                            fullWidth
-                            name="password"
-                            label="Mật khẩu"
-                            type="password"
                             id="password"
-                            autoComplete="new-password"
+                            name="password"
+                            type="password"
+                            required
+                            fullWidth
+                            label="Mật khẩu"
                         />
                     </Grid>
                     <Grid item xs={12}>
@@ -65,11 +64,15 @@ function Register(props) {
                         />
                     </Grid>
                 </Grid>
+                {error && <FormHelperText error={true}>
+                    {error}
+                </FormHelperText>}
                 <Button
                     type="submit"
                     fullWidth
                     variant="contained"
                     sx={{ mt: 3, mb: 2 }}
+                    disabled={processing}
                 >
                     ĐĂNG KÝ
                 </Button>

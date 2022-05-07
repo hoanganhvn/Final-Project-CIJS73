@@ -6,39 +6,46 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import FormHelperText from '@mui/material/FormHelperText';
+import Alert from "@mui/material/Alert";
 
 function Login(props) {
+    const { error } = props
+    const { login } = props
 
     return (
         <>
             <Typography component="h1" variant="h5">
                 ĐĂNG NHẬP
             </Typography>
-            <Box component="form" onSubmit={props.onSubmitLogin} noValidate sx={{ mt: 1 }}>
+            <Box component="form" onSubmit={props.onSubmitLogin} noValidate autoComplete="off" sx={{ mt: 1 }}>
                 <TextField
-                    margin="normal"
+                    id="username"
+                    name="username"
                     required
                     fullWidth
-                    id="email"
-                    label="Địa chỉ Email"
-                    name="email"
-                    autoComplete="email"
+                    margin="normal"
+                    label="Tên người dùng"
                     autoFocus
+                // autoComplete="username"
                 />
                 <TextField
-                    margin="normal"
+                    id="password"
+                    name="password"
                     required
                     fullWidth
-                    name="password"
+                    margin="normal"
                     label="Mật khẩu"
                     type="password"
-                    id="password"
-                    autoComplete="current-password"
+                // autoComplete="current-password"
                 />
                 <FormControlLabel
                     control={<Checkbox value="remember" color="primary" />}
                     label="Ghi nhớ tài khoản"
                 />
+                {error && <FormHelperText error={true}>
+                    {error}
+                </FormHelperText>}
                 <Button
                     type="submit"
                     fullWidth
@@ -47,6 +54,9 @@ function Login(props) {
                 >
                     ĐĂNG NHẬP
                 </Button>
+                {login && <Alert variant="outlined" severity="success" className="box-alert">
+                    Đăng nhập thành công.
+                </Alert>}
                 <Grid container>
                     <Grid item xs>
                         <Link href="#" variant="body2" onClick={props.clickToGoToForgotPassword} >

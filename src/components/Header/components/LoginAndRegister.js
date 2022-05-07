@@ -7,8 +7,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Login from './components/Login';
 import Register from './components/Register';
 import ForgotPassword from './components/ForgotPassword';
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import axios from 'axios';
+import { useContext } from "react";
+import Context from '../../../Context';
 
 const style = {
     position: 'absolute',
@@ -39,48 +41,59 @@ const theme = createTheme({
 });
 
 function LoginAndRegister(props) {
-    const [account, setAccount] = useState([]);
     const [error, setError] = useState("");
+    const [login, setLogin] = useState("");
+    const [processing, setProcessing] = useState(false);
+    const { clickToGoToLogin, handleCloseLoginAndRegister } = props
+    const value = useContext(Context);
 
-    const fetchDataAccount = () => {
-        axios
-            .get("https://625d83154c36c75357761d85.mockapi.io/Account")
-            .then((respone) => {
-                setAccount(respone.data);
-            });
+    const fetchDataAccount = async () => {
+        const respone = await axios.get("https://625d83154c36c75357761d85.mockapi.io/Account")
+        return respone.data
     }
 
-    const createNewAccount = (first, last, user, pass) => {
-        axios
+    const createNewAccount = async (first, last, user, pass) => {
+        setProcessing(true)
+        await axios
             .post(`https://625d83154c36c75357761d85.mockapi.io/Account`, {
                 firstname: first,
                 lastname: last,
                 username: user,
                 password: pass
             })
+        setProcessing(false)
+        clickToGoToLogin()
     }
 
-    useEffect(() => {
-        fetchDataAccount()
-    }, []);
+    const handleSubmitLogin = async (event) => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget)
+        const account = await fetchDataAccount()
 
-    const handleSubmitLogin = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
+        if (data.get('username') && data.get('password')) {
+            const test_login = account.filter((item) => item.username === data.get('username') && item.password === data.get('password'))
+            if (test_login.length === 0) {
+                setError("Tên tài khoản hoặc mật khẩu không đúng. Vui lòng nhập lại!")
+            } else {
+                setLogin("Đăng nhập thành công")
+                setError("")
+                setTimeout(() => {
+                    handleCloseLoginAndRegister()
+                    value.setUsername(data.get('username'))
+                    setLogin("")
+                }, 2000);
+
+            }
+        }
+        else {
+            setError("Vui lòng nhập đầy đủ thông tin.")
+        }
     };
-    const handleSubmitRegister = (event) => {
+     const handleSubmitRegister = async (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-            firstName: data.get('firstName'),
-            lastName: data.get('lastName'),
-        });
+        const data = new FormData(event.currentTarget)
+        const account = await fetchDataAccount()
+
 
         if (data.get('firstName') && data.get('lastName') && data.get('username') && data.get('password')) {
             const test = account.filter((item) => item.username === data.get('username'))
@@ -88,7 +101,7 @@ function LoginAndRegister(props) {
                 createNewAccount(data.get('firstName'), data.get('lastName'), data.get('username'), data.get('password'))
                 setError("")
             } else {
-                setError("Username đã tồn tại. Vui lòng nhập username khác.")
+                setError("Tên tài khoản đã tồn tại. Vui lòng nhập lại!")
             }
         }
         else {
@@ -109,8 +122,8 @@ function LoginAndRegister(props) {
                     <Box sx={style}>
                         <Avatar sx={{ m: 1, bgcolor: '#66a55f' }}>
                         </Avatar>
-                        {props.openLogin && <Login onSubmitLogin={handleSubmitLogin} clickToGoToRegister={props.clickToGoToRegister} clickToGoToForgotPassword={props.clickToGoToForgotPassword} />}
-                        {props.openRegister && <Register onSubmitRegister={handleSubmitRegister} clickToGoToLogin={props.clickToGoToLogin} error={error} />}
+                        {props.openLogin && <Login onSubmitLogin={handleSubmitLogin} clickToGoToRegister={props.clickToGoToRegister} clickToGoToForgotPassword={props.clickToGoToForgotPassword} error={error} login={login} />}
+                        {props.openRegister && <Register onSubmitRegister={handleSubmitRegister} clickToGoToLogin={props.clickToGoToLogin} error={error} processing={processing} />}
                         {props.openForgotPassword && <ForgotPassword clickToGoToLoginFromForgotPassword={props.clickToGoToLogin} />}
                     </Box>
                 </Container>

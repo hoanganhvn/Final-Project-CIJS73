@@ -1,0 +1,31 @@
+.box {
+    margin: 30px;
+    border: 1px solid grey;
+    width: 15vw;
+    height: 30vm;
+}
+
+#catalogue {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.hr {
+    margin: auto;
+    width: 65px;
+    background-color: #000;
+    height: 3px;
+}
+
+.title {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.content {
+    left: 50px;
+    padding: 40px;
+}

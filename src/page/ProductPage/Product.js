@@ -66,6 +66,7 @@ const Product = () => {
                                     </div>
 
                                     <div className="header-sort">
+                                    <span className="sort-title"> Lọc sản phẩm: </span>
                                         <select onChange={(e) => {
                                             switch (e.target.value) {
                                                 case "increase_price":

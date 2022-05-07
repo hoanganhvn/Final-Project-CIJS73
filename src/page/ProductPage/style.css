@@ -93,15 +93,20 @@
 .css-h93ljk-MuiTypography-root {
     font-size: 1rem !important;
 }
-
+.css-t1nuxs{
+    font-size: 1rem !important;
+}
 .css-18k87ye-MuiTypography-root {
     padding-bottom: -1rem !important;
     font-size: 0.75rem !important;
 }
-
-.css-1equabv-MuiGrid-root {
+.css-4an0mh {
+    padding-bottom: -1rem !important;
+    font-size: 0.75rem !important;
+  }
+/* .css-1equabv-MuiGrid-root {
     margin-left: px !important;
-}
+} */
 
 .style-noname {
     display: flex;
@@ -143,12 +148,17 @@
     .css-h93ljk-MuiTypography-root {
         font-size: 1rem !important;
     }
-
+    .css-t1nuxs{
+        font-size: 1rem !important;
+    }
     .css-18k87ye-MuiTypography-root {
         /* padding-bottom: -1.25rem!important; */
         font-size: 0.75rem !important;
     }
-
+    .css-4an0mh {
+      /* padding-bottom: -1.25rem!important; */
+      font-size: 0.75rem !important;
+    }
     .total-product {
         margin-bottom: 385%;
     }
@@ -181,12 +191,17 @@
     .css-h93ljk-MuiTypography-root {
         font-size: 0.6rem !important;
     }
-
+    .css-t1nuxs{
+        font-size: 0.6rem !important;
+    }
     .css-18k87ye-MuiTypography-root {
         /* padding-bottom: -1.25rem!important; */
         font-size: 0.4rem !important;
     }
-
+    .css-4an0mh {
+        /* padding-bottom: -1.25rem!important; */
+        font-size: 0.4rem !important;
+      }
     .button-product {
         font-size: 0.3rem !important;
     }

@@ -35,7 +35,7 @@ const Directory = () => {
       </div>
       <div className="content1">
         <Routes>
-          <Route index path="/" element={<Introduce />} />
+          <Route index path="" element={<Introduce />} />
           <Route
             path="search"
             element={<Search placeholder=" Search..." data={ProductData} />}
@@ -44,7 +44,7 @@ const Directory = () => {
           <Route path="privacy" element={<Privacy />} />
           <Route path="service" element={<Service />} />
           <Route path="contact" element={<Contact />} />
-        </Routes>{" "}
+        </Routes>
       </div>
     </div>
   );

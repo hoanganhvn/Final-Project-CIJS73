@@ -7,7 +7,7 @@ import { Links } from "../Links";
 import { Contact } from "../Directory/Contact";
 import { Service } from "../Directory/Service/index";
 import { Restore } from "./../Directory/Restore/index";
-import { Image } from "./../Directory/Img/index";
+// import { Image } from "./../Directory/Img/index";
 import ProductData from "./Product.json";
 
 const Directory = () => {
@@ -29,21 +29,21 @@ const Directory = () => {
             <Links />
           </div>
         </div>
-        <div>
+        {/* <div>
           <Image />
-        </div>
+        </div> */}
       </div>
       <div className="content1">
         <Routes>
-          <Route path="/introduce" element={<Introduce />} />
+          <Route index path="/" element={<Introduce />} />
           <Route
-            path="/search"
+            path="search"
             element={<Search placeholder=" Search..." data={ProductData} />}
-          />{" "}
-          <Route path="/restore" element={<Restore />} />{" "}
-          <Route path="/privacy" element={<Privacy />} />{" "}
-          <Route path="/service" element={<Service />} />{" "}
-          <Route path="/contact" element={<Contact />} />
+          />
+          <Route path="restore" element={<Restore />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="service" element={<Service />} />
+          <Route path="contact" element={<Contact />} />
         </Routes>{" "}
       </div>
     </div>

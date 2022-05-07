@@ -1,8 +1,6 @@
 import "./Searching.css";
 import { useEffect, useState } from 'react';
-import ProductData from "./Product.json";
-import SearchIcon from "@mui/icons-material/Search";
-import CloseIcon from "@mui/icons-material/Close";
+import ProductData from "../Product.json";
 
 function Searching() {
     useEffect(() => {
@@ -26,10 +24,10 @@ function Searching() {
         }
     };
 
-    const clearInput = () => {
-        setFilteredData([]);
-        setWordEntered("");
-    };
+    // const clearInput = () => {
+    //     setFilteredData([]);
+    //     setWordEntered("");
+    // };
 
     return (
         < >

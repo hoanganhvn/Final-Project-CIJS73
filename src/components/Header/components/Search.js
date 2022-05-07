@@ -3,6 +3,8 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
+import ProductData from "../../../Product.json";
 
 const style = {
     position: 'absolute',
@@ -29,6 +31,27 @@ const theme = createTheme({
 });
 
 function Search(props) {
+    const [filteredData, setFilteredData] = useState([]);
+    const [wordEntered, setWordEntered] = useState("");
+
+    const handleFilter = (e) => {
+        const searchWord = e.target.value;
+        setWordEntered(searchWord);
+        const newFilter = ProductData.filter((value) => {
+            return value.name.toLowerCase().includes(searchWord.toLowerCase());
+        });
+
+        if (searchWord === "") {
+            setFilteredData([]);
+        } else {
+            setFilteredData(newFilter);
+        }
+    };
+
+    // const clearInput = () => {
+    //     setFilteredData([]);
+    //     setWordEntered("");
+    // };
 
     return (
         <>
@@ -43,7 +66,21 @@ function Search(props) {
                         <Typography id="modal-modal-title" variant="h6" component="h2" align="center" sx={{ mb: 3 }}>
                             TÌM KIẾM
                         </Typography>
-                        <TextField fullWidth label="Tìm Kiếm Sản Phẩm" id="fullWidth" />
+                        <TextField fullWidth label="Tìm Kiếm Sản Phẩm" id="fullWidth" value={wordEntered} onChange={handleFilter} />
+                        {filteredData.length !== 0 && (
+                            <div className="dataResult">
+                                {filteredData.slice().map((value, key) => {
+                                    // console.log(value.image);
+                                    return (
+                                        <div>
+                                            <a className="dataItem" href={value.image[0]} target="_blank">
+                                                <p> {value.name}</p>
+                                            </a>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
                     </Box>
                 </Modal>
             </ThemeProvider>

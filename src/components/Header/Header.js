@@ -2,9 +2,10 @@ import Search from "./components/Search";
 import LoginAndRegister from "./components/LoginAndRegister";
 import Cart from "./components/Cart";
 import Menu from "./components/Menu";
-import { useState } from "react";
+import {useContext, useState } from "react";
 import './Header.css';
 import { NavLink,Link } from 'react-router-dom';
+import Context from "../../Context";
 
 function Header() {
     const [openSearch, setOpenSearch] = useState(false);
@@ -14,6 +15,7 @@ function Header() {
     const [openLogin, setOpenLogin] = useState(true);
     const [openRegister, setOpenRegister] = useState(false);
     const [openForgotPassword, setOpenForgotPassword] = useState(false);
+    const value = useContext(Context);
 
     const handleOpenSearch = () => setOpenSearch(true);
     const handleCloseSearch = () => setOpenSearch(false);
@@ -77,7 +79,7 @@ function Header() {
                     </div>
                     <div className="col-md-2 icon text-right">
                         <i className="fa fa-search fa-search1" id="myBtn" onClick={handleOpenSearch} />
-                        <i className="fa fa-user-circle" id="myBtn1" onClick={handleOpenLoginAndRegister} />
+                        {value.username ? <span>Xin chào, {value.username}<i className="fas fa-sign-out-alt" onClick={() => value.setUsername(undefined)} /></span> : <i className="fa fa-user-circle" id="myBtn1" onClick={handleOpenLoginAndRegister} />}
                         <i className="fa fa-shopping-bag" id="myBtn2" onClick={handleOpenCart} />
                     </div>
                 </div>

@@ -53,16 +53,28 @@
 .total-product {
     margin-bottom: 95%;
 }
-
+/* fixed button product page */
 .button-product {
     width: 94%;
 }
-
+.css-1hw9j7s{
+    width: 94% !important;
+    background-color: #66a55f !important;
+}
+.css-1hw9j7s:hover{
+    width: 94% !important;
+    background-color: white !important;
+}
+/* end */
 .Mui-disabled {
     width: 94%;
 }
-
+/* fixed button product page */
 .css-1yjd39a-MuiPaper-root {
+    width: 90% !important;
+    height: 95% !important;
+}
+.css-pljo3a{
     width: 90% !important;
     height: 95% !important;
 }
@@ -72,7 +84,12 @@
     height: 60% !important;
     margin-left: 7%;
 }
-
+.css-pljo3a img {
+    width: 80% !important;
+    height: 60% !important;
+    margin-left: 7%;
+}
+/* end */
 .css-h93ljk-MuiTypography-root {
     font-size: 1rem !important;
 }
@@ -111,6 +128,17 @@
         margin: 0;
         padding: 0;
     }
+    .css-pljo3a {
+        width: 95% !important;
+        /* height: 95%!important; */
+    }
+
+    .css-pljo3a img {
+        width: 80% !important;
+        height: 50% !important;
+        margin: 0;
+        padding: 0;
+    }
 
     .css-h93ljk-MuiTypography-root {
         font-size: 1rem !important;
@@ -126,6 +154,10 @@
     }
 
     .button-product {
+        margin-top: 15% !important;
+    }
+
+    .css-1hw9j7s{
         margin-top: 15% !important;
     }
 
@@ -156,6 +188,9 @@
     }
 
     .button-product {
+        font-size: 0.3rem !important;
+    }
+    .css-1hw9j7s{
         font-size: 0.3rem !important;
     }
 

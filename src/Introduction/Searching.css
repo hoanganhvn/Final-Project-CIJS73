@@ -40,7 +40,21 @@
 #p2 {
     margin-bottom: 250px;
 }
-
+.dataResult {
+    margin: 5px 0 0 5px;
+    width: 50%;
+    height: 200px;
+    background: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.dataResult::-webkit-scrollbar {
+    display: none;
+}
+.dataItem {
+    margin-left: 5px;
+}
 @media only screen and (max-width: 900px) {
     #Sline {
         width: 20%;

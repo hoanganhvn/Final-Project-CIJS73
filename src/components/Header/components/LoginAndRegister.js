@@ -7,10 +7,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Login from './components/Login';
 import Register from './components/Register';
 import ForgotPassword from './components/ForgotPassword';
-import {  useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { useContext } from "react";
-import Context from '../../../Context';
+import Context from '../../../helpers/Context';
 
 const style = {
     position: 'absolute',
@@ -89,7 +89,7 @@ function LoginAndRegister(props) {
             setError("Vui lòng nhập đầy đủ thông tin.")
         }
     };
-     const handleSubmitRegister = async (event) => {
+    const handleSubmitRegister = async (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget)
         const account = await fetchDataAccount()

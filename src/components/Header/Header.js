@@ -2,10 +2,10 @@ import Search from "./components/Search";
 import LoginAndRegister from "./components/LoginAndRegister";
 import Cart from "./components/Cart";
 import Menu from "./components/Menu";
-import {useContext, useState } from "react";
+import { useContext, useState } from "react";
 import './Header.css';
-import { NavLink,Link } from 'react-router-dom';
-import Context from "../../Context";
+import { NavLink, Link } from 'react-router-dom';
+import Context from "../../helpers/Context";
 
 function Header() {
     const [openSearch, setOpenSearch] = useState(false);
@@ -101,7 +101,7 @@ function Header() {
                         </li>
                         <li className="nav-item">
                             <div className="nav-name home2">
-                            <NavLink className={`nav-link ${activeClass}`} to="/gioi-thieu">Giới thiệu</NavLink>
+                                <NavLink className={`nav-link ${activeClass}`} to="/gioi-thieu">Giới thiệu</NavLink>
                                 <div className="line2" />
                             </div>
                         </li>

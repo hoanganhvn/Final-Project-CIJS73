@@ -33,7 +33,7 @@ function App() {
       < >
         <Header />
         <Routes>
-          <Route path="Final-Project-CIJS73/" element={<LayoutHome />} >
+          <Route path="/" element={<LayoutHome />} >
             <Route index element={<Home />} />
             <Route path="/san-pham" element={<ProductLayout />} >
               <Route index element={<Product />} />

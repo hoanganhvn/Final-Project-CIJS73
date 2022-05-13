@@ -10,7 +10,7 @@ import ForgotPassword from './components/ForgotPassword';
 import { useState } from 'react';
 import axios from 'axios';
 import { useContext } from "react";
-import Context from '../../../helpers/Context';
+import Context from '../../../Context';
 
 const style = {
     position: 'absolute',

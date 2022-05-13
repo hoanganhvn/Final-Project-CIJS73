@@ -4,7 +4,7 @@ import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
-import ProductData from "../../../Product.json";
+import ProductData from "../../../helpers/Product.json";
 
 const style = {
     position: 'absolute',

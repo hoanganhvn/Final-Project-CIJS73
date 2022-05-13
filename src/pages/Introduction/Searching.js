@@ -1,6 +1,6 @@
 import "./Searching.css";
 import { useEffect, useState } from 'react';
-import ProductData from "../Product.json";
+import ProductData from "../../helpers/Product.json";
 
 function Searching() {
     useEffect(() => {

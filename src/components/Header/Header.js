@@ -5,7 +5,7 @@ import Menu from "./components/Menu";
 import { useContext, useState } from "react";
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
-import Context from "../../helpers/Context";
+import Context from "../../Context";
 
 function Header() {
     const [openSearch, setOpenSearch] = useState(false);

@@ -8,7 +8,7 @@ import Product from "./pages/ProductPage/Product";
 import ProductDetail from "./pages/ProductDetailPage/ProductDetail";
 import ProductLayout from "./pages/ProductPage/ProductLayout";
 import LayoutHome from './pages/Home/LayoutHome';
-import NoPage from './pages/NoPage/NoPage';
+// import NoPage from './pages/NoPage/NoPage';
 import Blog from "./pages/Blog/Blog";
 import BlogLayout from "./pages/Blog/BlogLayout";
 import Article1 from "./pages/Blog/Article1";
@@ -56,7 +56,7 @@ function App() {
             </Route>
             <Route path="/khuyen-mai" element={<LandingPage />} />
           </Route>
-          <Route path="*" element={<NoPage />} />
+          <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
       </>

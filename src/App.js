@@ -33,7 +33,7 @@ function App() {
       < >
         <Header />
         <Routes>
-          <Route path="/" element={<LayoutHome />} >
+          <Route path={process.env.PUBLIC_URL + "/"} element={<LayoutHome />} >
             <Route index element={<Home />} />
             <Route path="/san-pham" element={<ProductLayout />} >
               <Route index element={<Product />} />

@@ -1320,13 +1320,13 @@ h4 {
 
   .introdution,
   .infomation,
-  .link,word
+  .link,
   .support {
     margin: 0 5% 0% 5%;
   }
 
   .foot-down {
-    margin-top: 8%;
+    margin-top: 50%;
   }
 
   .product-detail {
@@ -1528,7 +1528,7 @@ h4 {
   }
 
   .foot-down {
-    margin-top: 110%;
+    margin-top: 200%;
   }
 
   .product-top {

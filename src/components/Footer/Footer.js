@@ -30,7 +30,7 @@ function Footer() {
                                 <div className="col-md-12 col-lg-5 foot-email">
                                     <div className="container">
                                         <div className="row">
-                                            <input className="col-md-5 col-lg-8 input-email" type="text"  value={inputEmail} onChange={(e) => setInputEmail(e.target.value)} placeholder="   Nhập email của bạn" />
+                                            <input className="col-md-5 col-lg-8 input-email" type="text" value={inputEmail} onChange={(e) => setInputEmail(e.target.value)} placeholder="   Nhập email của bạn" />
                                             <div className="col-md-3 col-lg-4 foot-input-email text-center" onClick={handleSubmitEmail}>
                                                 {email ? "THÀNH CÔNG!" : "ĐĂNG KÝ"}
                                             </div>
@@ -51,7 +51,7 @@ function Footer() {
                             <div className="row">
                                 <div className="col-lg-1 blank">
                                 </div>
-                                <div className="col-md-6 col-lg-3 introdution">
+                                <div className="col-xs-4 col-lg-3 introdution">
                                     <h3>Giới thiệu</h3>
                                     <span>
                                         Fresh Organic trang mua sắm trực tuyến của thương hiệu thời trang Lama, thời trang nam, nữ, phụ kiện, giúp bạn tiếp cận xu hướng thời trang mới nhất.
@@ -77,7 +77,7 @@ function Footer() {
                                         </i>
                                     </div>
                                 </div>
-                                <div className="col-md-6 col-lg-3 infomation">
+                                <div className="col-xs-4 col-lg-3 infomation">
                                     <h3>Thông tin liên hệ</h3>
                                     <div className="address">
                                         <i className="fa fa-map-marker" />
@@ -108,7 +108,7 @@ function Footer() {
                                         </span>
                                     </div>
                                 </div>
-                                <div className="col-md-6 col-lg-2 link">
+                                <div className="col-xs-4 col-lg-2 link">
                                     <h3>
                                         Liên kết
                                     </h3>
@@ -128,12 +128,12 @@ function Footer() {
                                         </Link>
                                     </span>
                                 </div>
-                                <div className="col-md-6 col-lg-3 support">
+                                <div className="col-xs-4 col-lg-3 support">
                                     <h3>
                                         Hỗ trợ
                                     </h3>
                                     <span>
-                                        <Link to="/gioi-thieu/searching">
+                                        <Link to="/gioi-thieu/tim-kiem">
                                             Tìm kiếm
                                         </Link>
                                     </span>
@@ -143,22 +143,22 @@ function Footer() {
                                         </Link>
                                     </span>
                                     <span>
-                                        <Link to="/gioi-thieu/restore">
+                                        <Link to="/gioi-thieu/doi-tra">
                                             Chính sách đổi trả
                                         </Link>
                                     </span>
                                     <span>
-                                        <Link to="/gioi-thieu/privacy">
+                                        <Link to="/gioi-thieu/bao-mat">
                                             Chính sách bảo mật
                                         </Link>
                                     </span>
                                     <span>
-                                        <Link to="/gioi-thieu/service">
+                                        <Link to="/gioi-thieu/dich-vu">
                                             Điều khoản dịch vụ
                                         </Link>
                                     </span>
                                     <span>
-                                        <Link to="/gioi-thieu/contact">
+                                        <Link to="/gioi-thieu/lien-he">
                                             Liên hệ
                                         </Link>
                                     </span>

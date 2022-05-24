@@ -8,20 +8,6 @@ function AboutUs() {
     // const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
     // const dataImageUrl = _.slice(data, 10, 11);
 
-    // const dbRef = ref(database);
-    // const userId = 11;
-    // get(child(dbRef, `users/${userId}`)).then((snapshot) => {
-    //   if (snapshot.exists()) {
-    //     // console.log(snapshot.val().imgurl);
-    //     let imgurl = snapshot.val().imgurl;
-    //     console.log(imgurl);
-    //   } else {
-    //     console.log("No data available");
-    //   }
-    // }).catch((error) => {
-    //   console.error(error);
-    // });
-
     const userId = 11;
     const starCountRef = ref(database, 'users/' + userId);
     const data =[];

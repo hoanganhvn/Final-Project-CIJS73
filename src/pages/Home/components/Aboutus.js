@@ -1,22 +1,22 @@
 import { useFetch } from "../../../hooks";
 import * as _ from 'lodash';
 import { Link } from 'react-router-dom';
-import database from "../../../helpers/Firebase.js";
-import { ref, child, get, onValue } from "firebase/database";
+// import database from "../../../helpers/Firebase.js";
+// import { ref, child, get, onValue } from "firebase/database";
 
 function AboutUs() {
-    // const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
-    // const dataImageUrl = _.slice(data, 10, 11);
+    const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
+    const dataImageUrl = _.slice(data, 10, 11);
 
-    const userId = 11;
-    const starCountRef = ref(database, 'users/' + userId);
-    const data =[];
+    // const userId = 11;
+    // const starCountRef = ref(database, 'users/' + userId);
+    // const data =[];
 
-    onValue(starCountRef, (snapshot) => {
-        const data1 = snapshot.val().imgurl;
-        // console.log(data);
-        data.push(data1);
-    });
+    // onValue(starCountRef, (snapshot) => {
+    //     const data1 = snapshot.val().imgurl;
+    //     // console.log(data);
+    //     data.push(data1);
+    // });
     // console.log(data.map(data => data));
 
     return (
@@ -24,8 +24,8 @@ function AboutUs() {
             <div className="about">
                 <div className="about-img">
                     <div className="about-img-scale">
-                        {/* <img className="about-img-scale-1" src={dataImageUrl.map(dataImageUrl => dataImageUrl.imgurl)} alt="" /> */}
-                        <img className="about-img-scale-1" src={data.map(data => data)} alt="" />
+                        <img className="about-img-scale-1" src={dataImageUrl.map(dataImageUrl => dataImageUrl.imgurl)} alt="" />
+                        {/* <img className="about-img-scale-1" src={data.map(data => data)} alt="" /> */}
                     </div>
 
                     <h1 className="about-img-word2">Về chúng tôi</h1>

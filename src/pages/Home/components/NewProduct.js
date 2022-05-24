@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function NewProduct() {
     const [data] = useFetch("https://625d83154c36c75357761d85.mockapi.io/Product");
-    const dataImgurl = _.slice(data, 0, 6);
+    const dataImageUrl = _.slice(data, 0, 6);
 
     return (
         <>
@@ -16,9 +16,9 @@ function NewProduct() {
             </div>
             <div className="product-detail">
                 <ul className="product-top">
-                    {dataImgurl.map(
-                        (dataImgurl) => (
-                            <Product discount={dataImgurl.discount} image={dataImgurl.image[0]} name={dataImgurl.name} price={dataImgurl.price} id={dataImgurl.id}/>
+                    {dataImageUrl.map(
+                        (dataImageUrl) => (
+                            <Product discount={dataImageUrl.discount} image={dataImageUrl.image[0]} name={dataImageUrl.name} price={dataImageUrl.price} id={dataImageUrl.id}/>
                         )
                     )}
                 </ul>

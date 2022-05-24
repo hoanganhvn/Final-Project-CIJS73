@@ -33,6 +33,50 @@ const database = getDatabase(app);
 
 
 
+// function writeUserData(userId, name, email, imageUrl) {
+//   // const db = getDatabase();
+//   set(ref(database, 'users/' + userId), {
+//     username: name,
+//     email: email,
+//     profile_picture: imageUrl
+//   });
+// }
+// writeUserData(1, "aanh", "aanh@gmail.com", "http/img1");
+// writeUserData(2, "banh", "banh@gmail.com", "http/img2");
+// writeUserData(3, "canh", "canh@gmail.com", "http/img3");
+// writeUserData(4, "danh", "danh@gmail.com", "http/img4");
+// writeUserData(5, "hanh", "hanh@gmail.com", "http/img5");
+
+
+
+// function writeNewPost(userId, name, email, imageUrl) {
+//   // const db = getDatabase();
+
+//   // A post entry.
+//   const postData = {
+//     userId: userId,
+//     username: name,
+//     email: email,
+//     profile_picture: imageUrl
+//   };
+
+//   // Get a key for a new Post.
+//   const newPostKey = push(child(ref(database), 'users')).key;
+
+//   // Write the new post's data simultaneously in the posts list and the user's post list.
+//   const updates = {};
+//   updates['/users/' + newPostKey] = postData;
+//   updates['/users/' + userId + '/' + newPostKey] = postData;
+
+//   return update(ref(database), updates);
+// }
+// writeNewPost(1, "aanhnew", "aanhnew@gmail.com", "http/img1new");
+// writeNewPost(2, "banhnew", "banhnew@gmail.com", "http/img2new");
+// writeNewPost(3, "canhnew", "canhnew@gmail.com", "http/img3new");
+// writeNewPost(4, "danhnew", "danhnew@gmail.com", "http/img4new");
+
+
+
 // const dbRef = ref(database);
 // const userId = 5;
 // get(child(dbRef, `users/${userId}`)).then((snapshot) => {
@@ -44,50 +88,6 @@ const database = getDatabase(app);
 // }).catch((error) => {
 //   console.error(error);
 // });
-
-
-
-  // function writeUserData(userId, name, email, imageUrl) {
-  //   // const db = getDatabase();
-  //   set(ref(database, 'users/' + userId), {
-  //     username: name,
-  //     email: email,
-  //     profile_picture: imageUrl
-  //   });
-  // }
-  // writeUserData(1, "aanh", "aanh@gmail.com", "http/img1");
-  // writeUserData(2, "banh", "banh@gmail.com", "http/img2");
-  // writeUserData(3, "canh", "canh@gmail.com", "http/img3");
-  // writeUserData(4, "danh", "danh@gmail.com", "http/img4");
-  // writeUserData(5, "hanh", "hanh@gmail.com", "http/img5");
-
-
-
-  // function writeNewPost(userId, name, email, imageUrl) {
-  //   // const db = getDatabase();
-  
-  //   // A post entry.
-  //   const postData = {
-  //     userId: userId,
-  //     username: name,
-  //     email: email,
-  //     profile_picture: imageUrl
-  //   };
-  
-  //   // Get a key for a new Post.
-  //   const newPostKey = push(child(ref(database), 'users')).key;
-  
-  //   // Write the new post's data simultaneously in the posts list and the user's post list.
-  //   const updates = {};
-  //   updates['/users/' + newPostKey] = postData;
-  //   updates['/users/' + userId + '/' + newPostKey] = postData;
-  
-  //   return update(ref(database), updates);
-  // }
-  // writeNewPost(1, "aanhnew", "aanhnew@gmail.com", "http/img1new");
-  // writeNewPost(2, "banhnew", "banhnew@gmail.com", "http/img2new");
-  // writeNewPost(3, "canhnew", "canhnew@gmail.com", "http/img3new");
-  // writeNewPost(4, "danhnew", "danhnew@gmail.com", "http/img4new");
 
 
 

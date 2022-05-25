@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 
 function Home() {
     useEffect(() => {
-        document.title = "Fresh Organic - Home"
+        document.title = "Fresh Organic - Trang chủ"
     }, [])
     useEffect(() => {
         window.scrollTo(0, 0);

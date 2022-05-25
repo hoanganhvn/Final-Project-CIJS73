@@ -1,4 +1,4 @@
-import "./Article.css"
+import "./Article.scss"
 import { Link } from 'react-router-dom';
 
 const Article1 = () => {

@@ -1,3 +1,6 @@
+@import './../../styles/variable.scss';
+@import './../../styles/mixin.scss';
+
 .box-total {
     height: 70vh;
     margin-bottom: 50vh;
@@ -13,15 +16,15 @@
     margin: 5px;
     width: 150px;
     height: 150px;
-    cursor: pointer;
+    @include cursorPointer;
 }
 
 .box-small-img img:hover {
-    border: 1px solid black;
+    border: 1px solid$backgroundColorBlack;
 }
 
 .box-main-img img {
-    /* border: 1px solid black; */
+    /* border: 1px solid$backgroundColorBlack; */
     width: 600px;
     height: 600px;
     margin-top: 5px;
@@ -39,7 +42,7 @@
 }
 
 .box-input-value {
-    display: flex;
+     @include displayFlex;
     margin-bottom: 10px;
 }
 
@@ -57,17 +60,17 @@
     margin-left: 30px;
     margin-top: 28px;
     width: 30%;
-    font-size: 1rem;
+    @include fontSize1rem;
     font-weight: bold;
 }
 
 .box-button {
-    display: flex;
+     @include displayFlex;
 }
 
 .txtInput {
     width: 80px;
-    text-align: center;
+     @include textAlignCenter;
     border: 1px solid #F5F5F5;
     /* padding: 0 10px; */
     width: 30% !important;
@@ -82,7 +85,7 @@
 }
 .css-dcrfqy-MuiPaper-root-MuiAlert-root{
     /* font-size: 0.4rem !important; */
-    width: 80%;
+    @include width80;
 }
 .css-1erij54{
     font-size: 0.4rem !important;
@@ -107,12 +110,12 @@
     font-size: 2.5rem;
     font-weight: 500;
     padding: 5% 0;
-    text-align: center;
+     @include textAlignCenter;
   }
 
 @media only screen and (max-width: 768px) {
     .box-main-img img {
-        /* border: 1px solid black; */
+        /* border: 1px solid$backgroundColorBlack; */
         /* width: 600px; */
         height: 30vh;
         margin-top: 5px;

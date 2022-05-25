@@ -3,13 +3,13 @@ import axios from "axios";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import "./style.css"
+import "./style.scss"
 import * as _ from 'lodash';
 import { ProductItem } from "./components/ProductItem";
-import { useFetch } from "../../hooks";
+// import { useFetch } from "../../hooks";
 import { Link } from "react-router-dom";
 import database from "../../helpers/Firebase.js";
-import { ref, child, get, onValue } from "firebase/database";
+import { ref,  onValue } from "firebase/database";
 
 const Product = () => {
     const [product, setProduct] = useState([]);
@@ -23,7 +23,7 @@ const Product = () => {
 
     const userId = 1;
     const starCountRef = ref(database, 'users/' + userId);
-    const data =[];
+    const data = [];
 
     onValue(starCountRef, (snapshot) => {
         const data1 = snapshot.val().imgurl;
@@ -31,29 +31,29 @@ const Product = () => {
         data.push(data1);
     });
 
-    const fetchData = () => {
-        axios
-            .get("https://625d83154c36c75357761d85.mockapi.io/Product")
-            .then((respone) => {
-                let data = [...respone.data];
-                if (_.isArray(data)) {
-                    data = data.map((item) => {
-                        return {
-                            ...item,
-                            priceAfterDiscount: ((item.price * (100 - item.discount) / 100).toFixed(2) * 1000)
-                        }
-                    })
-                }
-                ((sort.by !== "" && sort.direction !== "") && (data = _.orderBy(data, [sort.by], [sort.direction])));
-                setProduct(data);
-            });
-    }
-
     const updateSort = (newSort) => {
         setSort(newSort);
     }
 
     useEffect(() => {
+        const fetchData = () => {
+            axios
+                .get("https://625d83154c36c75357761d85.mockapi.io/Product")
+                .then((respone) => {
+                    let data = [...respone.data];
+                    if (_.isArray(data)) {
+                        data = data.map((item) => {
+                            return {
+                                ...item,
+                                priceAfterDiscount: ((item.price * (100 - item.discount) / 100).toFixed(2) * 1000)
+                            }
+                        })
+                    }
+                    ((sort.by !== "" && sort.direction !== "") && (data = _.orderBy(data, [sort.by], [sort.direction])));
+                    setProduct(data);
+                });
+        }
+
         fetchData()
     }, [sort]);
 
@@ -63,7 +63,7 @@ const Product = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    
+
     return (
         <>
             <div class="container-fluid total-product">

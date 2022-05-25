@@ -1,10 +1,13 @@
+@import './../../../../../styles/variable.scss';
+@import './../../../../../styles/mixin.scss';
+
 .sidebar {
     margin: 0 0 30px;
-    position: relative;
+    @include positionRelative;
     padding: 20px;
     border: 1px solid #e3e5ec;
     height: 600px;
-    width: 100%;
+     @include width100;
 }
 
 .sidebar-title h2 {
@@ -12,8 +15,8 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #000;
-    text-align: center;
+    border-bottom: 2px solid $backgroundColorBlack;
+    @include textAlignCenter;
 }
 
 .sidebar-article {
@@ -29,7 +32,7 @@
 }
 
 img {
-    width: 100%;
+     @include width100;
 }
 
 .sidebar-post{
@@ -41,7 +44,7 @@ img {
 }
 
 .sidebar-article a {
-    color: #252a2b;
+    color: $fontColor;
     text-decoration: none;
     outline: none;
     transition: all 0.2s ease-in-out;

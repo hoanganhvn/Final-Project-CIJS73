@@ -28,8 +28,8 @@ function SliderShow() {
     const settings = {
         customPaging: function (i) {
             return (
-                <a>
-                    <img className="demo" src={dataImage[i].imgurl} style={{ width: '100%' }} />
+                <a href>
+                    <img className="demo" src={dataImage[i].imgurl} style={{ width: '100%' }} alt=""/>
                     {/* <img className="demo" src={dataImage[i]} style={{ width: '100%' }} /> */}
                 </a>
             );

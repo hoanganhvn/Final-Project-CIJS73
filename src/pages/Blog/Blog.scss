@@ -1,8 +1,11 @@
+@import './../../styles/variable.scss';
+@import './../../styles/mixin.scss';
+
 /* Start setup defaults */
 * {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
-    padding: 0;
+    @include paddingZero;
 }
 
 .fa {
@@ -12,7 +15,7 @@
 html,
 body {
     border: 0;
-    background-color: #fff;
+    background-color: $backgroundColorWhite;
 }
 
 html {
@@ -26,9 +29,9 @@ img {
 body {
     line-height: 1.4;
     font-size: 14px;
-    color: #252a2b;
+    color: $fontColor;
     overflow-x: hidden;
-    background: #fff;
+    background: $backgroundColorWhite;
     position: initial !important;
 }
 
@@ -45,7 +48,7 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+    @include displayBlock;
 }
 
 /* 1.4 - Typography */
@@ -55,7 +58,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #252a2b;
+    color: $fontColor;
     margin: 0 0 13px 0;
     font-weight: 500;
     line-height: 1.2
@@ -95,7 +98,7 @@ p {
 
 /* 1.5 - Links and Buttons */
 a {
-    color: #252a2b;
+    color: $fontColor;
     text-decoration: none;
     outline: none;
     -moz-transition: all 0.2s ease-in-out;
@@ -106,7 +109,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #66a55f;
+    color: $primaryColor;
     text-decoration: none;
     outline: none;
 }
@@ -121,7 +124,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: #252a2b;
+    color: $fontColor;
     line-height: 1.1;
 }
 
@@ -131,7 +134,7 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover,
 h6 a:hover {
-    color: #66a55f;
+    color: $primaryColor;
 }
 
 /* End setup defaults */
@@ -140,5 +143,5 @@ h6 a:hover {
     height: 100%;
     /* padding-left: 75px;
     padding-right: 75px; */
-    width: 100%;
+    @include width100;
 }

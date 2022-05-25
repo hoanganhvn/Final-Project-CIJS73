@@ -2,7 +2,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import LandingPage from "./pages/LandingPage/LandingPage";
-import "./App.css";
+import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import Product from "./pages/ProductPage/Product";
 import ProductDetail from "./pages/ProductDetailPage/ProductDetail";

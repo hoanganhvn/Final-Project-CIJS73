@@ -5,7 +5,7 @@
 // import BestsSellProduct from "./components/BestsSellProduct";
 // import Aboutus from "./components/Aboutus";
 // import { useEffect, useState } from 'react';
-import "./LandingPage.css";
+import "./LandingPage.scss";
 import { useEffect } from 'react';
 
 function LandingPage() {

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ImaginIntrodution from "./ImaginIntrodution";
-import "./Introduction.css";
+import "./Introduction.scss";
 import { useEffect } from 'react';
 
 function Introduction() {

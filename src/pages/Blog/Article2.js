@@ -1,4 +1,4 @@
-import "./Blog.css"
+import "./Blog.scss"
 import BreadCrumb from "./BreadCrumb/BreadCrumb";
 import Sidebar from "./BlogContent/Sidebar/Sidebar";
 import Article2 from "./BlogContent/MainContent/Article2";

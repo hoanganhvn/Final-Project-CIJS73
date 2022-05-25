@@ -1,4 +1,4 @@
-import "./Service.css";
+import "./Service.scss";
 import { Link } from "react-router-dom";
 import ImaginIntrodution from "./ImaginIntrodution";
 import { useEffect } from 'react';

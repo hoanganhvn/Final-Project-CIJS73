@@ -1,4 +1,4 @@
-import "./Restore.css";
+import "./Restore.scss";
 import { Link } from "react-router-dom";
 import ImaginIntrodution from "./ImaginIntrodution";
 import { useEffect } from 'react';

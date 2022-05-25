@@ -1,24 +1,27 @@
+@import './../../styles/variable.scss';
+@import './../../styles/mixin.scss';
+
 #childWeb1 {
-    display: flex;
+     @include displayFlex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
 }
 #Sline {
-    background-color: black;
+    background-color:$backgroundColorBlack;
     width: 5%;
     height: 4px;
 }
 #search {
-    width: 100%;
-    display: flex;
+    @include width100;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
 }
 #searchBar {
     height: 55px;
-    width: 50%;
+    @include width50;
     padding-left: 20px;
     margin-top: 20px;
     background-color: #ededed;
@@ -28,11 +31,11 @@
     height: 55px; 
     width: 55px;
     margin-top: 20px;
-    background-color: black;
-    color: white;
+    background-color:$backgroundColorBlack;
+    color:$backgroundColorWhite;
 }
 #searchBtn:hover {
-    color: #66a55f;
+    color: $primaryColor;
 }
 #p1 {
     margin-top: 25px;
@@ -42,15 +45,15 @@
 }
 .dataResult {
     margin: 5px 0 0 5px;
-    width: 50%;
+    @include width50;
     height: 200px;
-    background: #ffff;
+    background: $backgroundColorWhite;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    overflow: hidden;
+    @include overflowHidden;  
     overflow-y: auto;
 }
 .dataResult::-webkit-scrollbar {
-    display: none;
+    @include displayNone;
 }
 .dataItem {
     margin-left: 5px;
@@ -63,7 +66,7 @@
         width: 70%;
     }
     p {
-        text-align: center;
+        @include textAlignCenter;
         padding: 0rem 1rem;
     }
 }

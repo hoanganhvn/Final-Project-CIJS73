@@ -1,8 +1,8 @@
 import BannerOne from "./BannerOne";
 import * as _ from 'lodash';
 import { useFetch } from "../../../hooks";
-import database from "../../../helpers/Firebase.js";
-import { ref, child, get, onValue } from "firebase/database";
+// import database from "../../../helpers/Firebase.js";
+// import { ref, child, get, onValue } from "firebase/database";
 
 function Banner() {
     const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");

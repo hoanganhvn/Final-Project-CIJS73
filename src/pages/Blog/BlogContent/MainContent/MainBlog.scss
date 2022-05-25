@@ -1,5 +1,8 @@
+@import './../../../../styles/variable.scss';
+@import './../../../../styles/mixin.scss';
+
 img {
-    width: 100%;;
+    @include width100;;
 }
 
 .main-title h1 {
@@ -14,14 +17,14 @@ img {
 }
 
 .image-zoom img {
-    display: block;
+       @include displayBlock;
     transition: all .3s ease;
 }
 
 
 .image-zoom a {
-    display: block;
-    overflow: hidden;
+       @include displayBlock;
+       @include overflowHidden;  
 }
 
 .image-zoom img:hover {
@@ -33,7 +36,7 @@ img {
 }
 
 .main-item a {
-    color: #252a2b;
+    color: $fontColor;
     text-decoration: none;
     outline: none;
     transition: all 0.2s ease-in-out;

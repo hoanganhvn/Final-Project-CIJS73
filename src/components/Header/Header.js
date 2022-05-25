@@ -3,7 +3,7 @@ import LoginAndRegister from "./components/LoginAndRegister";
 import Cart from "./components/Cart";
 import Menu from "./components/Menu";
 import {useContext, useState } from "react";
-import './Header.css';
+import './Header.scss';
 import { NavLink,Link } from 'react-router-dom';
 import Context from "../../Context";
 

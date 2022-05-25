@@ -1,4 +1,4 @@
-import "./MainBlog.css"
+import "./MainBlog.scss"
 import { Link } from "react-router-dom";
 
 const MainBlog = () => {

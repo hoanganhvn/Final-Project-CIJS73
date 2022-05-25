@@ -1,4 +1,4 @@
-import "./Privacy.css";
+import "./Privacy.scss";
 import { Link } from "react-router-dom";
 import ImaginIntrodution from "./ImaginIntrodution";
 import { useEffect } from 'react';

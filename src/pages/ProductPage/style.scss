@@ -1,6 +1,9 @@
+@import './../../styles/variable.scss';
+@import './../../styles/mixin.scss';
+
 .box-header {
     margin-top: 5px;
-    display: flex;
+     @include displayFlex;
     justify-content: space-evenly;
     gap: 50px;
 }
@@ -11,23 +14,23 @@
 }
 
 .box-price {
-    /* border: 1px solid black; */
+    /* border: 1px solid$backgroundColorBlack; */
     padding: 4px 0;
-    color: rgb(151, 151, 151);
+    color:$colorDiscount;
 }
 
 .box-price-discount {
-    /* border: 1px solid black; */
+    /* border: 1px solid$backgroundColorBlack; */
     padding: 4px 0;
-    color: red;
+    color:$fontColorRed;
 }
 
 .css-sghohy-MuiButtonBase-root-MuiButton-root {
-    background-color: #66a55f !important;
+    background-color: $primaryColor !important;
 }
 
 .css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
-    background-color: white !important;
+    background-color:$backgroundColorWhite !important;
 }
 
 .box-discount {
@@ -35,19 +38,19 @@
     /* background-color: #DD4745; */
     background: linear-gradient(to top, #cc0000 0%, #ff9999 100%);
     padding: 4px 10px;
-    color: white;
+    color:$backgroundColorWhite;
     border-radius: 100%;
     font-weight: bold;
 }
 
 .link-item {
     text-decoration: none;
-    color: black;
+    color:$backgroundColorBlack;
 }
 
 .link-item:hover {
     text-decoration: none;
-    color: #66a55f;
+    color: $primaryColor;
 }
 
 .total-product {
@@ -62,11 +65,11 @@
 }
 .css-1hw9j7s{
     width: 94% !important;
-    background-color: #66a55f !important;
+    background-color: $primaryColor !important;
 }
 .css-1hw9j7s:hover{
     width: 94% !important;
-    background-color: white !important;
+    background-color:$backgroundColorWhite !important;
 }
 /* end */
 .Mui-disabled {
@@ -112,7 +115,7 @@
 } */
 
 .style-noname {
-    display: flex;
+     @include displayFlex;
     gap: 20px;
 }
 
@@ -135,7 +138,7 @@
         width: 80% !important;
         height: 50% !important;
         margin: 0;
-        padding: 0;
+        @include paddingZero;
     }
     .css-pljo3a {
         width: 95% !important;
@@ -146,7 +149,7 @@
         width: 80% !important;
         height: 50% !important;
         margin: 0;
-        padding: 0;
+        @include paddingZero;
     }
 
     .css-h93ljk-MuiTypography-root {
@@ -183,7 +186,7 @@
 
 @media only screen and (max-width: 576px) {
     .box-header .product a {
-        font-size: 1rem;
+        @include fontSize1rem;
         margin-left: 0;
     }
 

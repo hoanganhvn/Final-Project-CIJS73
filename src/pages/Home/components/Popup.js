@@ -1,10 +1,10 @@
 import Modal from '@mui/material/Modal';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useFetch } from "../../../hooks";
-import * as _ from 'lodash';
+// import { useFetch } from "../../../hooks";
+// import * as _ from 'lodash';
 import { useState ,useEffect} from 'react';
 import database from "../../../helpers/Firebase.js";
-import { ref, child, get, onValue } from "firebase/database";
+import { ref, onValue } from "firebase/database";
 
 const theme = createTheme({
     palette: {

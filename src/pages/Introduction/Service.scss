@@ -1,11 +1,14 @@
+@import './../../styles/variable.scss';
+@import './../../styles/mixin.scss';
+
 .active {
     background-color: #f5f5f5;
     height: 40px;
-    width: 100%;
+     @include width100;
     padding-top: 10px;
 }
 #active {
-    display: flex;
+     @include displayFlex;
     list-style: none;
     margin-left: 75px;
     font-size: small;
@@ -16,12 +19,12 @@
 }
 
 #container5 {
-    width: 100%;
+     @include width100;
     height: 700px;
 }
 
 #pageCatalogue5 {
-    position: relative;
+    @include positionRelative;
     top: -350px;
     left: 75px;
     border: 1px solid #e5e4e9;
@@ -31,7 +34,7 @@
 }
 #pagecatalogue {
     margin-top: 18px;
-    text-align: center;
+     @include textAlignCenter;
 }
 #catalogue {
     font-size: 20px;
@@ -47,7 +50,7 @@ h4 {
 #Service {
     width: 1000px;
     display: inline-block;
-    position: relative;
+    @include positionRelative;
     left: 100px;
     top: 30px;
 }
@@ -65,10 +68,10 @@ ol {
 #img5 {
     width: 310px;
     height: 210px;
-    position: relative;
+    @include positionRelative;
     top: -320px;
     left: 75px;
-    overflow: hidden;
+    @include overflowHidden;  
     -webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
 	display: -webkit-box;
@@ -86,26 +89,26 @@ img {
     -moz-transform: scale(1.2); 
     -o-transform: scale(1.2);
     -ms-transform: scale(1.2);
-    cursor: pointer; 
+    @include cursorPointer; 
 } */
 
 @media only screen and (max-width: 1023.5px) {
     img {
-        display: none;
+        @include displayNone;
     }
     #active {
         font-size: 12px;
         margin-left: 8%;
     }
     #childWeb5 {
-        display: flex;
+         @include displayFlex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 750px;
     }
     #pageCatalogue5 {
-        display: block;
+           @include displayBlock;
         margin: auto;
         width: 85%;
         left: 0px;
@@ -116,16 +119,16 @@ img {
         margin-left: 10%;
     }
     h2 {
-        text-align: center;
+         @include textAlignCenter;
     }
     #hr {
         margin: auto;
         width: 65px;
-        background-color: #000;
+        background-color: $backgroundColorBlack;
         height: 3px;
     }
     #Service {
-        display: block;
+           @include displayBlock;
         margin: auto;
         margin-top: 50px;
         left: 0px;
@@ -142,14 +145,14 @@ img {
     }
     #Service {
         width: 60%;
-        position: relative;
+        @include positionRelative;
         left: 35%;
         top: -230px;
-        display: block;
+           @include displayBlock;
         padding-left: 50px;
     }
     #img5 {
-        position: relative;
+        @include positionRelative;
         top: -270px;
     }
 }

@@ -1,4 +1,4 @@
-import "./Searching.css";
+import "./Searching.scss";
 import { useEffect, useState } from 'react';
 import ProductData from "../../helpers/Product.json";
 
@@ -56,7 +56,7 @@ function Searching() {
                             // console.log(value.image);
                             return (
                                 <div>
-                                    <a className="dataItem" href={value.image[0]} target="_blank">
+                                    <a className="dataItem" href={value.image[0]}>
                                         <p> {value.name}</p>
                                     </a>
                                 </div>

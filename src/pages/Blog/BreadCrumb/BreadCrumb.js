@@ -1,4 +1,4 @@
-import "./BreadCrumb.css"
+import "./BreadCrumb.scss"
 import { Link } from "react-router-dom";
 
 const BreadCrumb = () => {

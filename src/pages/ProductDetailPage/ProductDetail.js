@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import "./style.css";
+import "./style.scss";
 import * as _ from "lodash";
 import { ProductItem } from "../ProductPage/components/ProductItem";
 import { useParams } from "react-router-dom";

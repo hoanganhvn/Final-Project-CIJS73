@@ -1,14 +1,17 @@
+@import './../../styles/variable.scss';
+@import './../../styles/mixin.scss';
+
 /* Start setup defaults */
 *{
     font-family:'Quicksand', sans-serif;
     margin: 0;
-    padding: 0;
+    @include paddingZero;
 }
 .fa{
     font-family: 'FontAwesome';
 }
 html,body{
-    border: 0;background-color: #fff;
+    border: 0;background-color: $backgroundColorWhite;
 }
 html{
     font-size: 100%;
@@ -19,16 +22,16 @@ img{
 body{
 	line-height:1.4;
 	font-size: 14px;
-	color:#252a2b;
+	color:$fontColor;
 	overflow-x: hidden;
-	background : #fff;
+	background : $backgroundColorWhite;
 	position: initial !important;
-    width: 100%;
+     @include width100;
 }	
 /* 1.2 - HTML5 Elements */
 article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section { display:block; }
 /* 1.4 - Typography */
-h1,h2,h3,h4,h5,h6 { color:#252a2b; margin:0 0 13px 0;  font-weight:500;line-height:1.2}
+h1,h2,h3,h4,h5,h6 { color:$fontColor; margin:0 0 13px 0;  font-weight:500;line-height:1.2}
 h1 { font-size: 36px; }
 h2 { font-size: 28px;}
 h3 { font-size: 24px;}
@@ -37,31 +40,31 @@ h5 { font-size: 12px; line-height: 18px; }
 h6 { font-size: 10px; line-height: 18px; }
 p{ margin: 0 0 10px 0; line-height: 21px }
 /* 1.5 - Links and Buttons */
-a {color:#252a2b;text-decoration: none; outline: none; -moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;-webkit-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
-a:hover,a:focus{color:#66a55f;text-decoration: none; outline: none;}	
+a {color:$fontColor;text-decoration: none; outline: none; -moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;-webkit-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
+a:hover,a:focus{color:$primaryColor;text-decoration: none; outline: none;}	
 a:active { outline: none; }
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color:#252a2b;line-height: 1.1; }
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66a55f;}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color:$fontColor;line-height: 1.1; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:$primaryColor;}
 /* End setup defaults */
 
 /* Start Header */
 #topbar{
-    background-color: #66a55f;
-    color: #fff;
+    background-color: $primaryColor;
+    color: $backgroundColorWhite;
     height: 4.4vh;
     padding-top: 0.25%;
     font-size: 0.8rem;
 }
 #topbar:hover{
-    background-color: #fff;
-    color: #66a55f;
-    border: 1px solid #66a55f;
+    background-color: $backgroundColorWhite;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
 }
 .logo{
     height: 10vh;
     padding-top: 1%;
     width: 90%;
-    display: flex;
+     @include displayFlex;
 }
 .logo .header-logo{
     font-size: 2rem;
@@ -70,56 +73,56 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 .logo .fa{
     font-size: 1.4rem;
     padding-top: 10px;
-    cursor: pointer;
+    @include cursorPointer;
 }
 .logo .icon i{
     padding: 0 10px;
 }
 .logo .icon i:hover{
-    color: #66a55f;
+    color: $primaryColor;
 }
 .navbar{
     font-size: 1.1rem;
 }
 .line6 {
-    background-color: black;
+    background-color:$backgroundColorBlack;
     height: 2px;
 }
 .line2,.line3,.line4,.line5,.line1 {
-    background-color: black;
+    background-color:$backgroundColorBlack;
     height: 2px;
-    display: none;
+       @include displayNone;
 }
 .home2:hover .line2 {
-    display: block;
+       @include displayBlock;
 }
 .home3:hover .line3 {
-    display: block;
+       @include displayBlock;
 }
 .home4:hover .line4 {
-    display: block;
+       @include displayBlock;
 }
 .home5:hover .line5 {
-    display: block;
+       @include displayBlock;
 }
 .home1:hover .line1 {
-    display: block;
+       @include displayBlock;
 }
 #btn {
     width: 110px;
-    border: 1px solid #66a55f;
-    background-color: #66a55f;
+    border: 1px solid $primaryColor;
+    background-color: $primaryColor;
     font-size: 13px;
-    color: white;
+    color:$backgroundColorWhite;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
 }
 #btn:hover {
-    background-color: white;
-    color: #66a55f;
+    background-color:$backgroundColorWhite;
+    color: $primaryColor;
 }
 .head__line {
-    width: 100%;
+     @include width100;
     height: 1px;
     background-color: #f3f3f3;
 }
@@ -131,81 +134,81 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 
 .body {
     background-color: #e2ffe0;
-    width: 100%;
+     @include width100;
     height: fit-content;
 }
 .top--banner1 {
-    width: 100%;
+     @include width100;
     height: auto;
 }
 .top {
-    display: flex;
+     @include displayFlex;
     justify-content: center;
 }
 .top__banner2 {
-    width: 80%;
+    @include width80;
     height: auto;
     margin-top: 10px;
 }
 .pageTitle {
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    @include overflowHidden;  
     background-color: #e2ffe0;
     padding-top: 50px;
 }
 .pageTitle__text {
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
     background-color: #2c8722;
-    width: 50%;
+    @include width50;
     height: 2.3em;
-    overflow: hidden;
+    @include overflowHidden;  
     border-radius: 50px 0px;
     box-shadow: 8px 8px #c7edc3;
     font-size: 28px;
     font-weight: bold;
 }
 .countdown {
-    display: flex;
+     @include displayFlex;
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
 }
 #clockdiv {
 	height: 170px;
-    display: flex;
+     @include displayFlex;
     align-items: center;
 }
 .timer {
-    background-color: black;
+    background-color:$backgroundColorBlack;
     margin: 2%;
     width: 120px;
     height: 70%;
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
 }
 .timer__number {
-    color: red;
+    color:$fontColorRed;
     font-size: 40px;
-    background-color: white;
+    background-color:$backgroundColorWhite;
     height: 60%;
-    width: 80%;
-    display: flex;
+    @include width80;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
 }
 .smalltext{
-	color: white;
+	color:$backgroundColorWhite;
     margin-top: 5px;
 }
 .ul {
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     list-style: none;
     background-color: #e2ffe0;
@@ -214,20 +217,20 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     padding-top: 30px;
 }
 .li {
-    display: flex;
+     @include displayFlex;
 }
 .li1,.li2,.li3,.li4 {
     font-size: 23px;
     color: gray;
-    cursor: pointer;
+    @include cursorPointer;
     align-items: center;
     justify-content: center;
     width: 265px;
-    text-align: center;
+     @include textAlignCenter;
     background-color: #e2ffe0;
 }
 .li1 {
-    color: black;
+    color:$backgroundColorBlack;
 }
 .hr1,.hr2,.hr3,.hr4 {
     width: 70px;
@@ -236,21 +239,21 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     border-radius: 6px;
     margin: auto;
     margin-top: 25px;
-    display: none;
+       @include displayNone;
 }
 .hr1 {
-    display: block;
+       @include displayBlock;
 }
 
 
 .row {
-    display: flex;
+     @include displayFlex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
 .column {
-    display: flex;
+     @include displayFlex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
@@ -261,8 +264,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     width: 16.5%;
     height: 320px;
     border-radius: 10px;
-    overflow: hidden;
-    background-color: white;
+    @include overflowHidden;  
+    background-color:$backgroundColorWhite;
     margin: 6px;
     border: 2px solid #c7edc3;
 }
@@ -282,16 +285,16 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     margin-left: 4%;
     height: 25px;
     font-weight: 500;
-    overflow: hidden;
-    white-space: nowrap;
+    @include overflowHidden;  
+   $backgroundColorWhite-space: nowrap;
     text-overflow: ellipsis;
 }
 .product__price {
     margin-top: -2%;
     margin-left: 4%;
     font-size: 15px;
-    overflow: hidden;
-    white-space: nowrap;
+    @include overflowHidden;  
+   $backgroundColorWhite-space: nowrap;
     text-overflow: ellipsis;
 }
 .price-bef {
@@ -301,35 +304,35 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     margin-left: 2%;
 }
 .price-aft {
-    color: red;
+    color:$fontColorRed;
 }
 .product__discount {
     z-index: 2;
-    background-color: red;
+    background-color:$fontColorRed;
     width: 20%;
     color:white;
-    text-align: center;
+     @include textAlignCenter;
     font-size: 12px;
     border-radius: 10px 0px;
-    border: 2px solid red ;
+    border: 2px solid$fontColorRed ;
     font-weight: bolder;
-    position: relative;
+    @include positionRelative;
     top: -319px;
     left: 3px;
 }
 .promotion,.news,.best-selling {
-    display: none;
+       @include displayNone;
     flex-wrap: wrap;
     justify-content:center;
     background-color: #e2ffe0;
     padding-bottom: 50px;
 }
 .row3, .news__row3 {
-    display: none;
+       @include displayNone;
 }
 .seemore {
-    width: 100%;
-    display: flex;
+     @include width100;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
     background-color: #e2ffe0;
@@ -338,93 +341,93 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 .btn {
     width: 285px;
     height: 45px;
-    border: 1px solid #66a55f;
-    background-color: #66a55f;
+    border: 1px solid $primaryColor;
+    background-color: $primaryColor;
     font-size: 17px;
-    color: white;
+    color:$backgroundColorWhite;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
     margin-top: 20px;
 }
 .btn:hover {
-    background-color: white;
-    color: #66a55f;
+    background-color:$backgroundColorWhite;
+    color: $primaryColor;
 }
 .voucher {
-    display: flex;
+     @include displayFlex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #e2ffe0;
 }
 .voucher__item {
-    background-color: white;
+    background-color:$backgroundColorWhite;
     margin: 0.5%;
     width: 600px;
     height: 150px;
     border: 4px dashed lightgray;
     border-radius: 5px;
-    overflow: hidden;
-    display: flex;
+    @include overflowHidden;  
+     @include displayFlex;
     align-items: center;
 }
 .voucher__item--content {
     width: 60%;
     height: 85%;
     margin-left: 1.5%;
-    background-color: red;
+    background-color:$fontColorRed;
 }
 .discount__amount {
-    background-color: white;
+    background-color:$backgroundColorWhite;
     width: 95%;
     height: 40%;
     margin: auto;
     margin-top: 2%;
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
-    color: red;
+    color:$fontColorRed;
     font-size: 18px;
     border-radius: 5px;
 }
 #discount {
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
 }
 .amount {
     font-size: 30px;
-    position: relative;
+    @include positionRelative;
     left: 7px;
 }
 .co {
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
 }
 .condition {
-    color: white;
+    color:$backgroundColorWhite;
     margin-left: -3%;
 }
 .copyBtn {
-    color: red;
-    background-color: white;
-    width: 100%;
+    color:$fontColorRed;
+    background-color:$backgroundColorWhite;
+     @include width100;
     height: 20px;
     border-radius: 20px;
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
     margin-left: 8px;
     font-weight: bold;
 }
 .copyBtn:hover {
-    color: red;
-    background-color: white;
-    width: 100%;
+    color:$fontColorRed;
+    background-color:$backgroundColorWhite;
+     @include width100;
     height: 20px;
     border-radius: 20px;
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     align-items: center;
     border: 0px;
@@ -432,10 +435,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 .exp {
     margin-left: 6.5%;
     color: #2c8722;
-    text-align: center;
+     @include textAlignCenter;
 }
 .banners {
-    display: flex;
+     @include displayFlex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -452,13 +455,13 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     margin-left: -5px;
 }
 .banner-item {
-    overflow: hidden;
+    @include overflowHidden;  
     margin: 8px;
-    display: flex;
+     @include displayFlex;
     justify-content: center;
 }
 .banner-img {
-    width: 100%;
+     @include width100;
     height: 19rem;
     display: -webkit-box;
     transition: all 2s ease;
@@ -472,16 +475,16 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     -moz-transform: scale(1.1); 
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    cursor: pointer; 
+    @include cursorPointer; 
 }
 .concessionary,.hot,.supero,.outstanding {
-    display: flex;
+     @include displayFlex;
     justify-content: center;
     flex-wrap: wrap;
     background-color: #e2ffe0;
 }
 .hot,.supero {
-    display: none;
+       @include displayNone;
 }
 .concessionary__btn {
     margin-top: 80px;
@@ -510,11 +513,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         width: 47%;
     }
     .copyBtn {
-        width: 100%;
+         @include width100;
         font-size: 12px;
     }
     .copyBtn:hover {
-        width: 100%;
+         @include width100;
         font-size: 12px;
     }
     .condition {
@@ -524,11 +527,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         margin-left: 35px;
     }
     .banner1,.banner2 {
-        display: flex;
+         @include displayFlex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 50%;
+        @include width50;
     }
     .banner-item {
         width: 97.5%;
@@ -541,9 +544,9 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         font-size: 27px;
     }
     #clockdiv {
-        width: 100%;
+         @include width100;
         height: 200px;
-        display: flex;
+         @include displayFlex;
         justify-content: center;
         align-items: center;
         padding: 0% 3%;
@@ -559,12 +562,12 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     }
     .ul {
         
-        display: flex;
+         @include displayFlex;
     }
     .li {
         
-        width: 50%;
-        display: flex;
+        @include width50;
+         @include displayFlex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -579,7 +582,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         margin-top: 10px;
     }
     .img1 {
-        width: 100%;
+         @include width100;
         height: auto;
     }
     .product-item {
@@ -591,7 +594,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         margin-top: -0.5%;
     }
     .product__discount {
-        display: none;
+           @include displayNone;
     }
     .product__price {
         margin-top: -2%;
@@ -600,10 +603,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         margin-top: -7px;
     }
     .banner-item {
-        width: 100%;
+         @include width100;
     }
     .banner-img {
-        width: 100%;
+         @include width100;
         height: auto;
         margin-left: -15px;
     }
@@ -614,9 +617,9 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         font-size: 18px;
     }
     #clockdiv {
-        width: 100%;
+         @include width100;
         height: 200px;
-        display: flex;
+         @include displayFlex;
         justify-content: center;
         align-items: center;
         padding: 0% 3%;
@@ -632,12 +635,12 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     }
     .ul {
         
-        display: flex;
+         @include displayFlex;
     }
     .li {
         
-        width: 50%;
-        display: flex;
+        @include width50;
+         @include displayFlex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -652,7 +655,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         margin-top: 10px;
     }
     .img1 {
-        width: 100%;
+         @include width100;
         height: auto;
     }
     .product-item {
@@ -664,7 +667,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         margin-top: -5px;
     }
     .product__discount {
-        display: none;
+           @include displayNone;
     }
     .product__price {
         margin-top: -10px;
@@ -673,10 +676,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         margin-top: -7px;
     }
     .banner-item {
-        width: 100%;
+         @include width100;
     }
     .banner-img {
-        width: 100%;
+         @include width100;
         height: auto;
         margin-left: -15px;
     }
@@ -684,7 +687,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
         font-size: smaller;
     }
     .co {
-        display: flex;
+         @include displayFlex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -695,7 +698,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     }
     .copyBtn {
         margin: auto;
-        width: 100%;
+         @include width100;
         font-size: 12px;
     }
     #discount,.class {
@@ -709,16 +712,16 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 
 /* Start Footer */
 .footer .container-fluid{
-    padding: 0;
+    @include paddingZero;
 }
 .footer .container-fluid .col-md-12{
-    padding: 0;
+    @include paddingZero;
 }
 .foot-up{
     background-color: #f3f3f3;
     height: 16vh;
     padding-top: 20px;
-    font-size: 1rem;
+    @include fontSize1rem;
 }
 .foot-icon-email{
     padding-top: 20px;
@@ -733,17 +736,17 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 }
 .foot-input-email{
     height: 6vh;
-    background-color: #66a55f;
-    color: white;
+    background-color: $primaryColor;
+    color:$backgroundColorWhite;
     padding-top: 8px;
     padding-left: 7%;
     transition: 0.5s;
     margin-top: 8px;
 }
 .foot-input-email:hover{
-    background-color: white;
-    color: #66a55f;
-    border: 1px solid #66a55f;
+    background-color:$backgroundColorWhite;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
 }
 .foot-register{
     /* margin-left: 0; */
@@ -754,8 +757,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     font-size: 1.6rem;
 }
 .hotline{
-    color: red;
-    cursor: pointer;
+    color:$fontColorRed;
+    @include cursorPointer;
 }
 .foot-middle{
     height: 40vh;
@@ -770,7 +773,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 .introdution a img{
     height: 55px;
     width: 150px;
-    display: block;
+       @include displayBlock;
     margin: 15px 0;
 }
 .foot-icon i{
@@ -779,33 +782,33 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     padding: 2% 2% 2% 1.5%;
     border: 1px solid grey;
     border-radius: 5px;
-    cursor: pointer;
+    @include cursorPointer;
 }
 .fa-facebook:hover{
-    color: #66a55f;
-    border: 1px solid #66a55f;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
 }
 .fa-twitter:hover{
-    color: #66a55f;
-    border: 1px solid #66a55f;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
 }
 .fa-instagram:hover{
-    color: #66a55f;
-    border: 1px solid #66a55f;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
 }
 .fa-google:hover{
-    color: #66a55f;
-    border: 1px solid #66a55f;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
 }
 .fa-youtube-play:hover{
-    color: #66a55f;
-    border: 1px solid #66a55f;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
 }
 .infomation i{
     font-size: 1.5rem;
 }
 .address{
-    display: flex;
+     @include displayFlex;
 }
 .address i{
     padding-right: 30px;
@@ -820,42 +823,42 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     padding-right: 18px;
 }
 .link span{
-    display: block;
+       @include displayBlock;
     padding-bottom: 8px;
 }
 .support span{
-    display: block;
+       @include displayBlock;
     padding-bottom: 10px;
 }
 .foot-down{
     height: 10vh;
     padding-top: 3vh;
-    border-top: 1px solid rgb(209, 209, 209);
+    border-top: 1px solid $backgroundColorNav;
 
 }
 /* End Footer */
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
+       @include displayNone; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
-    left: 0;
+   @include leftZero;
     top: 0;
-    width: 100%; /* Full width */
+     @include width100; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.4); /*$backgroundColorBlack w/ opacity */
   }
   
 /* Modal Content */
 .modal-content {
-    position: relative;
-    background-color: #fefefe;
+    @include positionRelative;
+    background-color: $backgroundColorContent;
     margin: auto;
-    padding: 0;
+    @include paddingZero;
     border: 1px solid #888;
     width: 40%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -870,7 +873,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 
 /* The Close Button */
 .close,.close1,.close2 {
-    color: #000;
+    color: $backgroundColorBlack;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -878,30 +881,30 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: $backgroundColorBlack;
     text-decoration: none;
-    cursor: pointer;
+    @include cursorPointer;
 }
 .close1:hover,
 .close1:focus {
-    color: #000;
+    color: $backgroundColorBlack;
     text-decoration: none;
-    cursor: pointer;
+    @include cursorPointer;
 }
 .close2:hover,
 .close2:focus {
-    color: #000;
+    color: $backgroundColorBlack;
     text-decoration: none;
-    cursor: pointer;
+    @include cursorPointer;
 }
 
 .modal-header {
     padding: 2px 16px;
-    background-color: white;
-    color: white;
+    background-color:$backgroundColorWhite;
+    color:$backgroundColorWhite;
 }
 .modal-header h2 {
-    text-align: center;
+     @include textAlignCenter;
     font-size: 1.6rem;
     padding-top: 14px;
 }
@@ -909,7 +912,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 .modal-body {padding: 2px 16px;}
 
 .search{
-    width: 100%;
+     @include width100;
     padding: 0 10% 0 20%;
 }
 .search input{
@@ -918,11 +921,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 .search i{
     font-size: 1.2rem;
     padding: 6px 10px 6px 10px;
-    cursor: pointer;
+    @include cursorPointer;
     height: 38px;
 }
 .search i:hover{
-    border: 1px solid black;
+    border: 1px solid$backgroundColorBlack;
     border-radius: 5px;
 }
 .policy{
@@ -930,13 +933,13 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
     font-size: 0.8rem;
 }
 .user-title{
-    display: flex;
+     @include displayFlex;
 }
 .user-title{
-    width: 100%;
+     @include width100;
 }
 .user-title h3{
-    width: 80%;
+    @include width80;
     padding: 10% 0 5% 0;
     text-align: right;
 }
@@ -948,7 +951,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{color:#66
 }
 
 input[type=text], input[type=password] {
-    width: 100%;
+     @include width100;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -958,19 +961,19 @@ input[type=text], input[type=password] {
   
   
   button {
-    background-color: #66a55f;
-    color: white;
+    background-color: $primaryColor;
+    color:$backgroundColorWhite;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    cursor: pointer;
-    width: 100%;
+    @include cursorPointer;
+     @include width100;
   }
   
   button:hover {
-    background-color: white;
-    color: #66a55f;
-    border: 1px solid #66a55f;
+    background-color:$backgroundColorWhite;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
   }
   
   .container {
@@ -982,29 +985,29 @@ input[type=text], input[type=password] {
   }
   
   .content {
-    background-color: #fefefe;
+    background-color: $backgroundColorContent;
     margin: 1% auto 5% auto;
     border: 1px solid #888;
-    width: 80%; 
+    @include width80; 
   }
   
   #warning1 {
-    color: red;
-    display: none;
+    color:$fontColorRed;
+       @include displayNone;
     padding-bottom: 1%;
   }
   #warning2 {
-    color: red;
-    display: none;
+    color:$fontColorRed;
+       @include displayNone;
     padding-bottom: 1%;
   }
   
   #login1 {
-    display: none;
-    width: 50%;
+       @include displayNone;
+    @include width50;
     margin: 5% 50%;
     transform: translateX(-50%);
-    text-align: center;
+     @include textAlignCenter;
   }
   #login1 img{
     width: 30%;
@@ -1014,27 +1017,27 @@ input[type=text], input[type=password] {
     border-radius: 50%;
   }
   .link-register {
-      text-align: center;
+       @include textAlignCenter;
   }
   .close2{
       padding-right: 2%;
   }
   .modal-header-cart{
-    border-bottom:  1px solid rgb(209, 209, 209);;
+    border-bottom:  1px solid $backgroundColorNav;;
   }
   .cart-head h3 {
-      text-align: center;
+       @include textAlignCenter;
       padding-top: 5%;
       padding-left: 10%;
   }
   .fa-cart-plus{
       font-size: 5rem;
-      color: #66a55f;
+      color: $primaryColor;
       padding-left: 45%;
-      width: 100%;
+       @include width100;
   }
   .word-cart{
-    text-align: center;
+     @include textAlignCenter;
     padding: 3% 0 0 5%;
   }
   .count-money{
@@ -1042,12 +1045,12 @@ input[type=text], input[type=password] {
   }
   .money-red{
       float: right;
-      color: red;
-      font-size: 1rem;
+      color:$fontColorRed;
+      @include fontSize1rem;
       font-weight: 900;
   }
   .btn-cart{
-      display: flex;
+       @include displayFlex;
       /* padding: 0 5% 2% 5%; */
   }
   .money-cart1,.money-cart2{
@@ -1058,33 +1061,33 @@ input[type=text], input[type=password] {
   }
 
   .fa-bars,.search-input{
-      display: none;
+         @include displayNone;
   }
   .navlist{
-    position: absolute;;
+    @include positionAbsolute;;
     height: 80%;
-    width: 100%;
+     @include width100;
     top: 15vh;
-    left: 0;
+   @include leftZero;
     z-index: 1;
-    background-color: white;
-    border-top: 1px solid rgb(209, 209, 209);
+    background-color:$backgroundColorWhite;
+    border-top: 1px solid $backgroundColorNav;
     font-size: 1.5rem;
     font-weight: 600;
-    text-align: center;
+     @include textAlignCenter;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     opacity: 0;
     visibility: hidden;
   }
   .navlist ul li{
     padding: 1%;
-    cursor: pointer;
+    @include cursorPointer;
   }
   .navlist ul li:hover{
-    color: #66a55f;
+    color: $primaryColor;
   }
   .line-menu {
-    background-color: rgb(209, 209, 209);
+    background-color: $backgroundColorNav;
     height: 1px;
     margin-top: 2%;
   } 
@@ -1094,7 +1097,7 @@ input[type=text], input[type=password] {
   }
 @media only screen and (max-width: 768px) {
     .fa-bars, .search-input{
-        display: block;
+           @include displayBlock;
         /* padding-top: 8%; */
     }
     .search-input-btn{
@@ -1110,24 +1113,24 @@ input[type=text], input[type=password] {
         /* margin-top: 9%; */
     }
     .search-input-btn i:hover{
-        border: 1px solid #66a55f;
+        border: 1px solid $primaryColor;
         border-radius: 5px;
-        color: #66a55f;
+        color: $primaryColor;
         height: 6.2vh;
-        cursor: pointer;
+        @include cursorPointer;
         /* padding-bottom: 4%; */
     }
     .fa-search1{
-        display: none;
+           @include displayNone;
     }
     .header-logo a{
         /* height: 30vh;
-        width: 80%; */
+        @include width80; */
         font-size: 1.4rem;
         /* padding-bottom: 2%; */
     }
     .navbar{
-        display: none;
+           @include displayNone;
     }
     .foot-icon-email{
         width: 100vw;
@@ -1136,14 +1139,14 @@ input[type=text], input[type=password] {
         height: 38vh;
     }
     .foot-icon-email{
-        text-align: center;
+         @include textAlignCenter;
         padding: 1% 0 2% 0;
     }
     .foot-input-email, .foot-register{
-        text-align: center;
+         @include textAlignCenter;
     }
     .col-md-6 {
-        width: 50%;
+        @include width50;
     }
     .foot-middle{
         height: 80vh;
@@ -1158,12 +1161,12 @@ input[type=text], input[type=password] {
 @media only screen and (max-width: 576px) {
     .header-logo a{
         /* height: 30vh;
-        width: 80%; */
-        font-size: 1rem;
+        @include width80; */
+        @include fontSize1rem;
         /* padding-bottom: 2%; */
     }
     .search-input-btn input{
-        width: 80%;
+        @include width80;
     }
     .search-input-btn i{
         padding: 2.4% 6% 8.3% 6%;
@@ -1171,14 +1174,14 @@ input[type=text], input[type=password] {
         /* margin-top: 9%; */
     }
     .search-input-btn i:hover{
-        border: 1px solid #66a55f;
+        border: 1px solid $primaryColor;
         border-radius: 5px;
-        color: #66a55f;
+        color: $primaryColor;
         /* height: 6.4vh; */
-        cursor: pointer;
+        @include cursorPointer;
         /* padding-bottom: 4%; */
     }
     .foot-up,.foot-middle{
-        display: none;
+           @include displayNone;
     }
 }

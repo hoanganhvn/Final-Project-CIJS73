@@ -1,3 +1,6 @@
+@import './../../../../styles/variable.scss';
+@import './../../../../styles/mixin.scss';
+
 .new1-content h1 {
     margin: 20px 0;
     font-size: 24px;
@@ -5,7 +8,7 @@
 }
 
 .new1-img {
-    width: 80%;
+    @include width80;
 }
 
 .new1-info {
@@ -17,7 +20,7 @@
     border: 1px solid #f5f5f5;
     padding: 8px 30px;
     margin: 15px 0 20px;
-    width: 100%;
+    @include width100;
     border-radius: 6px;
 }
 
@@ -26,7 +29,7 @@
 }
 
 .new1-table li a {
-    color: #66a55f;
+    color: $primaryColor;
 }
 
 .new1-table-title {

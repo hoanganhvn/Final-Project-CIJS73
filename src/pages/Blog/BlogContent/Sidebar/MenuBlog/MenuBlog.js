@@ -1,4 +1,4 @@
-import "./MenuBlog.css"
+import "./MenuBlog.scss"
 import { Link } from "react-router-dom";
 
 const MenuBlog = () => {

@@ -1,0 +1,45 @@
+@mixin displayBlock {
+display: block;
+  }
+@mixin displayNone {
+display: none;
+  }
+@mixin displayFlex {
+display: flex;
+  }
+@mixin width100 {
+width: 100%;
+  }
+@mixin width50 {
+  width: 50%;
+  }
+@mixin width80 {
+  width: 80%;
+  }
+@mixin cursorPointer {
+  cursor: pointer;
+  }
+@mixin   positionRelative {
+  position: relative;
+  }
+@mixin   positionAbsolute {
+  position: absolute;
+  }
+@mixin   leftZero {
+  left: 0;
+  }
+@mixin   left10 {
+  left: 10%;
+  }
+@mixin   textAlignCenter {
+  text-align: center;
+  }
+@mixin   overflowHidden {
+  overflow: hidden;
+  }
+@mixin   paddingZero {
+  padding: 0;
+  }
+@mixin   fontSize1rem {
+  font-size: 1rem;
+  }

@@ -1,4 +1,4 @@
-import "./NewsLatest.css"
+import "./NewsLatest.scss"
 import { Link } from "react-router-dom";
 
 const NewsLatest = (props) => {

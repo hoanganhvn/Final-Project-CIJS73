@@ -1,5 +1,8 @@
+@import './../../styles/variable.scss';
+@import './../../styles/mixin.scss';
+
 #childWeb6 {
-    display: flex;
+     @include displayFlex;
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -29,7 +32,7 @@ input {
 #hr {
     width: 55px;
     height: 4px;
-    background-color: black;
+    background-color:$backgroundColorBlack;
 }
 #content {
     border: 1px solid #ededed;
@@ -50,25 +53,25 @@ input {
 .btn {
     height: 45px;
     width: 260px;
-    border: 1px solid #66a55f;
-    background-color: #66a55f;
+    border: 1px solid $primaryColor;
+    background-color: $primaryColor;
     font-size: 13px;
-    color: white;
+    color:$backgroundColorWhite;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
 }
 .btn:hover {
-    background-color: white;
-    color: #66a55f;
+    background-color:$backgroundColorWhite;
+    color: $primaryColor;
 }
 
 @media only screen and (max-width: 1023.5px) {
     #childWeb6 {
-        display: flex;
+         @include displayFlex;
         flex-direction: column;
     }
     iframe {
-        width: 100%;
+         @include width100;
         height: 300px;
     }
     #contact {
@@ -79,15 +82,15 @@ input {
         font-size: 80%;
     }
    #email {
-       width: 100%;
+        @include width100;
    }
    #number {
-       width: 100%;
+        @include width100;
        margin-top: 10px;
        margin-left: 0px;
    }
    #content {
-       width: 100%;
+        @include width100;
    }
 }
 
@@ -97,7 +100,7 @@ input {
     }
     #contact {
         margin-left: 3%;
-        display: block;
+        @include displayBlock;
         width: 55%;
     }
     #email,#number {
@@ -107,6 +110,6 @@ input {
         margin-left: 8%;
     }
     #content {
-        width: 100%;
+         @include width100;
     }
 }

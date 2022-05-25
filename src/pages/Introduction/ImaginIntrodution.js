@@ -7,7 +7,7 @@ const ImaginIntrodution = () => {
 
     return (
         <>
-            <img src={dataBanner.map(dataBanner => dataBanner.imgurl)} />
+            <img src={dataBanner.map(dataBanner => dataBanner.imgurl)} alt=""/>
         </>
     )
 }

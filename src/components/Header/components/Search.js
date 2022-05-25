@@ -73,7 +73,7 @@ function Search(props) {
                                     // console.log(value.image);
                                     return (
                                         <div>
-                                            <a className="dataItem" href={value.image[0]} target="_blank">
+                                            <a className="dataItem" href={value.image[0]} >
                                                 <p> {value.name}</p>
                                             </a>
                                         </div>

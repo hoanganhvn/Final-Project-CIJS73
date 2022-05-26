@@ -5,7 +5,6 @@ const BlogLayout = () => {
         <>
             <Outlet />
         </>
-
     )
 }
 

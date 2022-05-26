@@ -24,17 +24,12 @@ const RauMa = () => {
                             </div>
                             <div class="col-md-9 col-lg-9">
                                 <Article2 />
-
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </>
-
     )
 }
 

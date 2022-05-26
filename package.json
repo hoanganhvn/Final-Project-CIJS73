@@ -17,6 +17,7 @@
     "formik": "^2.2.9",
     "gh-pages": "^3.2.3",
     "lodash": "^4.17.21",
+    "moment": "^2.29.3",
     "react": "^18.0.0",
     "react-bootstrap": "^2.3.1",
     "react-dom": "^18.0.0",

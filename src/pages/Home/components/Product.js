@@ -28,7 +28,6 @@ function Product(props) {
                                 .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}đ</span>
                         </>
                     }
-
                 </h5>
             </li>
         </>

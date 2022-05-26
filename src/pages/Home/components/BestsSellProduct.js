@@ -1,4 +1,4 @@
-import {useFetch} from "../../../hooks";
+import { useFetch } from "../../../hooks";
 import Product from "./Product";
 import * as _ from 'lodash';
 import { Link } from 'react-router-dom';
@@ -17,11 +17,9 @@ function BestsSellProduct() {
             <div className="product-detail-2">
                 <div className="product-detail">
                     <ul className="product-top">
-                        {dataImgurl.map(
-                            (dataImgurl) => (
-                                <Product discount={dataImgurl.discount} image={dataImgurl.image[0]} name={dataImgurl.name} price={dataImgurl.price} id={dataImgurl.id}/>
-                            )
-                        )}
+                        {dataImgurl.map((dataImgurl) => (
+                            <Product discount={dataImgurl.discount} image={dataImgurl.image[0]} name={dataImgurl.name} price={dataImgurl.price} id={dataImgurl.id} />
+                        ))}
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "time": "Ngày",
+    "timeTitle": "days"
+  },
+  {
+    "id": "2",
+    "time": "Giờ",
+    "timeTitle": "hours"
+  },
+  {
+    "id": "3",
+    "time": "Phút",
+    "timeTitle": "minutes"
+  },
+  {
+    "id": "4",
+    "time": "Giây",
+    "timeTitle": "seconds"
+  },
+  {
+    "id": "5",
+    "discount": "300K",
+    "condition": "Đơn hàng từ 900k",
+    "date": "07/08/2021",
+    "code": "5MNLITQQA3ER"
+  },
+  {
+    "id": "6",
+    "discount": "20%",
+    "condition": "Tất cả đơn hàng",
+    "date": "05/08/2021",
+    "code": "FYPOSBOOWIY9"
+  },
+  {
+    "id": "7",
+    "discount": "100K",
+    "condition": "Đơn hàng từ 500k",
+    "date": "07/08/2021 22:00 CN",
+    "code": "AP4KI59F3WB2"
+  },
+  {
+    "id": "8",
+    "discount": "30%",
+    "condition": "Tất cả đơn hàng",
+    "date": "05/08/2021 22:59 CN",
+    "code": "T75CJBDAV9JH"
+  },
+  {
+    "id": "9",
+    "srcImage": "https://theme.hstatic.net/1000309753/1000718324/14/food01_banner_1.jpg?v=209"
+  },
+  {
+    "id": "10",
+    "srcImage": "https://theme.hstatic.net/1000309753/1000718324/14/food01_banner_3.jpg?v=209"
+  },
+  {
+    "id": "11",
+    "srcImage": "https://theme.hstatic.net/1000309753/1000718324/14/food01_banner_2.jpg?v=209"
+  },
+  {
+    "id": "12",
+    "srcImage": "https://theme.hstatic.net/1000309753/1000718324/14/food01_banner_4.jpg?v=209"
+  }
+]

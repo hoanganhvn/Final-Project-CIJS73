@@ -82,18 +82,17 @@ function LoginAndRegister(props) {
                     value.setUsername(data.get('username'))
                     setLogin("")
                 }, 2000);
-
             }
         }
         else {
             setError("Vui lòng nhập đầy đủ thông tin.")
         }
     };
+    
      const handleSubmitRegister = async (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget)
         const account = await fetchDataAccount()
-
 
         if (data.get('firstName') && data.get('lastName') && data.get('username') && data.get('password')) {
             const test = account.filter((item) => item.username === data.get('username'))

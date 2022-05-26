@@ -1,4 +1,4 @@
-import {useFetch} from "../../../hooks";
+import { useFetch } from "../../../hooks";
 import Product from "./Product";
 import * as _ from 'lodash';
 import { Link } from 'react-router-dom';
@@ -10,17 +10,15 @@ function NewProduct() {
     return (
         <>
             <div className="product">
-            <Link to="/">
+                <Link to="/">
                     Sản phẩm mới
                 </Link>
             </div>
             <div className="product-detail">
                 <ul className="product-top">
-                    {dataImageUrl.map(
-                        (dataImageUrl) => (
-                            <Product discount={dataImageUrl.discount} image={dataImageUrl.image[0]} name={dataImageUrl.name} price={dataImageUrl.price} id={dataImageUrl.id}/>
-                        )
-                    )}
+                    {dataImageUrl.map((dataImageUrl) => (
+                        <Product discount={dataImageUrl.discount} image={dataImageUrl.image[0]} name={dataImageUrl.name} price={dataImageUrl.price} id={dataImageUrl.id} />
+                    ))}
                 </ul>
             </div>
         </>

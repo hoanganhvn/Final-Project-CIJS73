@@ -24,17 +24,12 @@ const TrangMieng = () => {
                             </div>
                             <div class="col-md-9 col-lg-9">
                                 <Article3 />
-
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </>
-
     )
 }
 

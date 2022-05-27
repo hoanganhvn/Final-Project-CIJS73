@@ -25,6 +25,7 @@ function LandingPage() {
     const [hours, setHours] = useState(undefined);
     const [minutes, setMinutes] = useState(undefined);
     const [seconds, setSeconds] = useState(undefined);
+    const [countdown, setCountdown] = useState(true);
 
     const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
     const dataImageUrl = _.slice(data, startNumber, endNumber);
@@ -130,11 +131,13 @@ function LandingPage() {
                 setHours(hours);
                 setMinutes(minutes);
                 setSeconds(seconds);
+                setCountdown(true);
             } else {
-                setDays("");
-                setHours("");
-                setMinutes("");
-                setSeconds("");
+                setDays(0);
+                setHours(0);
+                setMinutes(0);
+                setSeconds(0);
+                setCountdown(false);
             }
         }, 1000);
         return () => clearInterval(interval);
@@ -161,7 +164,7 @@ function LandingPage() {
                         <h1 className="pageTitle__text" style={{ color: 'white' }}>HÈ CỰC NÓNG, GIÁ CỰC SỐC</h1>
                     </div>
                     <div className="countdown">
-                        <h3>ƯU ĐÃI KẾT THÚC</h3>
+                        <h3>{countdown?"ƯU ĐÃI KẾT THÚC SAU":"ƯU ĐÃI ĐÃ KẾT THÚC"}</h3>
                         <div id="clockdiv">
                             <Time timeTitle={"days"} time={"Ngày"} number={days} />
                             <Time timeTitle={"hours"} time={"Giờ"} number={hours} />

@@ -6,9 +6,9 @@ import Grid from "@mui/material/Grid";
 import "./style.scss"
 import * as _ from 'lodash';
 import { ProductItem } from "./components/ProductItem";
-// import { useFetch } from "../../hooks";
+import { useFetch } from "../../hooks";
 import { Link } from "react-router-dom";
-import database from "../../helpers/Firebase.js";
+// import database from "../../helpers/Firebase.js";
 import { ref,  onValue } from "firebase/database";
 
 const Product = () => {
@@ -18,18 +18,18 @@ const Product = () => {
         direction: ''
     });
 
-    // const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
-    // const dataImgurl = _.slice(data, 0, 1);
+    const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
+    const dataImgurl = _.slice(data, 0, 1);
 
-    const userId = 1;
-    const starCountRef = ref(database, 'users/' + userId);
-    const data = [];
+    // const userId = 1;
+    // const starCountRef = ref(database, 'users/' + userId);
+    // const data = [];
 
-    onValue(starCountRef, (snapshot) => {
-        const data1 = snapshot.val().imgurl;
-        // console.log(data);
-        data.push(data1);
-    });
+    // onValue(starCountRef, (snapshot) => {
+    //     const data1 = snapshot.val().imgurl;
+    //     // console.log(data);
+    //     data.push(data1);
+    // });
 
     const updateSort = (newSort) => {
         setSort(newSort);
@@ -68,8 +68,8 @@ const Product = () => {
         <>
             <div class="container-fluid total-product">
                 <div className="container-banner">
-                    {/* <img src={dataImgurl.map(dataImgurl => dataImgurl.imgurl)} alt="" /> */}
-                    <img src={data.map(data => data)} alt="" />
+                    <img src={dataImgurl.map(dataImgurl => dataImgurl.imgurl)} alt="" />
+                    {/* <img src={data.map(data => data)} alt="" /> */}
                 </div>
                 <Container maxWidth="xl">
 

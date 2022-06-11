@@ -29,8 +29,8 @@ function App() {
   const [username, setUsername] = useState("");
 
   return (
-    <Context.Provider value={{ username: username, setUsername: setUsername }}>
       < >
+    <Context.Provider value={{ username: username, setUsername: setUsername }}>
         <Header />
         <Routes>
           <Route path="/" element={<LayoutHome />} >
@@ -59,8 +59,8 @@ function App() {
           <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
-      </>
     </Context.Provider >
+      </>
   );
 }
 

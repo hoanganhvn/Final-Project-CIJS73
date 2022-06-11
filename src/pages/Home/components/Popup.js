@@ -1,9 +1,9 @@
 import Modal from '@mui/material/Modal';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-// import { useFetch } from "../../../hooks";
-// import * as _ from 'lodash';
+import { useFetch } from "../../../hooks";
+import * as _ from 'lodash';
 import { useState ,useEffect} from 'react';
-import database from "../../../helpers/Firebase.js";
+// import database from "../../../helpers/Firebase.js";
 import { ref, onValue } from "firebase/database";
 
 const theme = createTheme({
@@ -18,19 +18,19 @@ const theme = createTheme({
 });
 
 function Popup(props) {
-    // const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
-    // const dataImgurl = _.slice(data, 11, 12);
-    // console.log(dataImgurl);
+    const [data] = useFetch("https://625ed20e3b039517f1fcecfd.mockapi.io/img");
+    const dataImgurl = _.slice(data, 11, 12);
+    console.log(dataImgurl);
 
-    const userId = 12;
-    const starCountRef = ref(database, 'users/' + userId);
-    const data =[];
+    // const userId = 12;
+    // const starCountRef = ref(database, 'users/' + userId);
+    // const data =[];
 
-    onValue(starCountRef, (snapshot) => {
-        const data1 = snapshot.val().imgurl;
-        // console.log(data);
-        data.push(data1);
-    });
+    // onValue(starCountRef, (snapshot) => {
+    //     const data1 = snapshot.val().imgurl;
+    //     // console.log(data);
+    //     data.push(data1);
+    // });
 
     const [openPopup, setOpenPopup] = useState(false);
     useEffect(() => {
@@ -60,8 +60,8 @@ function Popup(props) {
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
-                    {/* <div className="modal-content modal-get-email" style={{ backgroundImage: `url(${dataImgurl.map(dataImgurl => dataImgurl.imgurl)}` }}> */}
-                    <div className="modal-content modal-get-email" style={{ backgroundImage: `url(${data.map(data => data)}` }}>
+                    <div className="modal-content modal-get-email" style={{ backgroundImage: `url(${dataImgurl.map(dataImgurl => dataImgurl.imgurl)}` }}>
+                    {/* <div className="modal-content modal-get-email" style={{ backgroundImage: `url(${data.map(data => data)}` }}> */}
                         <div className="modal-header-email">
                             <h2>Đăng ký nhận thông tin</h2>
                             <h4>

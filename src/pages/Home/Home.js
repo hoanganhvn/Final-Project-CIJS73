@@ -10,9 +10,9 @@ import { useEffect } from 'react';
 import {Helmet} from "react-helmet";
 
 function Home() {
-    useEffect(() => {
-        document.title = "Fresh Organic - Trang chủ";
-    }, [])
+    // useEffect(() => {
+    //     document.title = "Fresh Organic - Trang chủ";
+    // }, [])
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -34,9 +34,9 @@ function Home() {
             <div className="container-fluid" >
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>My Title</title>
+                <title>My Title adsfgh</title>
                 <link rel="canonical" href="http://mysite.com/example" />
-                <meta name="description" content="Nested component" />
+                <meta name="description" content="Nested component adsfdgfghjk" />
             </Helmet>
                 <SliderShow />
                 <Popup />
